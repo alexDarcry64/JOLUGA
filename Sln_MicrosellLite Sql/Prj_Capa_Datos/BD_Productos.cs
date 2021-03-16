@@ -32,6 +32,7 @@ namespace Prj_Capa_Datos
                 cmd.Parameters.AddWithValue("@idMar", pro.IdMar);
                 cmd.Parameters.AddWithValue("@Foto", pro.Foto);
                 cmd.Parameters.AddWithValue("@Pre_Venta_Menor", pro.Pre_Venta_Menor);
+                cmd.Parameters.AddWithValue("@Pre_Venta_Mayor", pro.Pre_Venta_Mayor);
                 cmd.Parameters.AddWithValue("@Pre_Venta", pro.Pre_Venta);
                 cmd.Parameters.AddWithValue("@UndMdida", pro.UndMdida);
                 cmd.Parameters.AddWithValue("@PesoUnit", pro.PesoUnit);

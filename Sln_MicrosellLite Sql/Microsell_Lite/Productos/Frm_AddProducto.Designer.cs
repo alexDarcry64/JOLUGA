@@ -73,6 +73,8 @@
             this.lblidcat = new System.Windows.Forms.Label();
             this.picbuscarMarca = new System.Windows.Forms.PictureBox();
             this.lblidmarca = new System.Windows.Forms.Label();
+            this.txtClaveSat = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.pnl_titu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_listo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cancel)).BeginInit();
@@ -168,7 +170,7 @@
             this.btn_listo.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_listo.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_listo.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_listo.Location = new System.Drawing.Point(444, 746);
+            this.btn_listo.Location = new System.Drawing.Point(444, 780);
             this.btn_listo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_listo.Name = "btn_listo";
             this.btn_listo.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ModernBlack;
@@ -200,7 +202,7 @@
             this.btn_cancel.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_cancel.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_cancel.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.Location = new System.Drawing.Point(182, 746);
+            this.btn_cancel.Location = new System.Drawing.Point(182, 780);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ClassicSilver;
@@ -330,7 +332,7 @@
             // piclogo
             // 
             this.piclogo.Image = ((System.Drawing.Image)(resources.GetObject("piclogo.Image")));
-            this.piclogo.Location = new System.Drawing.Point(593, 625);
+            this.piclogo.Location = new System.Drawing.Point(593, 659);
             this.piclogo.Name = "piclogo";
             this.piclogo.Size = new System.Drawing.Size(80, 64);
             this.piclogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -340,7 +342,7 @@
             // lblAbrir
             // 
             this.lblAbrir.AutoSize = true;
-            this.lblAbrir.Location = new System.Drawing.Point(599, 692);
+            this.lblAbrir.Location = new System.Drawing.Point(599, 726);
             this.lblAbrir.Name = "lblAbrir";
             this.lblAbrir.Size = new System.Drawing.Size(110, 17);
             this.lblAbrir.TabIndex = 21;
@@ -355,7 +357,7 @@
             // 
             this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioCompra.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecioCompra.Location = new System.Drawing.Point(185, 502);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(195, 503);
             this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(246, 29);
@@ -418,6 +420,7 @@
             this.txtUtilidad.Size = new System.Drawing.Size(188, 29);
             this.txtUtilidad.TabIndex = 29;
             this.txtUtilidad.Text = "0";
+            this.txtUtilidad.TextChanged += new System.EventHandler(this.txtUtilidad_TextChanged);
             // 
             // label11
             // 
@@ -475,7 +478,7 @@
             // 
             this.txtPrecioVentaMayor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioVentaMayor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecioVentaMayor.Location = new System.Drawing.Point(195, 616);
+            this.txtPrecioVentaMayor.Location = new System.Drawing.Point(195, 633);
             this.txtPrecioVentaMayor.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioVentaMayor.Name = "txtPrecioVentaMayor";
             this.txtPrecioVentaMayor.Size = new System.Drawing.Size(246, 29);
@@ -488,7 +491,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(35, 625);
+            this.label13.Location = new System.Drawing.Point(35, 642);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(161, 20);
@@ -499,8 +502,9 @@
             // 
             this.txtPrecioVentaMenor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioVentaMenor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecioVentaMenor.Location = new System.Drawing.Point(195, 557);
+            this.txtPrecioVentaMenor.Location = new System.Drawing.Point(195, 574);
             this.txtPrecioVentaMenor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecioVentaMenor.MaxLength = 2;
             this.txtPrecioVentaMenor.Name = "txtPrecioVentaMenor";
             this.txtPrecioVentaMenor.Size = new System.Drawing.Size(246, 29);
             this.txtPrecioVentaMenor.TabIndex = 36;
@@ -512,7 +516,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(35, 561);
+            this.label14.Location = new System.Drawing.Point(35, 578);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(162, 20);
@@ -523,7 +527,7 @@
             // 
             this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioVenta.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecioVenta.Location = new System.Drawing.Point(195, 673);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(195, 707);
             this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(246, 29);
@@ -536,7 +540,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(77, 682);
+            this.label15.Location = new System.Drawing.Point(77, 716);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 20);
@@ -603,12 +607,36 @@
             this.lblidmarca.TabIndex = 44;
             this.lblidmarca.Text = ".";
             // 
+            // txtClaveSat
+            // 
+            this.txtClaveSat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveSat.ForeColor = System.Drawing.Color.DimGray;
+            this.txtClaveSat.Location = new System.Drawing.Point(593, 256);
+            this.txtClaveSat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClaveSat.Name = "txtClaveSat";
+            this.txtClaveSat.Size = new System.Drawing.Size(188, 29);
+            this.txtClaveSat.TabIndex = 46;
+            this.txtClaveSat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClaveSat_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(469, 265);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 20);
+            this.label16.TabIndex = 45;
+            this.label16.Text = "Clave SAT:";
+            // 
             // Frm_AddProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(839, 834);
+            this.ClientSize = new System.Drawing.Size(839, 876);
+            this.Controls.Add(this.txtClaveSat);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.lblidmarca);
             this.Controls.Add(this.picbuscarMarca);
             this.Controls.Add(this.lblidcat);
@@ -711,5 +739,7 @@
         private System.Windows.Forms.Label lblidcat;
         private System.Windows.Forms.Label lblidmarca;
         private System.Windows.Forms.PictureBox picbuscarMarca;
+        private System.Windows.Forms.TextBox txtClaveSat;
+        private System.Windows.Forms.Label label16;
     }
 }

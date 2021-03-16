@@ -11,7 +11,7 @@ using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Proveedores;
 using Prj_Capa_Entidad;
 using Prj_Capa_Negocio;
-
+using Prj_Capa_Datos;
 
 namespace Microsell_Lite.Productos
 {
@@ -44,7 +44,7 @@ namespace Microsell_Lite.Productos
             this.Close();
         }
 
-        string xFotoruta;
+        string xFotoruta = "";
         private void lblAbrir_Click(object sender, EventArgs e)
         {
             var FilePath = string.Empty;
@@ -70,24 +70,27 @@ namespace Microsell_Lite.Productos
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia ver = new Frm_Advertencia();
 
-            if (txtIdProducto.Text.Trim().Length < 2) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtIdProducto.Focus(); return false; }
-            if (txtdescripcion_producto.Text.Trim().Length < 2) { fil.Show(); ver.ShowDialog(); fil.Hide();  txtdescripcion_producto.Focus(); return false; }
-            if (txtPesoUnit.Text.Trim().Length < 2) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPesoUnit.Focus(); return false; }
+            if (txtIdProducto.Text.Trim().Length < 2) { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el id del Producto"; ver.ShowDialog(); fil.Hide(); txtIdProducto.Focus(); return false; }
+            if (txtdescripcion_producto.Text.Trim().Length < 2) { fil.Show(); ver.lbl_Msm1.Text = "Ingrese la descripcion del producto"; ver.ShowDialog(); fil.Hide();  txtdescripcion_producto.Focus(); return false; }
+            if (txtPesoUnit.Text.Trim().Length < 2) { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el peso por unidad del producto"; ver.ShowDialog(); fil.Hide(); txtPesoUnit.Focus(); return false; }
 
-            if (cmbTipoProducto.SelectedIndex == -1) { fil.Show(); ver.ShowDialog(); fil.Hide(); cmbTipoProducto.Focus(); return false; }
-            if (cmbUnidadMedida.SelectedIndex == -1) { fil.Show(); ver.ShowDialog(); fil.Hide(); cmbUnidadMedida.Focus(); return false; }
+            if (cmbTipoProducto.SelectedIndex == -1) { fil.Show(); ver.lbl_Msm1.Text = "Seleccione el tipo de Producto"; ver.ShowDialog(); fil.Hide(); cmbTipoProducto.Focus(); return false; }
+            if (cmbUnidadMedida.SelectedIndex == -1) { fil.Show(); ver.lbl_Msm1.Text = "Seleccione la unidad de medida del producto"; ver.ShowDialog(); fil.Hide(); cmbUnidadMedida.Focus(); return false; }
 
-            if (txtPrecioCompra.Text.Trim() == "") { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioCompra.Focus(); return false; }
-            if (Convert.ToDouble(txtPrecioCompra.Text) == 0) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioCompra.Focus(); return false; }
+            if (txtPrecioCompra.Text.Trim() == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el precio de compra del producto"; ver.ShowDialog(); fil.Hide(); txtPrecioCompra.Focus(); return false; }
+            if (Convert.ToDouble(txtPrecioCompra.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "El precio de compra del producto no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtPrecioCompra.Focus(); return false; }
 
-            if (txtPrecioVentaMenor.Text.Trim() == "") { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVentaMenor.Focus(); return false; }
-            if (Convert.ToDouble(txtPrecioVentaMenor.Text) == 0) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVentaMenor.Focus(); return false; }
+            if (txtPrecioVentaMenor.Text.Trim() == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el precio de venta por menor del producto "; ver.ShowDialog(); fil.Hide(); txtPrecioVentaMenor.Focus(); return false; }
+            if (Convert.ToDouble(txtPrecioVentaMenor.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "El precio de venta minorista no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtPrecioVentaMenor.Focus(); return false; }
 
-            if (txtPrecioVentaMayor.Text.Trim() == "") { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVentaMayor.Focus(); return false; }
-            if (Convert.ToDouble(txtPrecioVentaMayor.Text) == 0) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVentaMayor.Focus(); return false; }
+            if (txtPrecioVentaMayor.Text.Trim() == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el precio de venta mayorista del producto"; ver.ShowDialog(); fil.Hide(); txtPrecioVentaMayor.Focus(); return false; }
+            if (Convert.ToDouble(txtPrecioVentaMayor.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "El precio de venta mayorista no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtPrecioVentaMayor.Focus(); return false; }
 
-            if (txtPrecioVenta.Text.Trim() == "") { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVenta.Focus(); return false; }
-            if (Convert.ToDouble(txtPrecioVenta.Text) == 0) { fil.Show(); ver.ShowDialog(); fil.Hide(); txtPrecioVenta.Focus(); return false; }
+            if (txtPrecioVenta.Text.Trim() == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese el precio de venta del producto"; ver.ShowDialog(); fil.Hide(); txtPrecioVenta.Focus(); return false; }
+            if (Convert.ToDouble(txtPrecioVenta.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "El precio de venta del producto no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtPrecioVenta.Focus(); return false; }
+
+            if (txtClaveSat.Text.Trim() == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese la clave de Sat del producto"; ver.ShowDialog(); fil.Hide(); txtClaveSat.Focus(); return false; }
+            if (Convert.ToDouble(txtClaveSat.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "La clave sat del producto no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtClaveSat.Focus(); return false; }
 
             return true;
         }
@@ -110,7 +113,10 @@ namespace Microsell_Lite.Productos
 
         private void btn_listo_Click(object sender, EventArgs e)
         {
-            
+            if (Validar_Texbox() == true)
+            {
+                registrar();
+            }
         }
 
         private void picbuscarProveedor_Click(object sender, EventArgs e)
@@ -208,6 +214,102 @@ namespace Microsell_Lite.Productos
         }
 
         private void txtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitario ut = new Utilitario();
+            e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));
+        }
+
+        private void txtUtilidad_TextChanged(object sender, EventArgs e)
+        {
+            txtUtilidad.Text = txtUtilidad.Text.Replace(",", ".");
+            txtUtilidad.SelectionStart = txtUtilidad.Text.Length;
+            
+        }
+
+        //private void txtMargenUtilidad_TextChanged(object sender, EventArgs e)
+        //{
+            //txtMargenUtilidad.Text = txtMargenUtilidad.Text.Replace(",", ".");
+            //txtMargenUtilidad.SelectionStart = txtMargenUtilidad.Text.Length;
+
+            //try
+            //{
+            //    if (txtMargenUtilidad.Text.Trim() == "") { return; }
+            //    if (txtPrecioCompra.Text.Trim() == "") { return; }
+
+            //    double precio_compra = 0;
+            //    double utilidad = 0;
+
+            //    precio_compra = Convert.ToDouble(txtPrecioCompra.Text) * Convert.ToDouble(txtMargenUtilidad.Text);
+            //    txtPrecioVentaMenor.Text = precio_compra.ToString("##.00");
+
+            //    utilidad = Convert.ToDouble(txtPrecioVentaMenor.Text) - Convert.ToDouble(txtPrecioCompra.Text);
+            //    txtUtilidad.Text = utilidad.ToString("##.00");
+            //}
+            //catch(Exception ex)
+            //{
+            //    string sms = ex.Message;
+            //}
+        //}
+
+        private void registrar()
+        {
+            RN_Productos obj = new RN_Productos();
+            EN_Producto producto = new EN_Producto();
+
+            try
+            {
+                producto.Idpro = txtIdProducto.Text;
+                producto.Idprove = lblidproveedor.Text;
+                producto.Descripcion = txtdescripcion_producto.Text;
+                producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);
+                producto.Pre_compra = Convert.ToDouble(txtPrecioCompra.Text);
+                producto.StockActual = 0;
+                producto.IdCat = Convert.ToInt32(lblidcat.Text);
+                producto.IdMar = Convert.ToInt32(lblidmarca.Text);
+                if (xFotoruta.Trim().Length < 5)
+                {
+                    producto.Foto = ".";
+                }
+                else
+                {
+                    producto.Foto = xFotoruta;
+                }
+                producto.Pre_Venta_Menor = Convert.ToDouble(txtPrecioVentaMenor.Text);
+                producto.Pre_Venta_Mayor = Convert.ToDouble(txtPrecioVentaMayor.Text);
+                producto.UndMdida = cmbUnidadMedida.Text;
+                producto.PesoUnit = Convert.ToDouble(txtPesoUnit.Text);
+                producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);
+                producto.TipoProd = cmbTipoProducto.Text;
+                producto.ValorporProd = 0;
+                producto.ClaveSAT = txtClaveSat.Text;
+
+                obj.RN_Registrar_Producoto(producto);
+
+                if (BD_Productos.seguardo == true)
+                {
+                    Frm_Filtro fil = new Frm_Filtro();
+                    fil.Show();
+                    MessageBox.Show("Producto guardado exitosamente");
+                    fil.Hide();
+
+                    this.Tag = "A";
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar:" + ex.Message);
+            }
+
+        }
+
+        private void txtMargenUtilidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitario ut = new Utilitario();
+            e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));
+        }
+
+        private void txtClaveSat_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilitario ut = new Utilitario();
             e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));

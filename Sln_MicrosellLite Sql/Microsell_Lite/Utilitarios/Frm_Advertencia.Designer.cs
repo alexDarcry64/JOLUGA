@@ -106,7 +106,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_Msm1;
         private System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Label lbl_Msm1;
     }
 }
