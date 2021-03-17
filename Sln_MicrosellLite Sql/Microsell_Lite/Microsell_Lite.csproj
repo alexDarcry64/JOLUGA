@@ -76,17 +76,23 @@
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Numalet.cs" />
+    <Compile Include="Productos\Frm_EditProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Frm_EditProducto.Designer.cs">
+      <DependentUpon>Frm_EditProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\Frm_AddProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos\Frm_AddProducto.Designer.cs">
       <DependentUpon>Frm_AddProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Productos\Frm_Explo_Prod.cs">
+    <Compile Include="Productos\Frm_Explor_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\Frm_Explo_Prod.Designer.cs">
-      <DependentUpon>Frm_Explo_Prod.cs</DependentUpon>
+    <Compile Include="Productos\Frm_Explor_Producto.Designer.cs">
+      <DependentUpon>Frm_Explor_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\Frm_Reg_Prod.cs">
       <SubType>Form</SubType>
@@ -184,11 +190,14 @@
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Frm_EditProducto.resx">
+      <DependentUpon>Frm_EditProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Productos\Frm_AddProducto.resx">
       <DependentUpon>Frm_AddProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\Frm_Explo_Prod.resx">
-      <DependentUpon>Frm_Explo_Prod.cs</DependentUpon>
+    <EmbeddedResource Include="Productos\Frm_Explor_Producto.resx">
+      <DependentUpon>Frm_Explor_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\Frm_Reg_Prod.resx">
       <DependentUpon>Frm_Reg_Prod.cs</DependentUpon>

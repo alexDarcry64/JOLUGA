@@ -45,9 +45,11 @@
     <Compile Include="BD_Categoria.cs" />
     <Compile Include="BD_Conexion.cs" />
     <Compile Include="BD_Distrito.cs" />
+    <Compile Include="BD_Kardex.cs" />
     <Compile Include="BD_Marcas.cs" />
     <Compile Include="BD_Productos.cs" />
     <Compile Include="BD_Proveedor.cs" />
+    <Compile Include="BD_Tipo_Doc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

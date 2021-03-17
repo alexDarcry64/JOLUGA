@@ -37,7 +37,7 @@ namespace Microsell_Lite
             //{
             //    explo.BringToFront();
             //}
-            Frm_Explo_Prod pro = new Frm_Explo_Prod();
+            Frm_Explor_Producto pro = new Frm_Explor_Producto();
 
             pro.MdiParent = this;
             pro.Show();

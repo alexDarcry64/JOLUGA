@@ -15,9 +15,9 @@ using Prj_Capa_Datos;
 
 namespace Microsell_Lite.Productos
 {
-    public partial class Frm_AddProducto : Form
+    public partial class Frm_EditProducto : Form
     {
-        public Frm_AddProducto()
+        public Frm_EditProducto()
         {
             InitializeComponent();
         }
@@ -26,8 +26,7 @@ namespace Microsell_Lite.Productos
         {
             double tipoCambio = 0;
             tipoCambio = RN_TipoDoc.RN_Leer_Tipo_Cambio(7);
-            //lblTipoCambio .Text = tipoCambio.ToString("###0.00");
-            txtIdProducto.Text = RN_TipoDoc.RN_Nro_id(4);
+            Buscar_Productopara_Editar(this.Tag.ToString());
         }
 
         private void pnl_titu_MouseMove(object sender, MouseEventArgs e)
@@ -118,7 +117,7 @@ namespace Microsell_Lite.Productos
         {
             if (Validar_Texbox() == true)
             {
-                registrar();
+                Editar();
             }
         }
 
@@ -268,7 +267,7 @@ namespace Microsell_Lite.Productos
             //}
             //}
 
-            private void registrar()
+            private void Editar()
         {
             RN_Productos obj = new RN_Productos();
             EN_Producto producto = new EN_Producto();
@@ -280,7 +279,6 @@ namespace Microsell_Lite.Productos
                 producto.Descripcion = txtdescripcion_producto.Text;
                 producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);
                 producto.Pre_compra = Convert.ToDouble(txtPrecioCompra.Text);
-                producto.StockActual = 0;
                 producto.IdCat = Convert.ToInt32(lblidcat.Text);
                 producto.IdMar = Convert.ToInt32(lblidmarca.Text);
                 if (xFotoruta.Trim().Length < 5)
@@ -297,19 +295,12 @@ namespace Microsell_Lite.Productos
                 producto.PesoUnit = Convert.ToDouble(txtPesoUnit.Text);
                 producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);
                 producto.TipoProd = cmbTipoProducto.Text;
-                producto.ValorporProd = 0;
                 producto.ClaveSAT = txtClaveSat.Text;
 
-                obj.RN_Registrar_Producoto(producto);
+                obj.RN_Editar_Producoto(producto);
 
-                if (BD_Productos.seguardo == true)
+                if (BD_Productos.seedito == true)
                 {
-                    if (cmbTipoProducto.SelectedIndex == 0)
-                    {
-                        Registrar_Kardex(txtIdProducto.Text);
-                    }
-
-                    RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(4);
 
                     Frm_Filtro fil = new Frm_Filtro();
                     fil.Show();
@@ -327,59 +318,6 @@ namespace Microsell_Lite.Productos
 
         }
 
-        private void Registrar_Kardex(string idProducto)
-        {
-            RN_Kardex obj = new RN_Kardex();
-            EN_Kardexcs kr = new EN_Kardexcs();
-
-            try
-            {
-                if (obj.RN_VerificarProducto_Cardex(idProducto) == true)
-                {
-                    return;
-                }
-                else
-                {
-                    string idKardex = RN_TipoDoc.RN_Nro_id(6);
-                    obj.RN_Registrar_Kardex(idKardex, idProducto, lblidproveedor.Text);
-
-                    if (BD_Kardex.seguardo == true)
-                    {
-                        //detalle cardex
-
-                        RN_TipoDoc.RN_Actualizar_Tipo_Doc(6);
-
-                        kr.Idkardex = idKardex;
-                        kr.Item = 1;
-                        kr.Doc_soporte = "000";
-                        kr.Det_operacion = "Inicio de Kardex";
-
-                        kr.Cantidad_in = 0;
-                        kr.Precio_in = 0;
-                        kr.Total_in = 0;
-
-                        kr.Cantidad_out = 0;
-                        kr.Precio_out = 0;
-                        kr.Importe_total_out = 0;
-                        kr.Cantidad_saldo = 0;
-                        kr.Promedio = 0;
-                        kr.Total_saldo = 0;
-
-                        obj.RN_Registrar_Detalle_Kardex(kr);
-
-                        if( BD_Kardex.seguardo == true)
-                        {
-
-                        }
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Algo Salio Mal: " + ex.Message);
-            }
-        }
-
         private void txtMargenUtilidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilitario ut = new Utilitario();
@@ -390,6 +328,45 @@ namespace Microsell_Lite.Productos
         {
             Utilitario ut = new Utilitario();
             e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));
+        }
+
+        private void Buscar_Productopara_Editar(string idproducto)
+        {
+            RN_Productos obj = new RN_Productos();
+            DataTable data = new DataTable();
+            try
+            {
+                data = obj.RN_Buscar_Productos(idproducto);
+                if (data.Rows.Count > 0)
+                {
+                    txtIdProducto.Text = Convert.ToString(data.Rows[0]["Id_Pro"]);
+                    txtdescripcion_producto.Text = Convert.ToString(data.Rows[0]["Descripcion_Larga"]);
+                    cmbTipoProducto.Text = Convert.ToString(data.Rows[0]["TipoProdcto"]);
+                    cmbUnidadMedida.Text = Convert.ToString(data.Rows[0]["UndMedida"]);
+                    txtPrecioCompra.Text = Convert.ToString(data.Rows[0]["Pre_Compra"]);
+                    txtPrecioVentaMenor.Text = Convert.ToString(data.Rows[0]["Pre_vntaxMenor"]);
+                    txtPrecioVentaMayor.Text = Convert.ToString(data.Rows[0]["Pre_vntaxMayor"]);
+                    txtPrecioVenta.Text = Convert.ToString(data.Rows[0]["Pre_Venta"]);
+                    txtPesoUnit.Text = Convert.ToString(data.Rows[0]["PesoUnit"]);
+                    txtUtilidad.Text = Convert.ToString(data.Rows[0]["UtilidadUnit"]);
+                    txtClaveSat.Text = Convert.ToString(data.Rows[0]["ClaveSAT"]);
+                    xFotoruta = Convert.ToString(data.Rows[0]["Foto"]);
+
+                    lblidcat.Text = Convert.ToString(data.Rows[0]["Id_Cat"]);
+                    lblidmarca.Text = Convert.ToString(data.Rows[0]["Id_Marca"]);
+                    lblidproveedor.Text = Convert.ToString(data.Rows[0]["IDPROVEE"]);
+
+                    txtproveedor.Text = Convert.ToString(data.Rows[0]["NOMBRE"]);
+                    txtmarca.Text = Convert.ToString(data.Rows[0]["Marca"]);
+                    txtcategoria.Text = Convert.ToString(data.Rows[0]["Categoria"]);
+
+                    piclogo.Load(xFotoruta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar:" + ex.Message, "Form Add Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

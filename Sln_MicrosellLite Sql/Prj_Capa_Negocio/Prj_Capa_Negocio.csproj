@@ -45,9 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RN_Categoria.cs" />
     <Compile Include="RN_Distrito.cs" />
+    <Compile Include="RN_Kardex.cs" />
     <Compile Include="RN_Marcas.cs" />
     <Compile Include="RN_Productos.cs" />
     <Compile Include="RN_Proveedor.cs" />
+    <Compile Include="RN_TipoDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Prj_Capa_Datos\Prj_Capa_Datos.csproj">
