@@ -43,7 +43,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mostrarTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEditarProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bt_agregarProveedorTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -59,10 +59,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.pnlmsj = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotalItems = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.pnlmsj.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,6 +136,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblTotalItems);
+            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtbuscar);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnEditar);
@@ -140,10 +150,11 @@
             // 
             // txtbuscar
             // 
+            this.txtbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtbuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtbuscar.ForeColor = System.Drawing.Color.White;
-            this.txtbuscar.HintForeColor = System.Drawing.Color.Empty;
+            this.txtbuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtbuscar.HintForeColor = System.Drawing.Color.Black;
             this.txtbuscar.HintText = "";
             this.txtbuscar.isPassword = false;
             this.txtbuscar.LineFocusedColor = System.Drawing.Color.Blue;
@@ -180,7 +191,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(324, 9);
+            this.btnEditar.Location = new System.Drawing.Point(107, 9);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(43, 39);
@@ -201,7 +212,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(252, 9);
+            this.btnAgregar.Location = new System.Drawing.Point(35, 9);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 39);
@@ -227,53 +238,59 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarTodosToolStripMenuItem,
             this.toolStripSeparator1,
-            this.editarProveedorToolStripMenuItem,
+            this.btnEditarProducto,
             this.toolStripSeparator2,
             this.bt_agregarProveedorTool,
             this.toolStripSeparator3,
             this.bt_copiarIDProveedorTool});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 118);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(210, 126);
             // 
             // mostrarTodosToolStripMenuItem
             // 
+            this.mostrarTodosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mostrarTodosToolStripMenuItem.Image")));
             this.mostrarTodosToolStripMenuItem.Name = "mostrarTodosToolStripMenuItem";
-            this.mostrarTodosToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.mostrarTodosToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.mostrarTodosToolStripMenuItem.Text = "Mostrar todos";
+            this.mostrarTodosToolStripMenuItem.Click += new System.EventHandler(this.mostrarTodosToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(206, 6);
             // 
-            // editarProveedorToolStripMenuItem
+            // btnEditarProducto
             // 
-            this.editarProveedorToolStripMenuItem.Name = "editarProveedorToolStripMenuItem";
-            this.editarProveedorToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
-            this.editarProveedorToolStripMenuItem.Text = "Editar proveedor";
+            this.btnEditarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarProducto.Image")));
+            this.btnEditarProducto.Name = "btnEditarProducto";
+            this.btnEditarProducto.Size = new System.Drawing.Size(209, 26);
+            this.btnEditarProducto.Text = "Editar producto";
+            this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(206, 6);
             // 
             // bt_agregarProveedorTool
             // 
+            this.bt_agregarProveedorTool.Image = ((System.Drawing.Image)(resources.GetObject("bt_agregarProveedorTool.Image")));
             this.bt_agregarProveedorTool.Name = "bt_agregarProveedorTool";
-            this.bt_agregarProveedorTool.Size = new System.Drawing.Size(213, 24);
-            this.bt_agregarProveedorTool.Text = "Agregar Proveedor";
+            this.bt_agregarProveedorTool.Size = new System.Drawing.Size(209, 26);
+            this.bt_agregarProveedorTool.Text = "Agregar Producto";
             this.bt_agregarProveedorTool.Click += new System.EventHandler(this.bt_agregarProveedorTool_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(206, 6);
             // 
             // bt_copiarIDProveedorTool
             // 
+            this.bt_copiarIDProveedorTool.Image = ((System.Drawing.Image)(resources.GetObject("bt_copiarIDProveedorTool.Image")));
             this.bt_copiarIDProveedorTool.Name = "bt_copiarIDProveedorTool";
-            this.bt_copiarIDProveedorTool.Size = new System.Drawing.Size(213, 24);
-            this.bt_copiarIDProveedorTool.Text = "Copiar ID Proveedor";
+            this.bt_copiarIDProveedorTool.Size = new System.Drawing.Size(209, 26);
+            this.bt_copiarIDProveedorTool.Text = "Copiar ID Producto";
             this.bt_copiarIDProveedorTool.Click += new System.EventHandler(this.bt_copiarIDProveedorTool_Click);
             // 
             // toolTip1
@@ -366,11 +383,75 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Estado";
             // 
+            // pnlmsj
+            // 
+            this.pnlmsj.Controls.Add(this.pictureBox2);
+            this.pnlmsj.Controls.Add(this.label12);
+            this.pnlmsj.Controls.Add(this.label6);
+            this.pnlmsj.Location = new System.Drawing.Point(13, 130);
+            this.pnlmsj.Name = "pnlmsj";
+            this.pnlmsj.Size = new System.Drawing.Size(1188, 419);
+            this.pnlmsj.TabIndex = 13;
+            this.pnlmsj.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(551, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(336, 250);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(521, 27);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Intenta realizar tu busqueda con otros valores";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(433, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(327, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Busqueda sin resultados";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(434, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Total Items";
+            // 
+            // lblTotalItems
+            // 
+            this.lblTotalItems.AutoSize = true;
+            this.lblTotalItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItems.Location = new System.Drawing.Point(465, 31);
+            this.lblTotalItems.Name = "lblTotalItems";
+            this.lblTotalItems.Size = new System.Drawing.Size(26, 17);
+            this.lblTotalItems.TabIndex = 14;
+            this.lblTotalItems.Text = "00";
+            // 
             // Frm_Explor_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 581);
+            this.Controls.Add(this.pnlmsj);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -392,8 +473,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.pnlmsj.ResumeLayout(false);
+            this.pnlmsj.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +500,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mostrarTodosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarProveedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnEditarProducto;
         private System.Windows.Forms.ToolStripMenuItem bt_agregarProveedorTool;
         private System.Windows.Forms.ToolStripMenuItem bt_copiarIDProveedorTool;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -430,5 +515,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlmsj;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTotalItems;
+        private System.Windows.Forms.Label label13;
     }
 }

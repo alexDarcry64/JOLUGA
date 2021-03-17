@@ -91,6 +91,9 @@ namespace Microsell_Lite.Productos
                 list.SubItems.Add(dr["Estado_Pro"].ToString());
                 ltsProductos.Items.Add(list);//si no ponemos esto el list nunca llenara
             }
+            PintarFilas();
+            pnlmsj.Visible = false;
+            lblTotalItems.Text = contextMenuStrip1.Items.Count.ToString();
         }
 
         private void Cargar_todos_Productos()
@@ -106,6 +109,7 @@ namespace Microsell_Lite.Productos
             else
             {
                 ltsProductos.Items.Clear();
+                pnlmsj.Visible = true;
             }
         }
 
@@ -123,6 +127,7 @@ namespace Microsell_Lite.Productos
             else
             {
                 ltsProductos.Items.Clear();
+                pnlmsj.Visible = true;
             }
         }
 
@@ -231,6 +236,23 @@ namespace Microsell_Lite.Productos
             }
         }
 
+        private void PintarFilas()
+        {
+            int cont = 1;
+            for (int i=0; i < ltsProductos.Items.Count; i++)
+            {
+                if (cont % 2 == 0)
+                {
+
+                }
+                else
+                {
+                    ltsProductos.Items[i].BackColor = Color.WhiteSmoke;
+                }
+                cont += 1;
+            }
+        }
+
         private void btnEditar_MouseMove(object sender, MouseEventArgs e)
         {
             Utilitario obj = new Utilitario();
@@ -251,5 +273,17 @@ namespace Microsell_Lite.Productos
 
             }
         }
+
+        private void btnEditarProducto_Click(object sender, EventArgs e)
+        {
+            btnEditar_Click(sender,e);
+        }
+
+        private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cargar_todos_Productos();
+        }
+
+
     }
 }

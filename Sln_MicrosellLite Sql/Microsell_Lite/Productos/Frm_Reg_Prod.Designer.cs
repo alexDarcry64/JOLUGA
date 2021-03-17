@@ -35,10 +35,10 @@
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gru_det = new Klik.Windows.Forms.v1.EntryLib.ELGroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_listo = new Klik.Windows.Forms.v1.EntryLib.ELButton();
             this.btn_cancel = new Klik.Windows.Forms.v1.EntryLib.ELButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnl_titu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gru_det)).BeginInit();
             this.gru_det.SuspendLayout();
@@ -58,8 +58,9 @@
             this.pnl_titu.Controls.Add(this.label1);
             this.pnl_titu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_titu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_titu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_titu.Name = "pnl_titu";
-            this.pnl_titu.Size = new System.Drawing.Size(629, 43);
+            this.pnl_titu.Size = new System.Drawing.Size(839, 53);
             this.pnl_titu.TabIndex = 1;
             this.pnl_titu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_titu_MouseMove);
             // 
@@ -73,9 +74,10 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(587, 4);
+            this.btn_cerrar.Location = new System.Drawing.Point(783, 5);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(32, 32);
+            this.btn_cerrar.Size = new System.Drawing.Size(43, 39);
             this.btn_cerrar.TabIndex = 6;
             this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -84,11 +86,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 20);
+            this.label1.Size = new System.Drawing.Size(203, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de Productos";
             // 
@@ -121,12 +124,34 @@
             this.gru_det.Controls.Add(this.btn_listo);
             this.gru_det.Controls.Add(this.btn_cancel);
             this.gru_det.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gru_det.Location = new System.Drawing.Point(0, 43);
+            this.gru_det.Location = new System.Drawing.Point(0, 53);
+            this.gru_det.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gru_det.Name = "gru_det";
             this.gru_det.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.gru_det.Size = new System.Drawing.Size(629, 635);
+            this.gru_det.Size = new System.Drawing.Size(839, 781);
             this.gru_det.TabIndex = 3;
             this.gru_det.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox1.Location = new System.Drawing.Point(141, 27);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 29);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Id Producto";
             // 
             // btn_listo
             // 
@@ -144,17 +169,18 @@
             this.btn_listo.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_listo.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_listo.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_listo.Location = new System.Drawing.Point(323, 565);
+            this.btn_listo.Location = new System.Drawing.Point(431, 695);
+            this.btn_listo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_listo.Name = "btn_listo";
             this.btn_listo.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ModernBlack;
-            this.btn_listo.Size = new System.Drawing.Size(157, 49);
+            this.btn_listo.Size = new System.Drawing.Size(209, 60);
             this.btn_listo.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.YellowGreen;
             this.btn_listo.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.YellowGreen;
-            this.btn_listo.StateStyles.HoverStyle.TextFont = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_listo.StateStyles.HoverStyle.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_listo.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_listo.StateStyles.PressedStyle.BorderSolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_listo.TabIndex = 4;
-            this.btn_listo.TextStyle.Font = new System.Drawing.Font("Oxygen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_listo.TextStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_listo.TextStyle.ForeColor = System.Drawing.Color.White;
             this.btn_listo.TextStyle.Text = "Listo";
             this.btn_listo.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,51 +200,34 @@
             this.btn_cancel.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_cancel.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_cancel.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.Location = new System.Drawing.Point(127, 565);
+            this.btn_cancel.Location = new System.Drawing.Point(169, 695);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ClassicSilver;
-            this.btn_cancel.Size = new System.Drawing.Size(157, 49);
+            this.btn_cancel.Size = new System.Drawing.Size(209, 60);
             this.btn_cancel.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.DimGray;
             this.btn_cancel.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.DimGray;
-            this.btn_cancel.StateStyles.HoverStyle.TextFont = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.StateStyles.HoverStyle.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White;
             this.btn_cancel.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_cancel.StateStyles.PressedStyle.BorderSolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_cancel.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White;
             this.btn_cancel.TabIndex = 5;
-            this.btn_cancel.TextStyle.Font = new System.Drawing.Font("Oxygen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.TextStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.TextStyle.Text = "Cancelar";
             this.btn_cancel.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancel.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Oxygen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Id Producto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(106, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 7;
-            // 
             // Frm_Reg_Prod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(629, 678);
+            this.ClientSize = new System.Drawing.Size(839, 834);
             this.Controls.Add(this.gru_det);
             this.Controls.Add(this.pnl_titu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_Reg_Prod";
             this.Text = "Frm_Reg_Prod";
             this.Load += new System.EventHandler(this.Frm_Reg_Prod_Load);

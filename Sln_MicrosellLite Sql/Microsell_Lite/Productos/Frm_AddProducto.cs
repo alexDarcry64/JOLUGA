@@ -235,7 +235,7 @@ namespace Microsell_Lite.Productos
                 double precio_compra = 0;
 
                 precio_compra = Convert.ToDouble(txtPrecioCompra.Text) * Convert.ToDouble(txtUtilidad.Text);
-                txtPrecioVentaMenor.Text = precio_compra.ToString("##.00");
+                txtPrecioVentaMenor.Text = precio_compra.ToString("###0.00");
             }
             catch (Exception ex)
             {
