@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Prj_Capa_Negocio;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Productos;
+using Microsell_Lite.Compras;
 
 namespace Microsell_Lite.Productos
 {
@@ -24,6 +25,7 @@ namespace Microsell_Lite.Productos
         {
             Configurar_listView();
             Cargar_todos_Productos();
+            txtbuscar.Focus();
         }
 
         private void btn_minimi_Click(object sender, EventArgs e)
@@ -65,11 +67,9 @@ namespace Microsell_Lite.Productos
             lis.Columns.Add("Nombre del Producto", 240, HorizontalAlignment.Left);//0
             lis.Columns.Add("Stock", 80, HorizontalAlignment.Left);//0
             lis.Columns.Add("Pre Compra", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Pre Venta 1", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Pre Venta 2", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Utilidad", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Total", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Estado", 100, HorizontalAlignment.Left);//0
+            lis.Columns.Add("marca", 164, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Estado", 100, HorizontalAlignment.Left);//0}
+            lis.Columns.Add("Tipo Producto", 0, HorizontalAlignment.Left);//0}
         }
 
         //llenar list view
@@ -84,17 +84,19 @@ namespace Microsell_Lite.Productos
                 list.SubItems.Add(dr["Descripcion_Larga"].ToString());
                 list.SubItems.Add(dr["Stock_Actual"].ToString());
                 list.SubItems.Add(dr["Pre_Compra"].ToString());
-                list.SubItems.Add(dr["Pre_vntaxMenor"].ToString());
-                list.SubItems.Add(dr["Pre_vntaxMayor"].ToString());
-                list.SubItems.Add(dr["UtilidadUnit"].ToString());
-                list.SubItems.Add(dr["Pre_Venta"].ToString());
+                //list.SubItems.Add(dr["Pre_vntaxMenor"].ToString());
+                //list.SubItems.Add(dr["Pre_vntaxMayor"].ToString());
+                //list.SubItems.Add(dr["UtilidadUnit"].ToString());
+                //list.SubItems.Add(dr["Pre_Venta"].ToString());
+                //list.SubItems.Add(dr["Valor_porCant"].ToString());
+                list.SubItems.Add(dr["Marca"].ToString());
                 list.SubItems.Add(dr["Estado_Pro"].ToString());
+                list.SubItems.Add(dr["TipoProdcto"].ToString());
                 ltsProductos.Items.Add(list);//si no ponemos esto el list nunca llenara
             }
             PintarFilas();
             pnlmsj.Visible = false;
-            lblTotalItems.Text = contextMenuStrip1.Items.Count.ToString();
-        }
+           }
 
         private void Cargar_todos_Productos()
         {
@@ -284,6 +286,75 @@ namespace Microsell_Lite.Productos
             Cargar_todos_Productos();
         }
 
+        private void Seleccionar_Producto()
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+            if (ltsProductos.SelectedIndices.Count == 0)
+            {
 
+            }
+            else
+            {
+                string tipoProducto = "";
+                double stock = 0;
+                double importe = 0;
+
+                var lis = ltsProductos.SelectedItems[0];
+                tipoProducto = lis.SubItems[6].Text;
+
+                if (tipoProducto.Trim() == "Producto")
+                {
+                    lblNombre.Text = lis.SubItems[1].Text;
+                    lbl_idProducto.Text = lis.SubItems[0].Text;
+                    lblPrecioCompra.Text = lis.SubItems[3].Text;
+                    stock = Convert.ToDouble(lis.SubItems[2].Text);
+
+                    fil.Show();
+                    solo.lblStock.Text = stock.ToString();
+                    solo.ShowDialog();
+                    solo.ShowDialog();
+                    fil.Hide();
+
+                    if (solo.Tag.ToString() == "A")
+                    {
+                        lblCantidad.Text = solo.txtCantidad.Text;
+                        solo.txtCantidad.Text = "";
+
+                        importe = Convert.ToDouble(lblCantidad.Text) * Convert.ToDouble(lblPrecioCompra.Text);
+                        lblImporte.Text = importe.ToString("###0.00");
+
+                        this.Tag = "A";
+                        this.Close();
+                    }
+                }
+                else
+                {
+                     
+                }
+            }
+        }
+
+        private void ltsProductos_DoubleClick(object sender, EventArgs e)
+        {
+            Seleccionar_Producto();
+        }
+
+        private void ltsProductos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Seleccionar_Producto();
+            }
+        }
+
+        private void Frm_ListadoProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Tag = "";
+                this.Close();
+            }
+        }
     }
 }

@@ -177,6 +177,18 @@
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cls_UsuLogin.cs" />
+    <Compile Include="Compras\Frm_SoloCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Frm_SoloCantidad.Designer.cs">
+      <DependentUpon>Frm_SoloCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Frm_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Frm_Compras.Designer.cs">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Filtro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +331,12 @@
     <EmbeddedResource Include="Clientes\Frm_Explor_Cliente.resx">
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Frm_SoloCantidad.resx">
+      <DependentUpon>Frm_SoloCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Frm_Compras.resx">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Filtro.resx">
       <DependentUpon>Frm_Filtro.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,7 +422,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Compras\" />
     <Folder Include="Informe\" />
   </ItemGroup>
   <ItemGroup>
