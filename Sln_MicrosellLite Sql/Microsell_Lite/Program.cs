@@ -20,7 +20,7 @@ namespace Microsell_Lite
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_ListadoCliente());
+            Application.Run(new Frm_Login());
         }
     }
 }

@@ -306,6 +306,7 @@ namespace Microsell_Lite.Productos
                 }
                 producto.Pre_Venta_Menor = Convert.ToDouble(txtPrecioVentaMenor.Text);
                 producto.Pre_Venta_Mayor = Convert.ToDouble(txtPrecioVentaMayor.Text);
+                producto.Pre_Venta = Convert.ToDouble(txtPrecioVenta.Text);
                 producto.UndMdida = cmbUnidadMedida.Text;
                 producto.PesoUnit = Convert.ToDouble(txtPesoUnit.Text);
                 producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);

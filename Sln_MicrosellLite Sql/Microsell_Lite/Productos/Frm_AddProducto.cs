@@ -296,6 +296,7 @@ namespace Microsell_Lite.Productos
                 producto.Utilidad = Convert.ToDouble(txtUtilidad.Text);
                 producto.Pre_compra = Convert.ToDouble(txtPrecioCompra.Text);
                 producto.StockActual = 0;
+                producto.Pre_Venta = Convert.ToDouble(txtPrecioVenta.Text);
                 producto.IdCat = Convert.ToInt32(lblidcat.Text);
                 producto.IdMar = Convert.ToInt32(lblidmarca.Text);
                 if (xFotoruta.Trim().Length < 5)
