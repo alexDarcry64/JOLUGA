@@ -14,9 +14,9 @@ using Prj_Capa_Datos;
 
 namespace Microsell_Lite.Clientes
 {
-    public partial class Frm_AddCliente : Form
+    public partial class Frm_EditCliente : Form
     {
-        public Frm_AddCliente()
+        public Frm_EditCliente()
         {
             InitializeComponent();
         }
@@ -24,6 +24,7 @@ namespace Microsell_Lite.Clientes
         private void Frm_Reg_Prod_Load(object sender, EventArgs e)
         {
             txtIdCliente.Text = RN_TipoDoc.RN_Nro_id(8);
+            Buscar_Cliente_Editar(this.Tag.ToString());
             Cargar_Distritos();
         }
 
@@ -53,13 +54,11 @@ namespace Microsell_Lite.Clientes
             {
                 if(openFileDialog1.ShowDialog()==DialogResult.OK)
                 {
-                    xFotoruta = openFileDialog1.FileName;
                 }
             }
             catch(Exception ex)
             {
-                xFotoruta = Application.StartupPath + @"\user.png";
-                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
+                MessageBox.Show("Error al Guardar el Cliente" + ex.Message);
             }
         }
 
@@ -82,7 +81,7 @@ namespace Microsell_Lite.Clientes
             return true;
         }
 
-        private void Registrar_Cliente()
+        private void Editar_Cliente()
         {
             RN_Cliente obj = new RN_Cliente();
             EN_Cliente cli = new EN_Cliente();
@@ -100,21 +99,20 @@ namespace Microsell_Lite.Clientes
                 cli.FechaAniv = dtpFechaAniv.Value;
                 cli.LimiteCred = Convert.ToDouble(txtLimiteCredito.Text);
 
-                obj.RN_Insertar_Cliente(cli);
+                obj.RN_Editar_Cliente(cli);
 
-                if (BD_Cliente.guardado == true)
+                if (BD_Cliente.editado == true)
                 {
-                    RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(8);
                     limpiar();
 
                     this.Tag = "A";
                     this.Close();
-                    MessageBox.Show("El cliente se ha insertado correctamente", "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El cliente se ha editado correctamente", "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message, "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error al editar:" + ex.Message, "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -152,7 +150,34 @@ namespace Microsell_Lite.Clientes
         {
             if(Validar_Texbox()==true)
             {
-                Registrar_Cliente();
+                Editar_Cliente();
+            }
+        }
+
+        private void Buscar_Cliente_Editar(string idCliente)
+        {
+            RN_Cliente obj = new RN_Cliente();
+            DataTable data = new DataTable();
+            try
+            {
+                data = obj.RN_Buscar_Cliente_Valor(idCliente,"Activo");
+                if (data.Rows.Count > 0)
+                {
+                    txtIdCliente.Text = Convert.ToString(data.Rows[0]["Id_Cliente"]);
+                    txtRazonSocial.Text = Convert.ToString(data.Rows[0]["Razon_Social_Nombres"]);
+                    txtRfc.Text = Convert.ToString(data.Rows[0]["RFC"]);
+                    txtDireccion.Text = Convert.ToString(data.Rows[0]["Direccion"]);
+                    txtTelefono.Text = Convert.ToString(data.Rows[0]["Telefono"]);
+                    txtEmail.Text = Convert.ToString(data.Rows[0]["E_Mail"]);
+                    txtLimiteCredito.Text = Convert.ToString(data.Rows[0]["Limit_Credit"]);
+                    txtNombreContacto.Text = Convert.ToString(data.Rows[0]["Contacto"]);
+                    cbmDistrito.Text = Convert.ToString(data.Rows[0]["Distrito"]);
+                    dtpFechaAniv.Text = Convert.ToString(data.Rows[0]["Fcha_Ncmnto_Anivsrio"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar:" + ex.Message, "Form Add Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

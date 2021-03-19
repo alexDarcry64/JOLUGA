@@ -1,6 +1,6 @@
 ﻿namespace Microsell_Lite.Clientes
 {
-    partial class Frm_AddCliente
+    partial class Frm_EditCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AddCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_EditCliente));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -388,7 +388,7 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Limite de Credito:";
             // 
-            // Frm_AddCliente
+            // Frm_EditCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -419,7 +419,7 @@
             this.Controls.Add(this.btn_cancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_AddCliente";
+            this.Name = "Frm_EditCliente";
             this.Text = "Frm_Reg_Prod";
             this.Load += new System.EventHandler(this.Frm_Reg_Prod_Load);
             this.pnl_titu.ResumeLayout(false);

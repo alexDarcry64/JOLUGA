@@ -62,10 +62,10 @@ namespace Microsell_Lite.Clientes
             //configurar las columnas
 
             lis.Columns.Add("ID", 100, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Nombre del Cliente", 240, HorizontalAlignment.Left);//0
-            lis.Columns.Add("RFC", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Direccion", 80, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Telefono", 80, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Nombre del Cliente", 210, HorizontalAlignment.Left);//0
+            lis.Columns.Add("RFC", 150, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Direccion", 150, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Telefono", 100, HorizontalAlignment.Left);//0
             lis.Columns.Add("Limite Cred", 80, HorizontalAlignment.Left);//0
             lis.Columns.Add("Estado", 100, HorizontalAlignment.Left);//0
         }
@@ -206,7 +206,7 @@ namespace Microsell_Lite.Clientes
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia ver = new Frm_Advertencia();
-            //Frm_EditCliente edi = new Frm_EditCliente();
+            Frm_EditCliente edi = new Frm_EditCliente();
 
             if (ltsProductos.SelectedIndices.Count == 0)
             {
@@ -220,14 +220,14 @@ namespace Microsell_Lite.Clientes
                 string idproducto = lis.SubItems[0].Text;
 
                 fil.Show();
-                //edi.Tag = idproducto;
-                //edi.ShowDialog();
+                edi.Tag = idproducto;
+                edi.ShowDialog();
                 fil.Hide();
 
-                //if(edi.Tag.ToString()=="A")
-                //{
-                //    Cargar_todos_Clientes();
-                //}
+                if(edi.Tag.ToString()=="A")
+                {
+                    Cargar_todos_Clientes();
+                }
                 
             }
         }
