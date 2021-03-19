@@ -178,6 +178,21 @@ namespace Microsell_Lite.Productos
         {
             txtPrecioCompra.Text = txtPrecioCompra.Text.Replace(",",".");
             txtPrecioCompra.SelectionStart = txtPrecioCompra.Text.Length;
+
+            try
+            {
+                if (txtUtilidad.Text.Trim() == "") { return; }
+                if (txtPrecioCompra.Text.Trim() == "") { return; }
+
+                double precio_compra = 0;
+
+                precio_compra = Convert.ToDouble(txtPrecioCompra.Text) * Convert.ToDouble(txtUtilidad.Text);
+                txtPrecioVentaMenor.Text = precio_compra.ToString("###0.00");
+            }
+            catch (Exception ex)
+            {
+                string sms = ex.Message;
+            }
         }
 
         private void txtPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)

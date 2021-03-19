@@ -166,8 +166,9 @@
             this.Pnl_Menu.Controls.Add(this.PicLogo);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(1344, 55);
+            this.Pnl_Menu.Size = new System.Drawing.Size(1792, 68);
             this.Pnl_Menu.TabIndex = 2;
             this.Pnl_Menu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Menu_MouseMove);
             // 
@@ -181,9 +182,10 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(1301, 10);
+            this.btn_cerrar.Location = new System.Drawing.Point(1735, 12);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(32, 32);
+            this.btn_cerrar.Size = new System.Drawing.Size(43, 39);
             this.btn_cerrar.TabIndex = 5;
             this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -193,6 +195,7 @@
             // 
             this.MenuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bt_MenuPrinci,
             this.Bt_Config,
@@ -201,10 +204,11 @@
             this.bt_salidadinero,
             this.LiToolStripMenuItem,
             this.bt_EntradaDinero});
-            this.MenuStrip1.Location = new System.Drawing.Point(186, 14);
+            this.MenuStrip1.Location = new System.Drawing.Point(248, 17);
             this.MenuStrip1.Name = "MenuStrip1";
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.MenuStrip1.ShowItemToolTips = true;
-            this.MenuStrip1.Size = new System.Drawing.Size(286, 32);
+            this.MenuStrip1.Size = new System.Drawing.Size(299, 32);
             this.MenuStrip1.TabIndex = 7;
             // 
             // bt_MenuPrinci
@@ -225,7 +229,7 @@
             this.bt_MenuPrinci.Image = ((System.Drawing.Image)(resources.GetObject("bt_MenuPrinci.Image")));
             this.bt_MenuPrinci.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bt_MenuPrinci.Name = "bt_MenuPrinci";
-            this.bt_MenuPrinci.Size = new System.Drawing.Size(82, 28);
+            this.bt_MenuPrinci.Size = new System.Drawing.Size(93, 28);
             this.bt_MenuPrinci.Text = "Menu";
             this.bt_MenuPrinci.ToolTipText = "Menu Principal";
             // 
@@ -247,7 +251,7 @@
             this.SeccionComprasToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("SeccionComprasToolStripMenuItem1.Image")));
             this.SeccionComprasToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SeccionComprasToolStripMenuItem1.Name = "SeccionComprasToolStripMenuItem1";
-            this.SeccionComprasToolStripMenuItem1.Size = new System.Drawing.Size(214, 30);
+            this.SeccionComprasToolStripMenuItem1.Size = new System.Drawing.Size(251, 30);
             this.SeccionComprasToolStripMenuItem1.Text = "Seccion Compras";
             // 
             // Bt_RegistrarUnaCompra
@@ -256,13 +260,13 @@
             this.Bt_RegistrarUnaCompra.Image = ((System.Drawing.Image)(resources.GetObject("Bt_RegistrarUnaCompra.Image")));
             this.Bt_RegistrarUnaCompra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_RegistrarUnaCompra.Name = "Bt_RegistrarUnaCompra";
-            this.Bt_RegistrarUnaCompra.Size = new System.Drawing.Size(321, 26);
+            this.Bt_RegistrarUnaCompra.Size = new System.Drawing.Size(382, 26);
             this.Bt_RegistrarUnaCompra.Text = "Registrar una Compra";
             // 
             // ToolStripSeparator16
             // 
             this.ToolStripSeparator16.Name = "ToolStripSeparator16";
-            this.ToolStripSeparator16.Size = new System.Drawing.Size(318, 6);
+            this.ToolStripSeparator16.Size = new System.Drawing.Size(379, 6);
             // 
             // Bt_EliminarFacturaCompra
             // 
@@ -270,56 +274,56 @@
             this.Bt_EliminarFacturaCompra.Image = ((System.Drawing.Image)(resources.GetObject("Bt_EliminarFacturaCompra.Image")));
             this.Bt_EliminarFacturaCompra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_EliminarFacturaCompra.Name = "Bt_EliminarFacturaCompra";
-            this.Bt_EliminarFacturaCompra.Size = new System.Drawing.Size(321, 26);
+            this.Bt_EliminarFacturaCompra.Size = new System.Drawing.Size(382, 26);
             this.Bt_EliminarFacturaCompra.Text = "Eliminar Factura Compra";
             // 
             // ToolStripSeparator17
             // 
             this.ToolStripSeparator17.Name = "ToolStripSeparator17";
-            this.ToolStripSeparator17.Size = new System.Drawing.Size(318, 6);
+            this.ToolStripSeparator17.Size = new System.Drawing.Size(379, 6);
             // 
             // ConsultasToolStripMenuItem
             // 
             this.ConsultasToolStripMenuItem.Enabled = false;
             this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
-            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(321, 26);
+            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(382, 26);
             this.ConsultasToolStripMenuItem.Text = "========Consultas=========";
             // 
             // Bt_AbrirExploradorDeCompras
             // 
             this.Bt_AbrirExploradorDeCompras.Enabled = false;
             this.Bt_AbrirExploradorDeCompras.Name = "Bt_AbrirExploradorDeCompras";
-            this.Bt_AbrirExploradorDeCompras.Size = new System.Drawing.Size(321, 26);
+            this.Bt_AbrirExploradorDeCompras.Size = new System.Drawing.Size(382, 26);
             this.Bt_AbrirExploradorDeCompras.Text = "Abrir Explorador de Compras";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(318, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(379, 6);
             // 
             // Bt_AbrirExploradorDeProveedores
             // 
             this.Bt_AbrirExploradorDeProveedores.Enabled = false;
             this.Bt_AbrirExploradorDeProveedores.Name = "Bt_AbrirExploradorDeProveedores";
-            this.Bt_AbrirExploradorDeProveedores.Size = new System.Drawing.Size(321, 26);
+            this.Bt_AbrirExploradorDeProveedores.Size = new System.Drawing.Size(382, 26);
             this.Bt_AbrirExploradorDeProveedores.Text = "Abrir Explorador de Proveedores";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(318, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(379, 6);
             // 
             // VerComprasACreditoToolStripMenuItem
             // 
             this.VerComprasACreditoToolStripMenuItem.Enabled = false;
             this.VerComprasACreditoToolStripMenuItem.Name = "VerComprasACreditoToolStripMenuItem";
-            this.VerComprasACreditoToolStripMenuItem.Size = new System.Drawing.Size(321, 26);
+            this.VerComprasACreditoToolStripMenuItem.Size = new System.Drawing.Size(382, 26);
             this.VerComprasACreditoToolStripMenuItem.Text = "Ver Compras a Credito";
             // 
             // ToolStripSeparator10
             // 
             this.ToolStripSeparator10.Name = "ToolStripSeparator10";
-            this.ToolStripSeparator10.Size = new System.Drawing.Size(211, 6);
+            this.ToolStripSeparator10.Size = new System.Drawing.Size(248, 6);
             // 
             // SeccionCajaSToolStripMenuItem
             // 
@@ -337,7 +341,7 @@
             this.SeccionCajaSToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SeccionCajaSToolStripMenuItem.Image")));
             this.SeccionCajaSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SeccionCajaSToolStripMenuItem.Name = "SeccionCajaSToolStripMenuItem";
-            this.SeccionCajaSToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.SeccionCajaSToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
             this.SeccionCajaSToolStripMenuItem.Text = "Seccion de Caja";
             // 
             // Bt_AperturarCajaDelDia
@@ -346,13 +350,13 @@
             this.Bt_AperturarCajaDelDia.Image = ((System.Drawing.Image)(resources.GetObject("Bt_AperturarCajaDelDia.Image")));
             this.Bt_AperturarCajaDelDia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_AperturarCajaDelDia.Name = "Bt_AperturarCajaDelDia";
-            this.Bt_AperturarCajaDelDia.Size = new System.Drawing.Size(263, 26);
+            this.Bt_AperturarCajaDelDia.Size = new System.Drawing.Size(311, 26);
             this.Bt_AperturarCajaDelDia.Text = "Aperturar Caja del Dia";
             // 
             // ToolStripSeparator23
             // 
             this.ToolStripSeparator23.Name = "ToolStripSeparator23";
-            this.ToolStripSeparator23.Size = new System.Drawing.Size(260, 6);
+            this.ToolStripSeparator23.Size = new System.Drawing.Size(308, 6);
             // 
             // Bt_RegistrarGastos
             // 
@@ -360,13 +364,13 @@
             this.Bt_RegistrarGastos.Image = ((System.Drawing.Image)(resources.GetObject("Bt_RegistrarGastos.Image")));
             this.Bt_RegistrarGastos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_RegistrarGastos.Name = "Bt_RegistrarGastos";
-            this.Bt_RegistrarGastos.Size = new System.Drawing.Size(263, 26);
+            this.Bt_RegistrarGastos.Size = new System.Drawing.Size(311, 26);
             this.Bt_RegistrarGastos.Text = "Registrar Gastos";
             // 
             // ToolStripSeparator24
             // 
             this.ToolStripSeparator24.Name = "ToolStripSeparator24";
-            this.ToolStripSeparator24.Size = new System.Drawing.Size(260, 6);
+            this.ToolStripSeparator24.Size = new System.Drawing.Size(308, 6);
             // 
             // Bt_RegistrarOtrosIngresos
             // 
@@ -374,26 +378,26 @@
             this.Bt_RegistrarOtrosIngresos.Image = ((System.Drawing.Image)(resources.GetObject("Bt_RegistrarOtrosIngresos.Image")));
             this.Bt_RegistrarOtrosIngresos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_RegistrarOtrosIngresos.Name = "Bt_RegistrarOtrosIngresos";
-            this.Bt_RegistrarOtrosIngresos.Size = new System.Drawing.Size(263, 26);
+            this.Bt_RegistrarOtrosIngresos.Size = new System.Drawing.Size(311, 26);
             this.Bt_RegistrarOtrosIngresos.Text = "Registrar Otros Ingresos";
             // 
             // ToolStripSeparator3
             // 
             this.ToolStripSeparator3.Name = "ToolStripSeparator3";
-            this.ToolStripSeparator3.Size = new System.Drawing.Size(260, 6);
+            this.ToolStripSeparator3.Size = new System.Drawing.Size(308, 6);
             // 
             // ConsultasToolStripMenuItem2
             // 
             this.ConsultasToolStripMenuItem2.Enabled = false;
             this.ConsultasToolStripMenuItem2.Name = "ConsultasToolStripMenuItem2";
-            this.ConsultasToolStripMenuItem2.Size = new System.Drawing.Size(263, 26);
+            this.ConsultasToolStripMenuItem2.Size = new System.Drawing.Size(311, 26);
             this.ConsultasToolStripMenuItem2.Text = "-------- Consultas --------";
             // 
             // Bt_VerMovimientoDeCaja
             // 
             this.Bt_VerMovimientoDeCaja.Enabled = false;
             this.Bt_VerMovimientoDeCaja.Name = "Bt_VerMovimientoDeCaja";
-            this.Bt_VerMovimientoDeCaja.Size = new System.Drawing.Size(263, 26);
+            this.Bt_VerMovimientoDeCaja.Size = new System.Drawing.Size(311, 26);
             this.Bt_VerMovimientoDeCaja.Text = "Ver Movimiento de Caja";
             // 
             // SeccionVentasToolStripMenuItem1
@@ -418,7 +422,7 @@
             this.SeccionVentasToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("SeccionVentasToolStripMenuItem1.Image")));
             this.SeccionVentasToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SeccionVentasToolStripMenuItem1.Name = "SeccionVentasToolStripMenuItem1";
-            this.SeccionVentasToolStripMenuItem1.Size = new System.Drawing.Size(214, 30);
+            this.SeccionVentasToolStripMenuItem1.Size = new System.Drawing.Size(251, 30);
             this.SeccionVentasToolStripMenuItem1.Text = "Seccion Ventas";
             // 
             // Bt_VentanaDeFacturación
@@ -427,7 +431,7 @@
             this.Bt_VentanaDeFacturación.Image = ((System.Drawing.Image)(resources.GetObject("Bt_VentanaDeFacturación.Image")));
             this.Bt_VentanaDeFacturación.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_VentanaDeFacturación.Name = "Bt_VentanaDeFacturación";
-            this.Bt_VentanaDeFacturación.Size = new System.Drawing.Size(268, 26);
+            this.Bt_VentanaDeFacturación.Size = new System.Drawing.Size(318, 26);
             this.Bt_VentanaDeFacturación.Text = "Atender una Cotizacion";
             this.Bt_VentanaDeFacturación.ToolTipText = "Esta Opcion abrirá la Ventana de Atención al Cliente\r\npara que puedas Vender, Emi" +
     "tiendo Boleta, Facturas, Notas\r\n";
@@ -435,7 +439,7 @@
             // ToolStripSeparator18
             // 
             this.ToolStripSeparator18.Name = "ToolStripSeparator18";
-            this.ToolStripSeparator18.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator18.Size = new System.Drawing.Size(315, 6);
             // 
             // Bt_crearUnaCotización
             // 
@@ -443,14 +447,14 @@
             this.Bt_crearUnaCotización.Image = ((System.Drawing.Image)(resources.GetObject("Bt_crearUnaCotización.Image")));
             this.Bt_crearUnaCotización.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_crearUnaCotización.Name = "Bt_crearUnaCotización";
-            this.Bt_crearUnaCotización.Size = new System.Drawing.Size(268, 26);
+            this.Bt_crearUnaCotización.Size = new System.Drawing.Size(318, 26);
             this.Bt_crearUnaCotización.Text = "Crear una Cotización";
             this.Bt_crearUnaCotización.ToolTipText = "Es una Area Especial, para que Puedas \r\nCrear tus Cotizaciones sin Impedimento";
             // 
             // ToolStripSeparator19
             // 
             this.ToolStripSeparator19.Name = "ToolStripSeparator19";
-            this.ToolStripSeparator19.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator19.Size = new System.Drawing.Size(315, 6);
             // 
             // Bt_CajearUnaNotaVenta
             // 
@@ -461,99 +465,99 @@
             this.ToolStripSeparator38,
             this.Bt_DuplicarUnaNota});
             this.Bt_CajearUnaNotaVenta.Name = "Bt_CajearUnaNotaVenta";
-            this.Bt_CajearUnaNotaVenta.Size = new System.Drawing.Size(268, 26);
+            this.Bt_CajearUnaNotaVenta.Size = new System.Drawing.Size(318, 26);
             this.Bt_CajearUnaNotaVenta.Text = "Canje de Documentos";
             // 
             // Bt_CanjearUnaNotaVenta
             // 
             this.Bt_CanjearUnaNotaVenta.Enabled = false;
             this.Bt_CanjearUnaNotaVenta.Name = "Bt_CanjearUnaNotaVenta";
-            this.Bt_CanjearUnaNotaVenta.Size = new System.Drawing.Size(296, 24);
+            this.Bt_CanjearUnaNotaVenta.Size = new System.Drawing.Size(362, 26);
             this.Bt_CanjearUnaNotaVenta.Text = "Canjear una Nota Venta";
             // 
             // ToolStripSeparator37
             // 
             this.ToolStripSeparator37.Name = "ToolStripSeparator37";
-            this.ToolStripSeparator37.Size = new System.Drawing.Size(293, 6);
+            this.ToolStripSeparator37.Size = new System.Drawing.Size(359, 6);
             // 
             // Bt_CanjearVariasNotas
             // 
             this.Bt_CanjearVariasNotas.Enabled = false;
             this.Bt_CanjearVariasNotas.Name = "Bt_CanjearVariasNotas";
-            this.Bt_CanjearVariasNotas.Size = new System.Drawing.Size(296, 24);
+            this.Bt_CanjearVariasNotas.Size = new System.Drawing.Size(362, 26);
             this.Bt_CanjearVariasNotas.Text = "Canjear Varias Notas";
             // 
             // ToolStripSeparator38
             // 
             this.ToolStripSeparator38.Name = "ToolStripSeparator38";
-            this.ToolStripSeparator38.Size = new System.Drawing.Size(293, 6);
+            this.ToolStripSeparator38.Size = new System.Drawing.Size(359, 6);
             // 
             // Bt_DuplicarUnaNota
             // 
             this.Bt_DuplicarUnaNota.Enabled = false;
             this.Bt_DuplicarUnaNota.Name = "Bt_DuplicarUnaNota";
-            this.Bt_DuplicarUnaNota.Size = new System.Drawing.Size(296, 24);
+            this.Bt_DuplicarUnaNota.Size = new System.Drawing.Size(362, 26);
             this.Bt_DuplicarUnaNota.Text = "Duplicar Documento Anulado";
             // 
             // ToolStripSeparator22
             // 
             this.ToolStripSeparator22.Name = "ToolStripSeparator22";
-            this.ToolStripSeparator22.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator22.Size = new System.Drawing.Size(315, 6);
             // 
             // ConsultasToolStripMenuItem1
             // 
             this.ConsultasToolStripMenuItem1.Enabled = false;
             this.ConsultasToolStripMenuItem1.Name = "ConsultasToolStripMenuItem1";
-            this.ConsultasToolStripMenuItem1.Size = new System.Drawing.Size(268, 26);
+            this.ConsultasToolStripMenuItem1.Size = new System.Drawing.Size(318, 26);
             this.ConsultasToolStripMenuItem1.Text = "------------ Consultas -------";
             // 
             // Bt_VerDocumentosEmitidos
             // 
             this.Bt_VerDocumentosEmitidos.Enabled = false;
             this.Bt_VerDocumentosEmitidos.Name = "Bt_VerDocumentosEmitidos";
-            this.Bt_VerDocumentosEmitidos.Size = new System.Drawing.Size(268, 26);
+            this.Bt_VerDocumentosEmitidos.Size = new System.Drawing.Size(318, 26);
             this.Bt_VerDocumentosEmitidos.Text = "Ver Documentos Emitidos";
             // 
             // ToolStripSeparator2
             // 
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(315, 6);
             // 
             // Bt_VerCotizacionesEmitidas
             // 
             this.Bt_VerCotizacionesEmitidas.Enabled = false;
             this.Bt_VerCotizacionesEmitidas.Name = "Bt_VerCotizacionesEmitidas";
-            this.Bt_VerCotizacionesEmitidas.Size = new System.Drawing.Size(268, 26);
+            this.Bt_VerCotizacionesEmitidas.Size = new System.Drawing.Size(318, 26);
             this.Bt_VerCotizacionesEmitidas.Text = "Ver Cotizaciones Emitidas";
             // 
             // ToolStripSeparator20
             // 
             this.ToolStripSeparator20.Name = "ToolStripSeparator20";
-            this.ToolStripSeparator20.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator20.Size = new System.Drawing.Size(315, 6);
             // 
             // Bt_VerCreditoDeClientes
             // 
             this.Bt_VerCreditoDeClientes.Enabled = false;
             this.Bt_VerCreditoDeClientes.Name = "Bt_VerCreditoDeClientes";
-            this.Bt_VerCreditoDeClientes.Size = new System.Drawing.Size(268, 26);
+            this.Bt_VerCreditoDeClientes.Size = new System.Drawing.Size(318, 26);
             this.Bt_VerCreditoDeClientes.Text = "Ver Credito de Clientes";
             // 
             // ToolStripSeparator44
             // 
             this.ToolStripSeparator44.Name = "ToolStripSeparator44";
-            this.ToolStripSeparator44.Size = new System.Drawing.Size(265, 6);
+            this.ToolStripSeparator44.Size = new System.Drawing.Size(315, 6);
             // 
             // bt_VerListadoDeClientes
             // 
             this.bt_VerListadoDeClientes.Enabled = false;
             this.bt_VerListadoDeClientes.Name = "bt_VerListadoDeClientes";
-            this.bt_VerListadoDeClientes.Size = new System.Drawing.Size(268, 26);
+            this.bt_VerListadoDeClientes.Size = new System.Drawing.Size(318, 26);
             this.bt_VerListadoDeClientes.Text = "Ver Listado de Clientes";
             // 
             // ToolStripSeparator11
             // 
             this.ToolStripSeparator11.Name = "ToolStripSeparator11";
-            this.ToolStripSeparator11.Size = new System.Drawing.Size(211, 6);
+            this.ToolStripSeparator11.Size = new System.Drawing.Size(248, 6);
             // 
             // AdministraciónToolStripMenuItem
             // 
@@ -576,93 +580,93 @@
             this.AdministraciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AdministraciónToolStripMenuItem.Image")));
             this.AdministraciónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AdministraciónToolStripMenuItem.Name = "AdministraciónToolStripMenuItem";
-            this.AdministraciónToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.AdministraciónToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
             this.AdministraciónToolStripMenuItem.Text = "Administración";
             // 
             // Bt_DevolverProductoConVale
             // 
             this.Bt_DevolverProductoConVale.Enabled = false;
             this.Bt_DevolverProductoConVale.Name = "Bt_DevolverProductoConVale";
-            this.Bt_DevolverProductoConVale.Size = new System.Drawing.Size(291, 24);
+            this.Bt_DevolverProductoConVale.Size = new System.Drawing.Size(352, 26);
             this.Bt_DevolverProductoConVale.Text = "Devolver producto con Vale";
             // 
             // ToolStripSeparator4
             // 
             this.ToolStripSeparator4.Name = "ToolStripSeparator4";
-            this.ToolStripSeparator4.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator4.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_EditarUnaVenta
             // 
             this.Bt_EditarUnaVenta.Enabled = false;
             this.Bt_EditarUnaVenta.Name = "Bt_EditarUnaVenta";
-            this.Bt_EditarUnaVenta.Size = new System.Drawing.Size(291, 24);
+            this.Bt_EditarUnaVenta.Size = new System.Drawing.Size(352, 26);
             this.Bt_EditarUnaVenta.Text = "Editar una Venta";
             // 
             // ToolStripSeparator28
             // 
             this.ToolStripSeparator28.Name = "ToolStripSeparator28";
-            this.ToolStripSeparator28.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator28.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_ConvertirVentaACredito
             // 
             this.Bt_ConvertirVentaACredito.Enabled = false;
             this.Bt_ConvertirVentaACredito.Name = "Bt_ConvertirVentaACredito";
-            this.Bt_ConvertirVentaACredito.Size = new System.Drawing.Size(291, 24);
+            this.Bt_ConvertirVentaACredito.Size = new System.Drawing.Size(352, 26);
             this.Bt_ConvertirVentaACredito.Text = "Convertir Venta a Credito";
             this.Bt_ConvertirVentaACredito.ToolTipText = "Ésta opcion te permite Crear un Crédito \r\na partir de una venta yá Efectuada";
             // 
             // ToolStripSeparator33
             // 
             this.ToolStripSeparator33.Name = "ToolStripSeparator33";
-            this.ToolStripSeparator33.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator33.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_HacerCierreDeCaja
             // 
             this.Bt_HacerCierreDeCaja.Enabled = false;
             this.Bt_HacerCierreDeCaja.Name = "Bt_HacerCierreDeCaja";
-            this.Bt_HacerCierreDeCaja.Size = new System.Drawing.Size(291, 24);
+            this.Bt_HacerCierreDeCaja.Size = new System.Drawing.Size(352, 26);
             this.Bt_HacerCierreDeCaja.Text = "Hacer Cierre de Caja";
             // 
             // ToolStripSeparator34
             // 
             this.ToolStripSeparator34.Name = "ToolStripSeparator34";
-            this.ToolStripSeparator34.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator34.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_RegistrarUsuarios
             // 
             this.Bt_RegistrarUsuarios.Enabled = false;
             this.Bt_RegistrarUsuarios.Name = "Bt_RegistrarUsuarios";
-            this.Bt_RegistrarUsuarios.Size = new System.Drawing.Size(291, 24);
+            this.Bt_RegistrarUsuarios.Size = new System.Drawing.Size(352, 26);
             this.Bt_RegistrarUsuarios.Text = "Registrar Usuarios";
             // 
             // ToolStripSeparator35
             // 
             this.ToolStripSeparator35.Name = "ToolStripSeparator35";
-            this.ToolStripSeparator35.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator35.Size = new System.Drawing.Size(349, 6);
             // 
             // ConsultasToolStripMenuItem5
             // 
             this.ConsultasToolStripMenuItem5.Enabled = false;
             this.ConsultasToolStripMenuItem5.Name = "ConsultasToolStripMenuItem5";
-            this.ConsultasToolStripMenuItem5.Size = new System.Drawing.Size(291, 24);
+            this.ConsultasToolStripMenuItem5.Size = new System.Drawing.Size(352, 26);
             this.ConsultasToolStripMenuItem5.Text = "------- Consultas ------------";
             // 
             // Bt_VerCierreDeCaja
             // 
             this.Bt_VerCierreDeCaja.Enabled = false;
             this.Bt_VerCierreDeCaja.Name = "Bt_VerCierreDeCaja";
-            this.Bt_VerCierreDeCaja.Size = new System.Drawing.Size(291, 24);
+            this.Bt_VerCierreDeCaja.Size = new System.Drawing.Size(352, 26);
             this.Bt_VerCierreDeCaja.Text = "Ver Cierre de Caja";
             // 
             // ToolStripSeparator36
             // 
             this.ToolStripSeparator36.Name = "ToolStripSeparator36";
-            this.ToolStripSeparator36.Size = new System.Drawing.Size(288, 6);
+            this.ToolStripSeparator36.Size = new System.Drawing.Size(349, 6);
             // 
             // ToolStripSeparator13
             // 
             this.ToolStripSeparator13.Name = "ToolStripSeparator13";
-            this.ToolStripSeparator13.Size = new System.Drawing.Size(211, 6);
+            this.ToolStripSeparator13.Size = new System.Drawing.Size(248, 6);
             // 
             // SeccionAlmacenToolStripMenuItem1
             // 
@@ -680,25 +684,25 @@
             this.SeccionAlmacenToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("SeccionAlmacenToolStripMenuItem1.Image")));
             this.SeccionAlmacenToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SeccionAlmacenToolStripMenuItem1.Name = "SeccionAlmacenToolStripMenuItem1";
-            this.SeccionAlmacenToolStripMenuItem1.Size = new System.Drawing.Size(214, 30);
+            this.SeccionAlmacenToolStripMenuItem1.Size = new System.Drawing.Size(251, 30);
             this.SeccionAlmacenToolStripMenuItem1.Text = "Seccion Almacen";
             // 
             // ToolStripSeparator31
             // 
             this.ToolStripSeparator31.Name = "ToolStripSeparator31";
-            this.ToolStripSeparator31.Size = new System.Drawing.Size(299, 6);
+            this.ToolStripSeparator31.Size = new System.Drawing.Size(356, 6);
             // 
             // ConsultasToolStripMenuItem3
             // 
             this.ConsultasToolStripMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ConsultasToolStripMenuItem3.Name = "ConsultasToolStripMenuItem3";
-            this.ConsultasToolStripMenuItem3.Size = new System.Drawing.Size(302, 26);
+            this.ConsultasToolStripMenuItem3.Size = new System.Drawing.Size(359, 26);
             this.ConsultasToolStripMenuItem3.Text = "------ Consultas ---------";
             // 
             // ToolStripSeparator25
             // 
             this.ToolStripSeparator25.Name = "ToolStripSeparator25";
-            this.ToolStripSeparator25.Size = new System.Drawing.Size(299, 6);
+            this.ToolStripSeparator25.Size = new System.Drawing.Size(356, 6);
             // 
             // bt_VerExploradorDeProductos
             // 
@@ -706,13 +710,13 @@
             this.bt_VerExploradorDeProductos.Image = ((System.Drawing.Image)(resources.GetObject("bt_VerExploradorDeProductos.Image")));
             this.bt_VerExploradorDeProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bt_VerExploradorDeProductos.Name = "bt_VerExploradorDeProductos";
-            this.bt_VerExploradorDeProductos.Size = new System.Drawing.Size(302, 26);
+            this.bt_VerExploradorDeProductos.Size = new System.Drawing.Size(359, 26);
             this.bt_VerExploradorDeProductos.Text = "Ver Explorador de Productos";
             // 
             // ToolStripSeparator26
             // 
             this.ToolStripSeparator26.Name = "ToolStripSeparator26";
-            this.ToolStripSeparator26.Size = new System.Drawing.Size(299, 6);
+            this.ToolStripSeparator26.Size = new System.Drawing.Size(356, 6);
             // 
             // bt_VerMovimientoDeProductos
             // 
@@ -720,13 +724,13 @@
             this.bt_VerMovimientoDeProductos.Image = ((System.Drawing.Image)(resources.GetObject("bt_VerMovimientoDeProductos.Image")));
             this.bt_VerMovimientoDeProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bt_VerMovimientoDeProductos.Name = "bt_VerMovimientoDeProductos";
-            this.bt_VerMovimientoDeProductos.Size = new System.Drawing.Size(302, 26);
+            this.bt_VerMovimientoDeProductos.Size = new System.Drawing.Size(359, 26);
             this.bt_VerMovimientoDeProductos.Text = "Ver Movimiento de Productos";
             // 
             // ToolStripSeparator1
             // 
             this.ToolStripSeparator1.Name = "ToolStripSeparator1";
-            this.ToolStripSeparator1.Size = new System.Drawing.Size(299, 6);
+            this.ToolStripSeparator1.Size = new System.Drawing.Size(356, 6);
             // 
             // Bt_ReporteDeProductos
             // 
@@ -734,13 +738,13 @@
             this.Bt_ReporteDeProductos.Image = ((System.Drawing.Image)(resources.GetObject("Bt_ReporteDeProductos.Image")));
             this.Bt_ReporteDeProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Bt_ReporteDeProductos.Name = "Bt_ReporteDeProductos";
-            this.Bt_ReporteDeProductos.Size = new System.Drawing.Size(302, 26);
+            this.Bt_ReporteDeProductos.Size = new System.Drawing.Size(359, 26);
             this.Bt_ReporteDeProductos.Text = "Reporte de Productos";
             // 
             // ToolStripSeparator15
             // 
             this.ToolStripSeparator15.Name = "ToolStripSeparator15";
-            this.ToolStripSeparator15.Size = new System.Drawing.Size(211, 6);
+            this.ToolStripSeparator15.Size = new System.Drawing.Size(248, 6);
             // 
             // MantenimientoToolStripMenuItem
             // 
@@ -757,46 +761,46 @@
             this.MantenimientoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MantenimientoToolStripMenuItem.Image")));
             this.MantenimientoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem";
-            this.MantenimientoToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.MantenimientoToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
             this.MantenimientoToolStripMenuItem.Text = "Mantenimiento";
             // 
             // Bt_LimpiarTemporalesDeGuia
             // 
             this.Bt_LimpiarTemporalesDeGuia.Name = "Bt_LimpiarTemporalesDeGuia";
-            this.Bt_LimpiarTemporalesDeGuia.Size = new System.Drawing.Size(288, 24);
+            this.Bt_LimpiarTemporalesDeGuia.Size = new System.Drawing.Size(352, 26);
             this.Bt_LimpiarTemporalesDeGuia.Text = "Limpiar Temporales de Guia";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_LimpiarTemporalesDeVenta
             // 
             this.Bt_LimpiarTemporalesDeVenta.Name = "Bt_LimpiarTemporalesDeVenta";
-            this.Bt_LimpiarTemporalesDeVenta.Size = new System.Drawing.Size(288, 24);
+            this.Bt_LimpiarTemporalesDeVenta.Size = new System.Drawing.Size(352, 26);
             this.Bt_LimpiarTemporalesDeVenta.Text = "Limpiar Temporales de Venta";
             // 
             // toolStripSeparator21
             // 
             this.toolStripSeparator21.Name = "toolStripSeparator21";
-            this.toolStripSeparator21.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator21.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_MantenimientoCategoria
             // 
             this.Bt_MantenimientoCategoria.Name = "Bt_MantenimientoCategoria";
-            this.Bt_MantenimientoCategoria.Size = new System.Drawing.Size(288, 24);
+            this.Bt_MantenimientoCategoria.Size = new System.Drawing.Size(352, 26);
             this.Bt_MantenimientoCategoria.Text = "Mantenimiento Categoria";
             // 
             // toolStripSeparator27
             // 
             this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator27.Size = new System.Drawing.Size(349, 6);
             // 
             // Bt_MantenimientoMarca
             // 
             this.Bt_MantenimientoMarca.Name = "Bt_MantenimientoMarca";
-            this.Bt_MantenimientoMarca.Size = new System.Drawing.Size(288, 24);
+            this.Bt_MantenimientoMarca.Size = new System.Drawing.Size(352, 26);
             this.Bt_MantenimientoMarca.Text = "Mantenimiento Marca";
             // 
             // Bt_Config
@@ -822,54 +826,54 @@
             // 
             this.Bt_RegistrarMiEmpresa.Enabled = false;
             this.Bt_RegistrarMiEmpresa.Name = "Bt_RegistrarMiEmpresa";
-            this.Bt_RegistrarMiEmpresa.Size = new System.Drawing.Size(237, 24);
+            this.Bt_RegistrarMiEmpresa.Size = new System.Drawing.Size(287, 26);
             this.Bt_RegistrarMiEmpresa.Text = "Editar Mi Empresa";
             // 
             // ToolStripSeparator7
             // 
             this.ToolStripSeparator7.Name = "ToolStripSeparator7";
-            this.ToolStripSeparator7.Size = new System.Drawing.Size(234, 6);
+            this.ToolStripSeparator7.Size = new System.Drawing.Size(284, 6);
             // 
             // Bt_EditarCorrelativos
             // 
             this.Bt_EditarCorrelativos.Enabled = false;
             this.Bt_EditarCorrelativos.Name = "Bt_EditarCorrelativos";
-            this.Bt_EditarCorrelativos.Size = new System.Drawing.Size(237, 24);
+            this.Bt_EditarCorrelativos.Size = new System.Drawing.Size(287, 26);
             this.Bt_EditarCorrelativos.Text = "Editar Correlativos";
             // 
             // ToolStripSeparator8
             // 
             this.ToolStripSeparator8.Name = "ToolStripSeparator8";
-            this.ToolStripSeparator8.Size = new System.Drawing.Size(234, 6);
+            this.ToolStripSeparator8.Size = new System.Drawing.Size(284, 6);
             // 
             // Bt_RestringirAcceso
             // 
             this.Bt_RestringirAcceso.Enabled = false;
             this.Bt_RestringirAcceso.Name = "Bt_RestringirAcceso";
-            this.Bt_RestringirAcceso.Size = new System.Drawing.Size(237, 24);
+            this.Bt_RestringirAcceso.Size = new System.Drawing.Size(287, 26);
             this.Bt_RestringirAcceso.Text = "Restringir Acceso";
             // 
             // ToolStripSeparator9
             // 
             this.ToolStripSeparator9.Name = "ToolStripSeparator9";
-            this.ToolStripSeparator9.Size = new System.Drawing.Size(234, 6);
+            this.ToolStripSeparator9.Size = new System.Drawing.Size(284, 6);
             // 
             // Bt_EditarTipoDeCambio
             // 
             this.Bt_EditarTipoDeCambio.Enabled = false;
             this.Bt_EditarTipoDeCambio.Name = "Bt_EditarTipoDeCambio";
-            this.Bt_EditarTipoDeCambio.Size = new System.Drawing.Size(237, 24);
+            this.Bt_EditarTipoDeCambio.Size = new System.Drawing.Size(287, 26);
             this.Bt_EditarTipoDeCambio.Text = "Editar Tipo de Cambio";
             // 
             // ToolStripSeparator12
             // 
             this.ToolStripSeparator12.Name = "ToolStripSeparator12";
-            this.ToolStripSeparator12.Size = new System.Drawing.Size(234, 6);
+            this.ToolStripSeparator12.Size = new System.Drawing.Size(284, 6);
             // 
             // ToolStripSeparator41
             // 
             this.ToolStripSeparator41.Name = "ToolStripSeparator41";
-            this.ToolStripSeparator41.Size = new System.Drawing.Size(234, 6);
+            this.ToolStripSeparator41.Size = new System.Drawing.Size(284, 6);
             // 
             // Bt_Configu
             // 
@@ -924,9 +928,10 @@
             this.btn_minimi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimi.ForeColor = System.Drawing.Color.White;
             this.btn_minimi.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimi.Image")));
-            this.btn_minimi.Location = new System.Drawing.Point(1260, 9);
+            this.btn_minimi.Location = new System.Drawing.Point(1680, 11);
+            this.btn_minimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_minimi.Name = "btn_minimi";
-            this.btn_minimi.Size = new System.Drawing.Size(32, 32);
+            this.btn_minimi.Size = new System.Drawing.Size(43, 39);
             this.btn_minimi.TabIndex = 6;
             this.btn_minimi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_minimi.UseVisualStyleBackColor = true;
@@ -938,8 +943,9 @@
             this.PicLogo.ForeColor = System.Drawing.Color.Black;
             this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
             this.PicLogo.Location = new System.Drawing.Point(0, 0);
+            this.PicLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(172, 55);
+            this.PicLogo.Size = new System.Drawing.Size(229, 68);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicLogo.TabIndex = 3;
             this.PicLogo.TabStop = false;
@@ -964,18 +970,20 @@
             this.PanelLateral.Controls.Add(this.lbl_Rol);
             this.PanelLateral.Controls.Add(this.lbl_user);
             this.PanelLateral.Controls.Add(this.PicUser);
-            this.PanelLateral.Location = new System.Drawing.Point(0, 56);
+            this.PanelLateral.Location = new System.Drawing.Point(0, 69);
+            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(40, 643);
+            this.PanelLateral.Size = new System.Drawing.Size(53, 791);
             this.PanelLateral.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 641);
+            this.label1.Location = new System.Drawing.Point(0, 789);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 2);
+            this.label1.Size = new System.Drawing.Size(52, 2);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -983,17 +991,19 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Gainsboro;
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(39, 0);
+            this.label3.Location = new System.Drawing.Point(52, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1, 643);
+            this.label3.Size = new System.Drawing.Size(1, 791);
             this.label3.TabIndex = 404;
             // 
             // PicUser_2
             // 
             this.PicUser_2.Image = ((System.Drawing.Image)(resources.GetObject("PicUser_2.Image")));
-            this.PicUser_2.Location = new System.Drawing.Point(4, 49);
+            this.PicUser_2.Location = new System.Drawing.Point(5, 60);
+            this.PicUser_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PicUser_2.Name = "PicUser_2";
-            this.PicUser_2.Size = new System.Drawing.Size(33, 44);
+            this.PicUser_2.Size = new System.Drawing.Size(44, 54);
             this.PicUser_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicUser_2.TabIndex = 403;
             this.PicUser_2.TabStop = false;
@@ -1010,9 +1020,10 @@
             this.bt_DocEmitidos.ForeColor = System.Drawing.Color.DimGray;
             this.bt_DocEmitidos.Image = ((System.Drawing.Image)(resources.GetObject("bt_DocEmitidos.Image")));
             this.bt_DocEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_DocEmitidos.Location = new System.Drawing.Point(3, 337);
+            this.bt_DocEmitidos.Location = new System.Drawing.Point(4, 415);
+            this.bt_DocEmitidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_DocEmitidos.Name = "bt_DocEmitidos";
-            this.bt_DocEmitidos.Size = new System.Drawing.Size(238, 32);
+            this.bt_DocEmitidos.Size = new System.Drawing.Size(317, 39);
             this.bt_DocEmitidos.TabIndex = 402;
             this.bt_DocEmitidos.Text = "       Ver Facturas y Otras Ventas";
             this.bt_DocEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1020,7 +1031,6 @@
             // 
             // bt_cliente
             // 
-            this.bt_cliente.Enabled = false;
             this.bt_cliente.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.bt_cliente.FlatAppearance.BorderSize = 0;
             this.bt_cliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
@@ -1030,13 +1040,15 @@
             this.bt_cliente.ForeColor = System.Drawing.Color.DimGray;
             this.bt_cliente.Image = ((System.Drawing.Image)(resources.GetObject("bt_cliente.Image")));
             this.bt_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_cliente.Location = new System.Drawing.Point(4, 302);
+            this.bt_cliente.Location = new System.Drawing.Point(5, 372);
+            this.bt_cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_cliente.Name = "bt_cliente";
-            this.bt_cliente.Size = new System.Drawing.Size(238, 32);
+            this.bt_cliente.Size = new System.Drawing.Size(317, 39);
             this.bt_cliente.TabIndex = 401;
             this.bt_cliente.Text = "       Listado de Clientes";
             this.bt_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cliente.UseVisualStyleBackColor = true;
+            this.bt_cliente.Click += new System.EventHandler(this.bt_cliente_Click);
             // 
             // bt_almacen
             // 
@@ -1049,9 +1061,10 @@
             this.bt_almacen.ForeColor = System.Drawing.Color.DimGray;
             this.bt_almacen.Image = ((System.Drawing.Image)(resources.GetObject("bt_almacen.Image")));
             this.bt_almacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_almacen.Location = new System.Drawing.Point(3, 264);
+            this.bt_almacen.Location = new System.Drawing.Point(4, 325);
+            this.bt_almacen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_almacen.Name = "bt_almacen";
-            this.bt_almacen.Size = new System.Drawing.Size(238, 32);
+            this.bt_almacen.Size = new System.Drawing.Size(317, 39);
             this.bt_almacen.TabIndex = 400;
             this.bt_almacen.Text = "      Almacen de Productos";
             this.bt_almacen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1070,9 +1083,10 @@
             this.Bt_cotizar.ForeColor = System.Drawing.Color.DimGray;
             this.Bt_cotizar.Image = ((System.Drawing.Image)(resources.GetObject("Bt_cotizar.Image")));
             this.Bt_cotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Bt_cotizar.Location = new System.Drawing.Point(3, 229);
+            this.Bt_cotizar.Location = new System.Drawing.Point(4, 282);
+            this.Bt_cotizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Bt_cotizar.Name = "Bt_cotizar";
-            this.Bt_cotizar.Size = new System.Drawing.Size(238, 32);
+            this.Bt_cotizar.Size = new System.Drawing.Size(317, 39);
             this.Bt_cotizar.TabIndex = 399;
             this.Bt_cotizar.Text = "      Crear Cotizaciones";
             this.Bt_cotizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1089,9 +1103,10 @@
             this.Bt_ventas.ForeColor = System.Drawing.Color.DimGray;
             this.Bt_ventas.Image = ((System.Drawing.Image)(resources.GetObject("Bt_ventas.Image")));
             this.Bt_ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Bt_ventas.Location = new System.Drawing.Point(3, 194);
+            this.Bt_ventas.Location = new System.Drawing.Point(4, 239);
+            this.Bt_ventas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Bt_ventas.Name = "Bt_ventas";
-            this.Bt_ventas.Size = new System.Drawing.Size(238, 32);
+            this.Bt_ventas.Size = new System.Drawing.Size(317, 39);
             this.Bt_ventas.TabIndex = 398;
             this.Bt_ventas.Text = "      Ventana de Ventas";
             this.Bt_ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1108,9 +1123,10 @@
             this.btn_hide.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hide.ForeColor = System.Drawing.Color.White;
             this.btn_hide.Image = ((System.Drawing.Image)(resources.GetObject("btn_hide.Image")));
-            this.btn_hide.Location = new System.Drawing.Point(9, 4);
+            this.btn_hide.Location = new System.Drawing.Point(12, 5);
+            this.btn_hide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(24, 34);
+            this.btn_hide.Size = new System.Drawing.Size(32, 42);
             this.btn_hide.TabIndex = 21;
             this.btn_hide.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_hide.UseVisualStyleBackColor = true;
@@ -1128,9 +1144,10 @@
             this.bt_compras.ForeColor = System.Drawing.Color.DimGray;
             this.bt_compras.Image = ((System.Drawing.Image)(resources.GetObject("bt_compras.Image")));
             this.bt_compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_compras.Location = new System.Drawing.Point(3, 159);
+            this.bt_compras.Location = new System.Drawing.Point(4, 196);
+            this.bt_compras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_compras.Name = "bt_compras";
-            this.bt_compras.Size = new System.Drawing.Size(238, 32);
+            this.bt_compras.Size = new System.Drawing.Size(317, 39);
             this.bt_compras.TabIndex = 397;
             this.bt_compras.Text = "      Registra tus Compras";
             this.bt_compras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1139,9 +1156,10 @@
             // Dtp_FechaHoy
             // 
             this.Dtp_FechaHoy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaHoy.Location = new System.Drawing.Point(51, 591);
+            this.Dtp_FechaHoy.Location = new System.Drawing.Point(68, 727);
+            this.Dtp_FechaHoy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dtp_FechaHoy.Name = "Dtp_FechaHoy";
-            this.Dtp_FechaHoy.Size = new System.Drawing.Size(115, 20);
+            this.Dtp_FechaHoy.Size = new System.Drawing.Size(152, 22);
             this.Dtp_FechaHoy.TabIndex = 7;
             this.Dtp_FechaHoy.Visible = false;
             // 
@@ -1152,9 +1170,10 @@
             this.lbl_miperfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_miperfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_miperfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_miperfil.Location = new System.Drawing.Point(93, 133);
+            this.lbl_miperfil.Location = new System.Drawing.Point(124, 164);
+            this.lbl_miperfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_miperfil.Name = "lbl_miperfil";
-            this.lbl_miperfil.Size = new System.Drawing.Size(67, 20);
+            this.lbl_miperfil.Size = new System.Drawing.Size(78, 22);
             this.lbl_miperfil.TabIndex = 15;
             this.lbl_miperfil.Text = "Mi perfil";
             this.lbl_miperfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1165,9 +1184,10 @@
             this.lbl_Rol.AutoSize = true;
             this.lbl_Rol.BackColor = System.Drawing.Color.Gainsboro;
             this.lbl_Rol.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Rol.Location = new System.Drawing.Point(19, 559);
+            this.lbl_Rol.Location = new System.Drawing.Point(25, 688);
+            this.lbl_Rol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Rol.Name = "lbl_Rol";
-            this.lbl_Rol.Size = new System.Drawing.Size(10, 13);
+            this.lbl_Rol.Size = new System.Drawing.Size(13, 17);
             this.lbl_Rol.TabIndex = 3;
             this.lbl_Rol.Text = "-";
             this.lbl_Rol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1176,9 +1196,10 @@
             // 
             this.lbl_user.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_user.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_user.Location = new System.Drawing.Point(59, 107);
+            this.lbl_user.Location = new System.Drawing.Point(79, 132);
+            this.lbl_user.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(142, 20);
+            this.lbl_user.Size = new System.Drawing.Size(189, 25);
             this.lbl_user.TabIndex = 14;
             this.lbl_user.Text = "Erwin Rodriguez";
             this.lbl_user.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1186,27 +1207,29 @@
             // PicUser
             // 
             this.PicUser.Image = ((System.Drawing.Image)(resources.GetObject("PicUser.Image")));
-            this.PicUser.Location = new System.Drawing.Point(89, 29);
+            this.PicUser.Location = new System.Drawing.Point(119, 36);
+            this.PicUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PicUser.Name = "PicUser";
-            this.PicUser.Size = new System.Drawing.Size(71, 75);
+            this.PicUser.Size = new System.Drawing.Size(95, 92);
             this.PicUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicUser.TabIndex = 4;
             this.PicUser.TabStop = false;
             // 
             // Frm_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1344, 700);
+            this.ClientSize = new System.Drawing.Size(1792, 862);
             this.Controls.Add(this.PanelLateral);
             this.Controls.Add(this.Pnl_Menu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Microsell Likte";

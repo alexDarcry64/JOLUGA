@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsell_Lite.Clientes;
 using Microsell_Lite.Productos;
 using Microsell_Lite.Ventas;
 
@@ -45,7 +46,7 @@ namespace Microsell_Lite
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Pnl_Menu_MouseMove(object sender, MouseEventArgs e)
@@ -87,6 +88,13 @@ namespace Microsell_Lite
             ven.Show();
 
 
+        }
+
+        private void bt_cliente_Click(object sender, EventArgs e)
+        {
+            Frm_Explor_Cliente cli = new Frm_Explor_Cliente();
+            cli.MdiParent = this;
+            cli.Show();
         }
     }
 }

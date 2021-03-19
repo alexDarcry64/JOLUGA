@@ -150,6 +150,7 @@
     <Compile Include="BD_Proveedor.cs" />
     <Compile Include="BD_Tipo_Doc.cs" />
     <Compile Include="BD_Usuario.cs" />
+    <Compile Include="BD_Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
