@@ -44,8 +44,7 @@ namespace Microsell_Lite.Clientes
             this.Tag = "";
             this.Close();
         }
-
-        string xFotoruta;
+        
         private void lblAbrir_Click(object sender, EventArgs e)
         {
             var FilePath = string.Empty;
@@ -126,7 +125,6 @@ namespace Microsell_Lite.Clientes
             txtTelefono.Text = "";
             txtEmail.Text = "";
             txtNombreContacto.Text = "";
-            xFotoruta = "";
             cbmDistrito.SelectedIndex = -1;
 
         }

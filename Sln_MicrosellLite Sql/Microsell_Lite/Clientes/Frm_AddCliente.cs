@@ -43,24 +43,10 @@ namespace Microsell_Lite.Clientes
             this.Tag = "";
             this.Close();
         }
-
-        string xFotoruta;
+        
         private void lblAbrir_Click(object sender, EventArgs e)
         {
-            var FilePath = string.Empty;
-
-            try
-            {
-                if(openFileDialog1.ShowDialog()==DialogResult.OK)
-                {
-                    xFotoruta = openFileDialog1.FileName;
-                }
-            }
-            catch(Exception ex)
-            {
-                xFotoruta = Application.StartupPath + @"\user.png";
-                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
-            }
+            
         }
 
         private bool Validar_Texbox()
@@ -128,7 +114,6 @@ namespace Microsell_Lite.Clientes
             txtTelefono.Text = "";
             txtEmail.Text = "";
             txtNombreContacto.Text = "";
-            xFotoruta = "";
             cbmDistrito.SelectedIndex = -1;
 
         }

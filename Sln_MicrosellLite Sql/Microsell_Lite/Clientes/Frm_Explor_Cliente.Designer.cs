@@ -35,13 +35,8 @@
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTotalItems = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtbuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.ltsProductos = new System.Windows.Forms.ListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mostrarTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -52,23 +47,28 @@
             this.bt_copiarIDProveedorTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotalItems = new System.Windows.Forms.Label();
+            this.txtbuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pnlmsj = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.ltsProductos = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlmsj = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            this.pnlmsj.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlmsj.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,59 +146,6 @@
             this.panel2.Size = new System.Drawing.Size(1225, 56);
             this.panel2.TabIndex = 1;
             // 
-            // lblTotalItems
-            // 
-            this.lblTotalItems.AutoSize = true;
-            this.lblTotalItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalItems.Location = new System.Drawing.Point(465, 31);
-            this.lblTotalItems.Name = "lblTotalItems";
-            this.lblTotalItems.Size = new System.Drawing.Size(26, 17);
-            this.lblTotalItems.TabIndex = 14;
-            this.lblTotalItems.Text = "00";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(434, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 17);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Total Items";
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtbuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtbuscar.HintForeColor = System.Drawing.Color.Black;
-            this.txtbuscar.HintText = "";
-            this.txtbuscar.isPassword = false;
-            this.txtbuscar.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtbuscar.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtbuscar.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtbuscar.LineThickness = 3;
-            this.txtbuscar.Location = new System.Drawing.Point(581, 15);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(379, 33);
-            this.txtbuscar.TabIndex = 13;
-            this.txtbuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtbuscar.OnValueChanged += new System.EventHandler(this.txtbuscar_OnValueChanged);
-            this.txtbuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbuscar_KeyDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(967, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Buscar Proveedor");
-            // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -239,16 +186,6 @@
             this.toolTip1.SetToolTip(this.btnAgregar, "Nuevo Proveedor");
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // ltsProductos
-            // 
-            this.ltsProductos.ContextMenuStrip = this.contextMenuStrip1;
-            this.ltsProductos.HideSelection = false;
-            this.ltsProductos.Location = new System.Drawing.Point(13, 130);
-            this.ltsProductos.Name = "ltsProductos";
-            this.ltsProductos.Size = new System.Drawing.Size(1188, 419);
-            this.ltsProductos.TabIndex = 2;
-            this.ltsProductos.UseCompatibleStateImageBehavior = false;
             // 
             // contextMenuStrip1
             // 
@@ -320,6 +257,104 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(434, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Total Items";
+            // 
+            // lblTotalItems
+            // 
+            this.lblTotalItems.AutoSize = true;
+            this.lblTotalItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItems.Location = new System.Drawing.Point(465, 31);
+            this.lblTotalItems.Name = "lblTotalItems";
+            this.lblTotalItems.Size = new System.Drawing.Size(26, 17);
+            this.lblTotalItems.TabIndex = 14;
+            this.lblTotalItems.Text = "00";
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtbuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtbuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtbuscar.HintForeColor = System.Drawing.Color.Black;
+            this.txtbuscar.HintText = "";
+            this.txtbuscar.isPassword = false;
+            this.txtbuscar.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtbuscar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtbuscar.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtbuscar.LineThickness = 3;
+            this.txtbuscar.Location = new System.Drawing.Point(581, 15);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(379, 33);
+            this.txtbuscar.TabIndex = 13;
+            this.txtbuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtbuscar.OnValueChanged += new System.EventHandler(this.txtbuscar_OnValueChanged);
+            this.txtbuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbuscar_KeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(967, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Buscar Proveedor");
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1077, 110);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 17);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Estado";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(964, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 17);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Limite Credit";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(824, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Telefono";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(640, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Direccion";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(431, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "RFC";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -338,71 +373,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Datos del Cliente";
             // 
-            // label4
+            // ltsProductos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "RFC";
+            this.ltsProductos.ContextMenuStrip = this.contextMenuStrip1;
+            this.ltsProductos.HideSelection = false;
+            this.ltsProductos.Location = new System.Drawing.Point(13, 130);
+            this.ltsProductos.Name = "ltsProductos";
+            this.ltsProductos.Size = new System.Drawing.Size(1188, 419);
+            this.ltsProductos.TabIndex = 2;
+            this.ltsProductos.UseCompatibleStateImageBehavior = false;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(633, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Direccion";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(829, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Telefono";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(964, 110);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 17);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Limite Credit";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1077, 110);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 17);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Estado";
-            // 
-            // pnlmsj
-            // 
-            this.pnlmsj.Controls.Add(this.pictureBox2);
-            this.pnlmsj.Controls.Add(this.label12);
-            this.pnlmsj.Controls.Add(this.label6);
-            this.pnlmsj.Location = new System.Drawing.Point(13, 130);
-            this.pnlmsj.Name = "pnlmsj";
-            this.pnlmsj.Size = new System.Drawing.Size(1188, 419);
-            this.pnlmsj.TabIndex = 13;
-            this.pnlmsj.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(551, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(433, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(327, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Busqueda sin resultados";
             // 
             // label12
             // 
@@ -415,16 +405,26 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Intenta realizar tu busqueda con otros valores";
             // 
-            // label6
+            // pictureBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(433, 196);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(327, 31);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Busqueda sin resultados";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(551, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pnlmsj
+            // 
+            this.pnlmsj.Controls.Add(this.pictureBox2);
+            this.pnlmsj.Controls.Add(this.label12);
+            this.pnlmsj.Controls.Add(this.label6);
+            this.pnlmsj.Location = new System.Drawing.Point(13, 130);
+            this.pnlmsj.Name = "pnlmsj";
+            this.pnlmsj.Size = new System.Drawing.Size(1188, 419);
+            this.pnlmsj.TabIndex = 13;
+            this.pnlmsj.Visible = false;
             // 
             // Frm_Explor_Cliente
             // 
@@ -452,11 +452,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlmsj.ResumeLayout(false);
             this.pnlmsj.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,10 +470,7 @@
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Button btn_minimi;
         private System.Windows.Forms.Button btnAgregar;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbuscar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ListView ltsProductos;
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -484,6 +481,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Label lblTotalItems;
+        private System.Windows.Forms.Label label13;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbuscar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlmsj;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -491,11 +496,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnlmsj;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblTotalItems;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListView ltsProductos;
     }
 }

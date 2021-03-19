@@ -164,6 +164,12 @@
     <Compile Include="Clientes\Frm_AddCliente.Designer.cs">
       <DependentUpon>Frm_AddCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\Frm_ListadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Frm_ListadoCliente.Designer.cs">
+      <DependentUpon>Frm_ListadoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\Frm_Explor_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\Frm_AddCliente.resx">
       <DependentUpon>Frm_AddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Frm_ListadoCliente.resx">
+      <DependentUpon>Frm_ListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\Frm_Explor_Cliente.resx">
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
