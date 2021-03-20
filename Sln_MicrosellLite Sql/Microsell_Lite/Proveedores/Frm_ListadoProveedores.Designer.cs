@@ -37,7 +37,12 @@
             this.ltsProveedor = new System.Windows.Forms.ListView();
             this.lblId = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtbuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_titu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -91,9 +96,9 @@
             // ltsProveedor
             // 
             this.ltsProveedor.HideSelection = false;
-            this.ltsProveedor.Location = new System.Drawing.Point(17, 75);
+            this.ltsProveedor.Location = new System.Drawing.Point(17, 115);
             this.ltsProveedor.Name = "ltsProveedor";
-            this.ltsProveedor.Size = new System.Drawing.Size(496, 336);
+            this.ltsProveedor.Size = new System.Drawing.Size(496, 343);
             this.ltsProveedor.TabIndex = 3;
             this.ltsProveedor.UseCompatibleStateImageBehavior = false;
             this.ltsProveedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ltsProveedor_KeyDown);
@@ -117,12 +122,87 @@
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "label3";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SkyBlue;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(89, 69);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(43, 39);
+            this.btnEditar.TabIndex = 12;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SkyBlue;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(17, 69);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(43, 39);
+            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtbuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtbuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtbuscar.HintForeColor = System.Drawing.Color.Black;
+            this.txtbuscar.HintText = "";
+            this.txtbuscar.isPassword = false;
+            this.txtbuscar.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtbuscar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtbuscar.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtbuscar.LineThickness = 3;
+            this.txtbuscar.Location = new System.Drawing.Point(209, 75);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(258, 33);
+            this.txtbuscar.TabIndex = 15;
+            this.txtbuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtbuscar.OnValueChanged += new System.EventHandler(this.txtbuscar_OnValueChanged);
+            this.txtbuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbuscar_KeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(474, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Frm_ListadoProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(530, 450);
+            this.ClientSize = new System.Drawing.Size(530, 488);
+            this.Controls.Add(this.txtbuscar);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.ltsProveedor);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblId);
@@ -134,6 +214,7 @@
             this.Load += new System.EventHandler(this.Frm_ListadoProveedores_Load);
             this.pnl_titu.ResumeLayout(false);
             this.pnl_titu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +229,9 @@
         private System.Windows.Forms.ListView ltsProveedor;
         public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAgregar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbuscar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

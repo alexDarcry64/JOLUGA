@@ -184,11 +184,18 @@ namespace Microsell_Lite.Compras
             pro.txtbuscar.Focus();
             pro.ShowDialog();
             fil.Hide();
-
-            if (pro.Tag.ToString() == "A")
+            try
             {
-                Agregar_Productos_carro();
-                txt_IdComp.Text = RN_TipoDoc.RN_Nro_id(9);
+                if (pro.Tag.ToString() == "A")
+                {
+                    Agregar_Productos_carro();
+                    txt_IdComp.Text = RN_TipoDoc.RN_Nro_id(9);
+                }
+            }
+            catch (Exception)
+            {
+                pro.Tag = "";
+                pro.Close();
             }
 
         }
@@ -202,9 +209,18 @@ namespace Microsell_Lite.Compras
             pro.ShowDialog();
             fil.Hide();
 
-            if (pro.Tag.ToString() == "A")
+            try
             {
-                Agregar_Productos_carro();
+                if (pro.Tag.ToString() == "A")
+                {
+                    Agregar_Productos_carro();
+                }
+            }
+            catch (Exception)
+            {
+
+                pro.Tag = "";
+                pro.Close();
             }
         }
 
@@ -460,18 +476,18 @@ namespace Microsell_Lite.Compras
                         kar.Det_operacion = "Compra de Mercaderia";
                         kar.Cantidad_in = xcantidad;
                         kar.Precio_in = xprecioCompra;
-                        kar.Total_in = xcant * xprecioCompra;
+                        kar.Total_in = xcantidad * xprecioCompra;
                         kar.Cantidad_out = 0;
                         kar.Precio_out = 0;
                         kar.Importe_total_out = 0;
 
-                        kar.Cantidad_saldo = stockProd + xcant;
+                        kar.Cantidad_saldo = stockProd + xcantidad;
                         kar.Promedio = xprecioCompra;
                         kar.Total_saldo = xprecioCompra * kar.Cantidad_saldo;
 
                         obj.RN_Registrar_Detalle_Kardex(kar);
 
-                        pro.RN_Sumar_Stock_Producto(idProd.Trim(),xcant);
+                        pro.RN_Sumar_Stock_Producto(idProd.Trim(), xcantidad);
 
 
                     }

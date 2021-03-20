@@ -303,10 +303,10 @@
             // 
             // Bt_AbrirExploradorDeProveedores
             // 
-            this.Bt_AbrirExploradorDeProveedores.Enabled = false;
             this.Bt_AbrirExploradorDeProveedores.Name = "Bt_AbrirExploradorDeProveedores";
             this.Bt_AbrirExploradorDeProveedores.Size = new System.Drawing.Size(382, 26);
             this.Bt_AbrirExploradorDeProveedores.Text = "Abrir Explorador de Proveedores";
+            this.Bt_AbrirExploradorDeProveedores.Click += new System.EventHandler(this.Bt_AbrirExploradorDeProveedores_Click);
             // 
             // toolStripSeparator6
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prj_Capa_Negocio;
+using Microsell_Lite.Utilitarios;
 
 
 namespace Microsell_Lite
@@ -21,7 +22,17 @@ namespace Microsell_Lite
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Sino sino = new Frm_Sino();
+            fil.Show();
+            sino.Lbl_msm1.Text = "¿Quieres salir del sistema?";
+            sino.ShowDialog();
+            fil.Hide();
+
+            if (sino.Tag.ToString() == "Si")
+            {
+                Application.Exit();
+            }
         }
 
         private bool Validar_Texto()
@@ -32,13 +43,13 @@ namespace Microsell_Lite
 
             return true;
         }
-
+        int veces = 0;
         public void Login()
         {
             RN_Usuario obj = new RN_Usuario();
             DataTable dato = new DataTable();
 
-            int veces = 0;
+            
             string usu = txtUsuario.Text;
             string pass = txtPass.Text;
 

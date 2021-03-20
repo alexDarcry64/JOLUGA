@@ -11,6 +11,8 @@ using Microsell_Lite.Clientes;
 using Microsell_Lite.Productos;
 using Microsell_Lite.Ventas;
 using Microsell_Lite.Compras;
+using Microsell_Lite.Proveedores;
+using Microsell_Lite.Utilitarios;
 
 namespace Microsell_Lite
 {
@@ -47,7 +49,17 @@ namespace Microsell_Lite
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Sino sino = new Frm_Sino();
+            fil.Show();
+            sino.Lbl_msm1.Text = "¿Quieres salir del sistema?";
+            sino.ShowDialog();
+            fil.Hide();
+
+            if (sino.Tag.ToString() == "Si")
+            {
+                Application.Exit();
+            }
         }
 
         private void Pnl_Menu_MouseMove(object sender, MouseEventArgs e)
@@ -110,6 +122,13 @@ namespace Microsell_Lite
             Frm_Explor_Compra explor = new Frm_Explor_Compra();
             explor.MdiParent = this;
             explor.Show();
+        }
+
+        private void Bt_AbrirExploradorDeProveedores_Click(object sender, EventArgs e)
+        {
+            Frm_Explor_Proveedor pro = new Frm_Explor_Proveedor();
+            pro.MdiParent = this;
+            pro.Show();
         }
     }
 }

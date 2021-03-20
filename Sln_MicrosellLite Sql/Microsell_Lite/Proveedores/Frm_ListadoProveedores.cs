@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prj_Capa_Negocio;
+using Microsell_Lite.Utilitarios;
 
 namespace Microsell_Lite.Proveedores
 {
@@ -106,6 +107,82 @@ namespace Microsell_Lite.Proveedores
                     this.Tag = "A";
                     this.Close();
                 }
+            }
+        }
+
+        private void buscar_Proveedores(string valor)
+        {
+            RN_Productos obj = new RN_Productos();
+            DataTable dato = new DataTable();
+
+            dato = obj.RN_Buscar_Productos(valor);
+            if (dato.Rows.Count > 0)
+            {
+                Llenar_ListView(dato);
+            }
+            else
+            {
+                ltsProveedor.Items.Clear();
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_AddProveedor ad = new Frm_AddProveedor();
+
+            fil.Show();
+            ad.ShowDialog();
+            fil.Hide();
+
+            if (ad.Tag.ToString() == "A")
+            {
+                Cargar_Todos_Proveedores();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia ver = new Frm_Advertencia();
+
+            if (ltsProveedor.SelectedIndices.Count == 0)
+            {
+                fil.Show();
+                ver.ShowDialog();
+                fil.Hide();
+            }
+            else
+            {
+                var lis = ltsProveedor.SelectedItems[0];
+                string idprovee = lis.SubItems[0].Text;
+
+                Clipboard.Clear();
+                Clipboard.SetText(idprovee.Trim());
+            }
+        }
+
+        private void txtbuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtbuscar.Text.Trim().Length > 2)
+            {
+                buscar_Proveedores(txtbuscar.Text);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text.Trim().Length > 2)
+            {
+                buscar_Proveedores(txtbuscar.Text);
+            }
+        }
+
+        private void txtbuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txtbuscar.Text.Trim().Length > 2)
+            {
+                buscar_Proveedores(txtbuscar.Text);
             }
         }
     }

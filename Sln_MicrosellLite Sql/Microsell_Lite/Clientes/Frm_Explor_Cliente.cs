@@ -79,7 +79,7 @@ namespace Microsell_Lite.Clientes
             {
                 DataRow dr = data.Rows[i];
                 ListViewItem list = new ListViewItem(dr["Id_Cliente"].ToString());
-                list.SubItems.Add(dr["Contacto"].ToString());
+                list.SubItems.Add(dr["Razon_Social_Nombres"].ToString());
                 list.SubItems.Add(dr["RFC"].ToString());
                 list.SubItems.Add(dr["Direccion"].ToString());
                 list.SubItems.Add(dr["Telefono"].ToString());
@@ -211,6 +211,7 @@ namespace Microsell_Lite.Clientes
             if (ltsProductos.SelectedIndices.Count == 0)
             {
                 fil.Show();
+                ver.lbl_Msm1.Text = "Por favor, seleccione un cliente";
                 ver.ShowDialog();
                 fil.Hide();
             }

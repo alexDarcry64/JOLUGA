@@ -27,7 +27,10 @@ namespace Microsell_Lite.Productos
             double tipoCambio = 0;
             tipoCambio = RN_TipoDoc.RN_Leer_Tipo_Cambio(7);
             //lblTipoCambio .Text = tipoCambio.ToString("###0.00");
+            
             txtIdProducto.Text = RN_TipoDoc.RN_Nro_id(4);
+
+            
         }
 
         private void pnl_titu_MouseMove(object sender, MouseEventArgs e)
@@ -326,7 +329,7 @@ namespace Microsell_Lite.Productos
                     }
 
                     RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(4);
-
+                    //RN_TipoDoc.RN_Actualizar_Tipo_Doc(4);
                     Frm_Filtro fil = new Frm_Filtro();
                     fil.Show();
                     MessageBox.Show("Producto guardado exitosamente");
@@ -406,6 +409,12 @@ namespace Microsell_Lite.Productos
         {
             Utilitario ut = new Utilitario();
             e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Tag = "";
+            this.Close();
         }
     }
 }

@@ -145,15 +145,24 @@ namespace Microsell_Lite.Proveedores
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Frm_Filtro fil = new Frm_Filtro();
-            Frm_AddProveedor ad = new Frm_AddProveedor();
-
-            fil.Show();
-            ad.ShowDialog();
-            fil.Hide();
-
-            if(ad.Tag.ToString()=="A")
+            try
             {
+                Frm_Filtro fil = new Frm_Filtro();
+                Frm_AddProveedor ad = new Frm_AddProveedor();
+
+                fil.Show();
+                ad.ShowDialog();
+                fil.Hide();
+
+                if (ad.Tag.ToString() == "A")
+                {
+                    Cargar_todos_Proveedores();
+                }
+            }
+            catch (Exception)
+            {
+
+                this.Tag = "";
                 Cargar_todos_Proveedores();
             }
         }
@@ -166,6 +175,7 @@ namespace Microsell_Lite.Proveedores
             if(ltsProveedores.SelectedIndices.Count==0)
             {
                 fil.Show();
+                ver.lbl_Msm1.Text = "Por vavor Seleccione un Proveedor";
                 ver.ShowDialog();
                 fil.Hide();
             }
