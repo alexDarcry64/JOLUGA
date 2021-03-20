@@ -299,59 +299,65 @@ namespace Microsell_Lite.Productos
 
         private void Seleccionar_Producto()
         {
-            Frm_Filtro fil = new Frm_Filtro();
-            Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
-            if (ltsProductos.SelectedIndices.Count == 0)
-            {
-
-            }
-            else
-            {
-                string tipoProducto = "";
-                double stock = 0;
-                double importe = 0;
-                string xnomprod = "";
-                double xcanti = 0;
-                double ximporte = 0;
-                double xprecioCompra = 0;
-
-                var lis = ltsProductos.SelectedItems[0];
-                tipoProducto = lis.SubItems[6].Text;
-
-                if (tipoProducto.Trim() == "Producto")
+            
+                Frm_Filtro fil = new Frm_Filtro();
+                Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+                if (ltsProductos.SelectedIndices.Count == 0)
                 {
-                    Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
-                    xnomprod = lis.SubItems[1].Text;
-                    Frm_Compras.xidProducto = lis.SubItems[0].Text;
-                    Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
-                    xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
-                    stock = Convert.ToDouble(lis.SubItems[2].Text);
-                    
 
-                    fil.Show();
-                    solo.lblNom.Text = xnomprod;
-                    solo.lblStock.Text = stock.ToString();
-                    solo.ShowDialog();
-                    fil.Hide();
-
-                    if (solo.Tag.ToString() == "A")
-                    {
-                        xcanti = Convert.ToDouble(solo.txtCantidad.Text);
-                        solo.txtCantidad.Text = "";
-
-                        ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
-                        Frm_Compras.ximporte = importe;
-                        Frm_Compras.xcant = xcanti;
-
-                        this.Tag = "A";
-                        this.Close();
-                    }
                 }
                 else
                 {
-                     
+                    string tipoProducto = "";
+                    double stock = 0;
+                    double importe = 0;
+                    string xnomprod = "";
+                    double xcanti = 0;
+                    double ximporte = 0;
+                    double xprecioCompra = 0;
+
+                    var lis = ltsProductos.SelectedItems[0];
+                    tipoProducto = lis.SubItems[6].Text;
+
+                    if (tipoProducto.Trim() == "Producto")
+                    {
+                        Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
+                        xnomprod = lis.SubItems[1].Text;
+                        Frm_Compras.xidProducto = lis.SubItems[0].Text;
+                        Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
+                        xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
+                        stock = Convert.ToDouble(lis.SubItems[2].Text);
+
+
+                        fil.Show();
+                        solo.lblNom.Text = xnomprod;
+                        solo.lblStock.Text = stock.ToString();
+                        solo.ShowDialog();
+                        fil.Hide();
+                    try
+                    {
+                        if (solo.Tag.ToString() == "A")
+                        {
+                            xcanti = Convert.ToDouble(solo.txtCantidad.Text);
+                            solo.txtCantidad.Text = "";
+
+                            ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
+                            Frm_Compras.ximporte = importe;
+                            Frm_Compras.xcant = xcanti;
+
+                            this.Tag = "A";
+                            this.Close();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        solo.Tag = "";
+                        solo.Close();
+                    }
+
                 }
             }
+            
         }
 
         private void ltsProductos_DoubleClick(object sender, EventArgs e)

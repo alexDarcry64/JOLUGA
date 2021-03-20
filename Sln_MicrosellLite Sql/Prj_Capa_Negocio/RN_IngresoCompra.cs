@@ -41,7 +41,7 @@ namespace Prj_Capa_Negocio
             return obj.BD_Cargar_TodasCompras();
         }
 
-        public DataTable RN_Buscar_Compras_Dia(string tipo, DateTime fecha)
+        public DataTable RN_Buscar_Compras_Dia(string tipo,DateTime fecha)
         {
             BD_IngresoCompra obj = new BD_IngresoCompra();
             return obj.BD_Buscar_Compras_Dia(tipo,fecha);

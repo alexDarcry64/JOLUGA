@@ -109,6 +109,7 @@
             this.txtPrecio.TextPlaceholder = "";
             this.txtPrecio.UseSystemPasswordChar = false;
             this.txtPrecio.WordWrap = true;
+            this.txtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyDown);
             // 
             // Frm_SoloPrecio
             // 

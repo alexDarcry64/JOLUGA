@@ -210,6 +210,7 @@ namespace Microsell_Lite.Productos
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia ver = new Frm_Advertencia();
+            ver.lbl_Msm1.Text = "Seleccione";
             Frm_EditProducto edi = new Frm_EditProducto();
 
             if (ltsProductos.SelectedIndices.Count == 0)

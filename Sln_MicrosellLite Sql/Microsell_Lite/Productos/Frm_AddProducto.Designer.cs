@@ -219,6 +219,7 @@
             this.btn_cancel.TextStyle.Text = "Cancelar";
             this.btn_cancel.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancel.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // txtdescripcion_producto
             // 

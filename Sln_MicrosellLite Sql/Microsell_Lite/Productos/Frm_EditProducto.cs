@@ -384,5 +384,11 @@ namespace Microsell_Lite.Productos
                 MessageBox.Show("Error al guardar:" + ex.Message, "Form Add Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Tag = "";
+            this.Close();
+        }
     }
 }

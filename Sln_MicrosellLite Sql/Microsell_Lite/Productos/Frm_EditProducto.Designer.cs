@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AddProducto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_EditProducto));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -219,6 +219,7 @@
             this.btn_cancel.TextStyle.Text = "Cancelar";
             this.btn_cancel.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_cancel.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // txtdescripcion_producto
             // 
@@ -629,7 +630,7 @@
             this.label16.TabIndex = 45;
             this.label16.Text = "Clave SAT:";
             // 
-            // Frm_AddProducto
+            // Frm_EditProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -678,7 +679,7 @@
             this.Controls.Add(this.btn_cancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_AddProducto";
+            this.Name = "Frm_EditProducto";
             this.Text = "Frm_Reg_Prod";
             this.Load += new System.EventHandler(this.Frm_Reg_Prod_Load);
             this.pnl_titu.ResumeLayout(false);
