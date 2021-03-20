@@ -54,6 +54,7 @@ namespace Microsell_Lite
                     Cls_Libreria.IdRol = dr["Nombres"].ToString();
                     Cls_Libreria.Foto = dr["Ubicacion_Foto"].ToString();
                     Cls_Libreria.Rol = dr["Rol"].ToString();
+                    Cls_Libreria.IdUsu = dr["id_Usu"].ToString();
                 }
                 this.Hide();
                 Frm_Principal pri = new Frm_Principal();

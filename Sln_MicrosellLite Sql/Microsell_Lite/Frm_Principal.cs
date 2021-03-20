@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Microsell_Lite.Clientes;
 using Microsell_Lite.Productos;
 using Microsell_Lite.Ventas;
+using Microsell_Lite.Compras;
 
 namespace Microsell_Lite
 {
@@ -95,6 +96,13 @@ namespace Microsell_Lite
             Frm_Explor_Cliente cli = new Frm_Explor_Cliente();
             cli.MdiParent = this;
             cli.Show();
+        }
+
+        private void bt_compras_Click(object sender, EventArgs e)
+        {
+            Frm_Compras com = new Frm_Compras();
+            com.MdiParent = this;
+            com.Show();
         }
     }
 }

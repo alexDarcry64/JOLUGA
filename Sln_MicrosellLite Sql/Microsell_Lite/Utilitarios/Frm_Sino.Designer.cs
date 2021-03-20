@@ -122,7 +122,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(269, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 39);
+            this.label1.Size = new System.Drawing.Size(219, 38);
             this.label1.TabIndex = 8;
             this.label1.Text = "¿Seguro (a)?";
             // 
@@ -136,7 +136,7 @@
             this.Lbl_msm1.TabIndex = 9;
             this.Lbl_msm1.Text = "¿Quieres eliminar?";
             // 
-            // sino
+            // Frm_Sino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,7 +148,7 @@
             this.Controls.Add(this.btn_no);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "sino";
+            this.Name = "Frm_Sino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "sino";
             this.Load += new System.EventHandler(this.sino_Load);
@@ -166,6 +166,6 @@
         private Klik.Windows.Forms.v1.EntryLib.ELButton btn_si;
         private Klik.Windows.Forms.v1.EntryLib.ELButton btn_no;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Lbl_msm1;
+        public System.Windows.Forms.Label Lbl_msm1;
     }
 }

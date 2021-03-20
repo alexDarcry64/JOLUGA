@@ -8,16 +8,16 @@ namespace Prj_Capa_Entidad
 {
   public class EN_Det_IngresoCompra
     {
-    private char Id_ingreso;
-	private char Id_Pro;
-	private decimal Precio;
-    private decimal Cantidad;
-    private decimal Importe;
+    private string Id_ingreso;
+	private string Id_Pro;
+	private Double Precio;
+    private Double Cantidad;
+    private Double Importe;
 
-        public char Id_ingreso1 { get => Id_ingreso; set => Id_ingreso = value; }
-        public char Id_Pro1 { get => Id_Pro; set => Id_Pro = value; }
-        public decimal Precio1 { get => Precio; set => Precio = value; }
-        public decimal Cantidad1 { get => Cantidad; set => Cantidad = value; }
-        public decimal Importe1 { get => Importe; set => Importe = value; }
+        public string Id_ingreso1 { get => Id_ingreso; set => Id_ingreso = value; }
+        public string Id_Pro1 { get => Id_Pro; set => Id_Pro = value; }
+        public Double Precio1 { get => Precio; set => Precio = value; }
+        public Double Cantidad1 { get => Cantidad; set => Cantidad = value; }
+        public Double Importe1 { get => Importe; set => Importe = value; }
     }
 }

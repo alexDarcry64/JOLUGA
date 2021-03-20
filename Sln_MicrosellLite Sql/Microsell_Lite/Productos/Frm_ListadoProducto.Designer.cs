@@ -52,12 +52,6 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_idProducto = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblStock = new System.Windows.Forms.Label();
-            this.lblPrecioCompra = new System.Windows.Forms.Label();
-            this.lblImporte = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,14 +211,9 @@
             // 
             // pnlmsj
             // 
-            this.pnlmsj.Controls.Add(this.lblImporte);
-            this.pnlmsj.Controls.Add(this.lblStock);
             this.pnlmsj.Controls.Add(this.pictureBox2);
-            this.pnlmsj.Controls.Add(this.lblPrecioCompra);
             this.pnlmsj.Controls.Add(this.label12);
-            this.pnlmsj.Controls.Add(this.lblNombre);
             this.pnlmsj.Controls.Add(this.label6);
-            this.pnlmsj.Controls.Add(this.lblCantidad);
             this.pnlmsj.Location = new System.Drawing.Point(13, 130);
             this.pnlmsj.Name = "pnlmsj";
             this.pnlmsj.Size = new System.Drawing.Size(1053, 419);
@@ -360,66 +349,11 @@
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbl_idProducto
-            // 
-            this.lbl_idProducto.AutoSize = true;
-            this.lbl_idProducto.Location = new System.Drawing.Point(35, 150);
-            this.lbl_idProducto.Name = "lbl_idProducto";
-            this.lbl_idProducto.Size = new System.Drawing.Size(13, 17);
-            this.lbl_idProducto.TabIndex = 15;
-            this.lbl_idProducto.Text = "-";
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(22, 37);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(13, 17);
-            this.lblCantidad.TabIndex = 21;
-            this.lblCantidad.Text = "-";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(22, 67);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(13, 17);
-            this.lblNombre.TabIndex = 22;
-            this.lblNombre.Text = "-";
-            // 
-            // lblStock
-            // 
-            this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(22, 99);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(13, 17);
-            this.lblStock.TabIndex = 23;
-            this.lblStock.Text = "-";
-            // 
-            // lblPrecioCompra
-            // 
-            this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(22, 82);
-            this.lblPrecioCompra.Name = "lblPrecioCompra";
-            this.lblPrecioCompra.Size = new System.Drawing.Size(13, 17);
-            this.lblPrecioCompra.TabIndex = 23;
-            this.lblPrecioCompra.Text = "-";
-            // 
-            // lblImporte
-            // 
-            this.lblImporte.AutoSize = true;
-            this.lblImporte.Location = new System.Drawing.Point(22, 116);
-            this.lblImporte.Name = "lblImporte";
-            this.lblImporte.Size = new System.Drawing.Size(13, 17);
-            this.lblImporte.TabIndex = 24;
-            this.lblImporte.Text = "-";
-            // 
             // Frm_ListadoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 581);
-            this.Controls.Add(this.lbl_idProducto);
             this.Controls.Add(this.bunifuLabel5);
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.bunifuLabel4);
@@ -447,7 +381,6 @@
             this.pnlmsj.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -458,7 +391,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Button btn_minimi;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtbuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListView ltsProductos;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -475,11 +407,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
-        internal System.Windows.Forms.Label lbl_idProducto;
-        internal System.Windows.Forms.Label lblStock;
-        internal System.Windows.Forms.Label lblPrecioCompra;
-        internal System.Windows.Forms.Label lblNombre;
-        internal System.Windows.Forms.Label lblCantidad;
-        internal System.Windows.Forms.Label lblImporte;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox txtbuscar;
     }
 }

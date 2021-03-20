@@ -144,6 +144,7 @@
     <Compile Include="BD_Categoria.cs" />
     <Compile Include="BD_Conexion.cs" />
     <Compile Include="BD_Distrito.cs" />
+    <Compile Include="BD_IngresoCompra.cs" />
     <Compile Include="BD_Kardex.cs" />
     <Compile Include="BD_Marcas.cs" />
     <Compile Include="BD_Productos.cs" />

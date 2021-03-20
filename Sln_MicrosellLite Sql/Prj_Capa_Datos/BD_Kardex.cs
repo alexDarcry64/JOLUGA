@@ -129,5 +129,30 @@ namespace Prj_Capa_Datos
             }
             return respuesta;
         }
+
+        public DataTable BD_KardexDetalle_Producto(string idCliente)
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Buscador_DeKardex_Principal_yDetalle", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@xvalor", idCliente);
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
     }
 }

@@ -293,7 +293,7 @@ namespace Prj_Capa_Datos
                 SqlCommand cmd = new SqlCommand("Sp_Actulizar_Precios_CompraVenta_Producto", cn);
                 cmd.CommandTimeout = 20;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idpro", idprod);
+                cmd.Parameters.AddWithValue("@Id_Pro", idprod);
                 cmd.Parameters.AddWithValue("@Pre_Compra", precompra);
                 cmd.Parameters.AddWithValue("@Pre_vntaxMenor", preVenta_mnor);
                 cmd.Parameters.AddWithValue("@Utilidad", utilidad);

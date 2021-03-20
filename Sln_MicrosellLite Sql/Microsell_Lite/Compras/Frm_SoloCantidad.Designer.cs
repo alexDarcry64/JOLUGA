@@ -33,28 +33,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.txtCantidad = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(127, 28);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(120, 34);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Cantidad";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // label1
             // 
@@ -160,16 +144,26 @@
             this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(133, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Cantidad";
+            // 
             // Frm_Solo_Cantidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 308);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuLabel1);
             this.KeyPreview = true;
             this.Name = "Frm_Solo_Cantidad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -182,11 +176,10 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label lblStock;
         internal System.Windows.Forms.Label lblNom;
         internal Bunifu.UI.WinForms.BunifuTextBox txtCantidad;
+        private System.Windows.Forms.Label label2;
     }
 }

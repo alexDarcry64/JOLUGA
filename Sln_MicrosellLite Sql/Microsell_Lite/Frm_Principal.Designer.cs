@@ -166,7 +166,7 @@
             this.Pnl_Menu.Controls.Add(this.PicLogo);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(1792, 68);
             this.Pnl_Menu.TabIndex = 2;
@@ -183,7 +183,7 @@
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
             this.btn_cerrar.Location = new System.Drawing.Point(1735, 12);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(43, 39);
             this.btn_cerrar.TabIndex = 5;
@@ -929,7 +929,7 @@
             this.btn_minimi.ForeColor = System.Drawing.Color.White;
             this.btn_minimi.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimi.Image")));
             this.btn_minimi.Location = new System.Drawing.Point(1680, 11);
-            this.btn_minimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimi.Name = "btn_minimi";
             this.btn_minimi.Size = new System.Drawing.Size(43, 39);
             this.btn_minimi.TabIndex = 6;
@@ -943,7 +943,7 @@
             this.PicLogo.ForeColor = System.Drawing.Color.Black;
             this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
             this.PicLogo.Location = new System.Drawing.Point(0, 0);
-            this.PicLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PicLogo.Margin = new System.Windows.Forms.Padding(4);
             this.PicLogo.Name = "PicLogo";
             this.PicLogo.Size = new System.Drawing.Size(229, 68);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -971,7 +971,7 @@
             this.PanelLateral.Controls.Add(this.lbl_user);
             this.PanelLateral.Controls.Add(this.PicUser);
             this.PanelLateral.Location = new System.Drawing.Point(0, 69);
-            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(53, 791);
             this.PanelLateral.TabIndex = 6;
@@ -1001,7 +1001,7 @@
             // 
             this.PicUser_2.Image = ((System.Drawing.Image)(resources.GetObject("PicUser_2.Image")));
             this.PicUser_2.Location = new System.Drawing.Point(5, 60);
-            this.PicUser_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PicUser_2.Margin = new System.Windows.Forms.Padding(4);
             this.PicUser_2.Name = "PicUser_2";
             this.PicUser_2.Size = new System.Drawing.Size(44, 54);
             this.PicUser_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1021,7 +1021,7 @@
             this.bt_DocEmitidos.Image = ((System.Drawing.Image)(resources.GetObject("bt_DocEmitidos.Image")));
             this.bt_DocEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_DocEmitidos.Location = new System.Drawing.Point(4, 415);
-            this.bt_DocEmitidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_DocEmitidos.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DocEmitidos.Name = "bt_DocEmitidos";
             this.bt_DocEmitidos.Size = new System.Drawing.Size(317, 39);
             this.bt_DocEmitidos.TabIndex = 402;
@@ -1041,7 +1041,7 @@
             this.bt_cliente.Image = ((System.Drawing.Image)(resources.GetObject("bt_cliente.Image")));
             this.bt_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cliente.Location = new System.Drawing.Point(5, 372);
-            this.bt_cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.bt_cliente.Name = "bt_cliente";
             this.bt_cliente.Size = new System.Drawing.Size(317, 39);
             this.bt_cliente.TabIndex = 401;
@@ -1062,7 +1062,7 @@
             this.bt_almacen.Image = ((System.Drawing.Image)(resources.GetObject("bt_almacen.Image")));
             this.bt_almacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_almacen.Location = new System.Drawing.Point(4, 325);
-            this.bt_almacen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_almacen.Margin = new System.Windows.Forms.Padding(4);
             this.bt_almacen.Name = "bt_almacen";
             this.bt_almacen.Size = new System.Drawing.Size(317, 39);
             this.bt_almacen.TabIndex = 400;
@@ -1084,7 +1084,7 @@
             this.Bt_cotizar.Image = ((System.Drawing.Image)(resources.GetObject("Bt_cotizar.Image")));
             this.Bt_cotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Bt_cotizar.Location = new System.Drawing.Point(4, 282);
-            this.Bt_cotizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bt_cotizar.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_cotizar.Name = "Bt_cotizar";
             this.Bt_cotizar.Size = new System.Drawing.Size(317, 39);
             this.Bt_cotizar.TabIndex = 399;
@@ -1104,7 +1104,7 @@
             this.Bt_ventas.Image = ((System.Drawing.Image)(resources.GetObject("Bt_ventas.Image")));
             this.Bt_ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Bt_ventas.Location = new System.Drawing.Point(4, 239);
-            this.Bt_ventas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bt_ventas.Margin = new System.Windows.Forms.Padding(4);
             this.Bt_ventas.Name = "Bt_ventas";
             this.Bt_ventas.Size = new System.Drawing.Size(317, 39);
             this.Bt_ventas.TabIndex = 398;
@@ -1124,7 +1124,7 @@
             this.btn_hide.ForeColor = System.Drawing.Color.White;
             this.btn_hide.Image = ((System.Drawing.Image)(resources.GetObject("btn_hide.Image")));
             this.btn_hide.Location = new System.Drawing.Point(12, 5);
-            this.btn_hide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_hide.Margin = new System.Windows.Forms.Padding(4);
             this.btn_hide.Name = "btn_hide";
             this.btn_hide.Size = new System.Drawing.Size(32, 42);
             this.btn_hide.TabIndex = 21;
@@ -1134,7 +1134,6 @@
             // 
             // bt_compras
             // 
-            this.bt_compras.Enabled = false;
             this.bt_compras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.bt_compras.FlatAppearance.BorderSize = 0;
             this.bt_compras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
@@ -1145,19 +1144,20 @@
             this.bt_compras.Image = ((System.Drawing.Image)(resources.GetObject("bt_compras.Image")));
             this.bt_compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_compras.Location = new System.Drawing.Point(4, 196);
-            this.bt_compras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_compras.Margin = new System.Windows.Forms.Padding(4);
             this.bt_compras.Name = "bt_compras";
             this.bt_compras.Size = new System.Drawing.Size(317, 39);
             this.bt_compras.TabIndex = 397;
             this.bt_compras.Text = "      Registra tus Compras";
             this.bt_compras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_compras.UseVisualStyleBackColor = true;
+            this.bt_compras.Click += new System.EventHandler(this.bt_compras_Click);
             // 
             // Dtp_FechaHoy
             // 
             this.Dtp_FechaHoy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaHoy.Location = new System.Drawing.Point(68, 727);
-            this.Dtp_FechaHoy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dtp_FechaHoy.Margin = new System.Windows.Forms.Padding(4);
             this.Dtp_FechaHoy.Name = "Dtp_FechaHoy";
             this.Dtp_FechaHoy.Size = new System.Drawing.Size(152, 22);
             this.Dtp_FechaHoy.TabIndex = 7;
@@ -1208,7 +1208,7 @@
             // 
             this.PicUser.Image = ((System.Drawing.Image)(resources.GetObject("PicUser.Image")));
             this.PicUser.Location = new System.Drawing.Point(119, 36);
-            this.PicUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PicUser.Margin = new System.Windows.Forms.Padding(4);
             this.PicUser.Name = "PicUser";
             this.PicUser.Size = new System.Drawing.Size(95, 92);
             this.PicUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1229,7 +1229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Microsell Likte";

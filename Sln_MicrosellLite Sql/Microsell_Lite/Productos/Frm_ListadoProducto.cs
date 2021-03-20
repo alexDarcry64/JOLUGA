@@ -148,10 +148,21 @@ namespace Microsell_Lite.Productos
                 if (txtbuscar.Text.Trim().Length > 2)
                 {
                     buscar_Productos(txtbuscar.Text);
+
+                    if (ltsProductos.Items.Count > 0)
+                    {
+                        ltsProductos.Focus();
+                        ltsProductos.Items[0].Selected = true;
+                    }
                 }
                 else
                 {
                     Cargar_todos_Productos();
+                    if (ltsProductos.Items.Count > 0)
+                    {
+                        ltsProductos.Focus();
+                        ltsProductos.Items[0].Selected = true;
+                    }
                 }
 
             }
@@ -299,30 +310,38 @@ namespace Microsell_Lite.Productos
                 string tipoProducto = "";
                 double stock = 0;
                 double importe = 0;
+                string xnomprod = "";
+                double xcanti = 0;
+                double ximporte = 0;
+                double xprecioCompra = 0;
 
                 var lis = ltsProductos.SelectedItems[0];
                 tipoProducto = lis.SubItems[6].Text;
 
                 if (tipoProducto.Trim() == "Producto")
                 {
-                    lblNombre.Text = lis.SubItems[1].Text;
-                    lbl_idProducto.Text = lis.SubItems[0].Text;
-                    lblPrecioCompra.Text = lis.SubItems[3].Text;
+                    Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
+                    xnomprod = lis.SubItems[1].Text;
+                    Frm_Compras.xidProducto = lis.SubItems[0].Text;
+                    Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
+                    xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
                     stock = Convert.ToDouble(lis.SubItems[2].Text);
+                    
 
                     fil.Show();
+                    solo.lblNom.Text = xnomprod;
                     solo.lblStock.Text = stock.ToString();
-                    solo.ShowDialog();
                     solo.ShowDialog();
                     fil.Hide();
 
                     if (solo.Tag.ToString() == "A")
                     {
-                        lblCantidad.Text = solo.txtCantidad.Text;
+                        xcanti = Convert.ToDouble(solo.txtCantidad.Text);
                         solo.txtCantidad.Text = "";
 
-                        importe = Convert.ToDouble(lblCantidad.Text) * Convert.ToDouble(lblPrecioCompra.Text);
-                        lblImporte.Text = importe.ToString("###0.00");
+                        ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
+                        Frm_Compras.ximporte = importe;
+                        Frm_Compras.xcant = xcanti;
 
                         this.Tag = "A";
                         this.Close();
@@ -354,6 +373,10 @@ namespace Microsell_Lite.Productos
             {
                 this.Tag = "";
                 this.Close();
+            }
+            if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.A))
+            {
+                txtbuscar.Focus();
             }
         }
     }

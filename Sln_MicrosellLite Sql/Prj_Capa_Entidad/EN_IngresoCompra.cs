@@ -8,27 +8,27 @@ namespace Prj_Capa_Entidad
 {
    public class EN_IngresoCompra
     {
-        private char idCom;
-private char Nro_Fac_Fisico;
-private char IdProvee;
-private decimal SubTotal_Com;
+        private string idCom;
+private string Nro_Fac_Fisico;
+private string IdProvee;
+private Double SubTotal_Com;
 private DateTime FechaIngre;
-private decimal TotalCompra;
+private double TotalCompra;
 private int IdUsu;
-private String ModalidadPago;
+private string ModalidadPago;
 private int TiempoEspera;
 private DateTime FechaVence;
-private String EstadoIngre;
+private string EstadoIngre;
 private bool RecibiConforme;
-private String Datos_Adicional;
-private String Tipo_Doc_Compra;
+private string Datos_Adicional;
+private string Tipo_Doc_Compra;
 
-        public char IdCom { get => idCom; set => idCom = value; }
-        public char Nro_Fac_Fisico1 { get => Nro_Fac_Fisico; set => Nro_Fac_Fisico = value; }
-        public char IdProvee1 { get => IdProvee; set => IdProvee = value; }
-        public decimal SubTotal_Com1 { get => SubTotal_Com; set => SubTotal_Com = value; }
+        public string IdCom { get => idCom; set => idCom = value; }
+        public string Nro_Fac_Fisico1 { get => Nro_Fac_Fisico; set => Nro_Fac_Fisico = value; }
+        public string IdProvee1 { get => IdProvee; set => IdProvee = value; }
+        public Double SubTotal_Com1 { get => SubTotal_Com; set => SubTotal_Com = value; }
         public DateTime FechaIngre1 { get => FechaIngre; set => FechaIngre = value; }
-        public decimal TotalCompra1 { get => TotalCompra; set => TotalCompra = value; }
+        public Double TotalCompra1 { get => TotalCompra; set => TotalCompra = value; }
         public int IdUsu1 { get => IdUsu; set => IdUsu = value; }
         public string ModalidadPago1 { get => ModalidadPago; set => ModalidadPago = value; }
         public int TiempoEspera1 { get => TiempoEspera; set => TiempoEspera = value; }

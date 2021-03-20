@@ -28,5 +28,11 @@ namespace Prj_Capa_Negocio
             BD_Kardex obj = new BD_Kardex();
             return obj.BD_VerificarProducto_Cardex(idProducto);
         }
+
+        public DataTable RN_KardexDetalle_Producto(string idCliente)
+        {
+            BD_Kardex obj = new BD_Kardex();
+            return obj.BD_KardexDetalle_Producto(idCliente);
+        }
     }
 }

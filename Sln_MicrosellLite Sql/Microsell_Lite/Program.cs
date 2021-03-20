@@ -7,6 +7,7 @@ using Microsell_Lite.Productos;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Proveedores;
 using Microsell_Lite.Clientes;
+using Microsell_Lite.Compras;
 
 namespace Microsell_Lite
 {

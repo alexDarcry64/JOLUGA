@@ -142,6 +142,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="EN_Cliente.cs" />
+    <Compile Include="EN_Det_IngresoCompra.cs" />
+    <Compile Include="EN_IngresoCompra.cs" />
     <Compile Include="EN_Kardexcs.cs" />
     <Compile Include="EN_Producto.cs" />
     <Compile Include="EN_Proveedor.cs" />
