@@ -104,5 +104,12 @@ namespace Microsell_Lite
             com.MdiParent = this;
             com.Show();
         }
+
+        private void Bt_AbrirExploradorDeCompras_Click(object sender, EventArgs e)
+        {
+            Frm_Explor_Compra explor = new Frm_Explor_Compra();
+            explor.MdiParent = this;
+            explor.Show();
+        }
     }
 }

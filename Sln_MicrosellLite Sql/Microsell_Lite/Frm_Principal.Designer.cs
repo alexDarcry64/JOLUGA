@@ -208,7 +208,7 @@
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.MenuStrip1.ShowItemToolTips = true;
-            this.MenuStrip1.Size = new System.Drawing.Size(299, 32);
+            this.MenuStrip1.Size = new System.Drawing.Size(449, 32);
             this.MenuStrip1.TabIndex = 7;
             // 
             // bt_MenuPrinci
@@ -291,10 +291,10 @@
             // 
             // Bt_AbrirExploradorDeCompras
             // 
-            this.Bt_AbrirExploradorDeCompras.Enabled = false;
             this.Bt_AbrirExploradorDeCompras.Name = "Bt_AbrirExploradorDeCompras";
             this.Bt_AbrirExploradorDeCompras.Size = new System.Drawing.Size(382, 26);
             this.Bt_AbrirExploradorDeCompras.Text = "Abrir Explorador de Compras";
+            this.Bt_AbrirExploradorDeCompras.Click += new System.EventHandler(this.Bt_AbrirExploradorDeCompras_Click);
             // 
             // toolStripSeparator5
             // 

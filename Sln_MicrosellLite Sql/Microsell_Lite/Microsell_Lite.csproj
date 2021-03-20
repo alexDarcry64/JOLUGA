@@ -313,6 +313,12 @@
     <Compile Include="Utilitarios\Frm_Sino.Designer.cs">
       <DependentUpon>Frm_Sino.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\Frm_SoloFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilitarios\Frm_SoloFecha.Designer.cs">
+      <DependentUpon>Frm_SoloFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Frm_Edit_Cant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utilitarios\Frm_Sino.resx">
       <DependentUpon>Frm_Sino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilitarios\Frm_SoloFecha.resx">
+      <DependentUpon>Frm_SoloFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Frm_Edit_Cant.resx">
       <DependentUpon>Frm_Edit_Cant.cs</DependentUpon>

@@ -287,10 +287,68 @@ namespace Microsell_Lite.Compras
             Cargar_todos_Compras();
         }
 
+        private void buscar_Compras_Dia(DateTime fecha)
+        {
+            RN_IngresoCompra obj = new RN_IngresoCompra();
+            DataTable dato = new DataTable();
+
+            dato = obj.RN_Buscar_Compras_Dia("dia",fecha);
+            if (dato.Rows.Count > 0)
+            {
+                llenar_Listview(dato);
+            }
+            else
+            {
+                ltsCompras.Items.Clear();
+                pnlmsj.Visible = true;
+            }
+        }
+
+        private void buscar_Compras_Mes(DateTime fecha)
+        {
+            RN_IngresoCompra obj = new RN_IngresoCompra();
+            DataTable dato = new DataTable();
+
+            dato = obj.RN_Buscar_Compras_Dia("mes", fecha);
+            if (dato.Rows.Count > 0)
+            {
+                llenar_Listview(dato);
+            }
+            else
+            {
+                ltsCompras.Items.Clear();
+                pnlmsj.Visible = true;
+            }
+        }
+
         private void coomprasDelDiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
+            Frm_SoloFecha solo = new Frm_SoloFecha();
             fil.Show();
+            solo.ShowDialog();
+            fil.Hide();
+
+            if (solo.Tag.ToString() == "A")
+            {
+                DateTime xfecha = solo.dtpCambioFecha.Value;
+                buscar_Compras_Dia(xfecha);
+            }
+        }
+
+        private void buscarComprasDelMesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_SoloFecha solo = new Frm_SoloFecha();
+            fil.Show();
+            solo.ShowDialog();
+            fil.Hide();
+
+            if (solo.Tag.ToString() == "A")
+            {
+                DateTime xfecha = solo.dtpCambioFecha.Value;
+                buscar_Compras_Mes(xfecha);
+            }
         }
     }
 }

@@ -50,6 +50,8 @@
             this.bt_agregarProveedorTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bt_copiarIDProveedorTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarComprasDelMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coomprasDelDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.buscarComprasDelMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.coomprasDelDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -275,48 +275,62 @@
             // 
             this.mostrarTodosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mostrarTodosToolStripMenuItem.Image")));
             this.mostrarTodosToolStripMenuItem.Name = "mostrarTodosToolStripMenuItem";
-            this.mostrarTodosToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.mostrarTodosToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.mostrarTodosToolStripMenuItem.Text = "Mostrar todos";
             this.mostrarTodosToolStripMenuItem.Click += new System.EventHandler(this.mostrarTodosToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(241, 6);
             // 
             // btnEditarCompra
             // 
             this.btnEditarCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarCompra.Image")));
             this.btnEditarCompra.Name = "btnEditarCompra";
-            this.btnEditarCompra.Size = new System.Drawing.Size(214, 26);
+            this.btnEditarCompra.Size = new System.Drawing.Size(244, 26);
             this.btnEditarCompra.Text = "Eliminar compra";
             this.btnEditarCompra.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(241, 6);
             // 
             // bt_agregarProveedorTool
             // 
             this.bt_agregarProveedorTool.Image = ((System.Drawing.Image)(resources.GetObject("bt_agregarProveedorTool.Image")));
             this.bt_agregarProveedorTool.Name = "bt_agregarProveedorTool";
-            this.bt_agregarProveedorTool.Size = new System.Drawing.Size(214, 26);
+            this.bt_agregarProveedorTool.Size = new System.Drawing.Size(244, 26);
             this.bt_agregarProveedorTool.Text = "Agregar compra";
             this.bt_agregarProveedorTool.Click += new System.EventHandler(this.bt_agregarProveedorTool_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(241, 6);
             // 
             // bt_copiarIDProveedorTool
             // 
             this.bt_copiarIDProveedorTool.Image = ((System.Drawing.Image)(resources.GetObject("bt_copiarIDProveedorTool.Image")));
             this.bt_copiarIDProveedorTool.Name = "bt_copiarIDProveedorTool";
-            this.bt_copiarIDProveedorTool.Size = new System.Drawing.Size(214, 26);
+            this.bt_copiarIDProveedorTool.Size = new System.Drawing.Size(244, 26);
             this.bt_copiarIDProveedorTool.Text = "Copiar ID compra";
             this.bt_copiarIDProveedorTool.Click += new System.EventHandler(this.bt_copiarIDProveedorTool_Click);
+            // 
+            // buscarComprasDelMesToolStripMenuItem
+            // 
+            this.buscarComprasDelMesToolStripMenuItem.Name = "buscarComprasDelMesToolStripMenuItem";
+            this.buscarComprasDelMesToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.buscarComprasDelMesToolStripMenuItem.Text = "Buscar Compras del mes";
+            this.buscarComprasDelMesToolStripMenuItem.Click += new System.EventHandler(this.buscarComprasDelMesToolStripMenuItem_Click);
+            // 
+            // coomprasDelDiaToolStripMenuItem
+            // 
+            this.coomprasDelDiaToolStripMenuItem.Name = "coomprasDelDiaToolStripMenuItem";
+            this.coomprasDelDiaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.coomprasDelDiaToolStripMenuItem.Text = "Coompras del Dia";
+            this.coomprasDelDiaToolStripMenuItem.Click += new System.EventHandler(this.coomprasDelDiaToolStripMenuItem_Click);
             // 
             // toolTip1
             // 
@@ -469,19 +483,6 @@
             this.label14.TabIndex = 14;
             this.label14.Text = " Otros Datos";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // buscarComprasDelMesToolStripMenuItem
-            // 
-            this.buscarComprasDelMesToolStripMenuItem.Name = "buscarComprasDelMesToolStripMenuItem";
-            this.buscarComprasDelMesToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.buscarComprasDelMesToolStripMenuItem.Text = "Buscar Compras del mes";
-            // 
-            // coomprasDelDiaToolStripMenuItem
-            // 
-            this.coomprasDelDiaToolStripMenuItem.Name = "coomprasDelDiaToolStripMenuItem";
-            this.coomprasDelDiaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.coomprasDelDiaToolStripMenuItem.Text = "Coompras del Dia";
-            this.coomprasDelDiaToolStripMenuItem.Click += new System.EventHandler(this.coomprasDelDiaToolStripMenuItem_Click);
             // 
             // Frm_Explor_Compra
             // 
