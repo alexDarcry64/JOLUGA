@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.bt_MenuPrinci = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,6 +161,7 @@
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.Gray;
             this.Pnl_Menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pnl_Menu.Controls.Add(this.button1);
             this.Pnl_Menu.Controls.Add(this.btn_cerrar);
             this.Pnl_Menu.Controls.Add(this.MenuStrip1);
             this.Pnl_Menu.Controls.Add(this.btn_minimi);
@@ -171,6 +173,25 @@
             this.Pnl_Menu.Size = new System.Drawing.Size(1792, 68);
             this.Pnl_Menu.TabIndex = 2;
             this.Pnl_Menu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Menu_MouseMove);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SkyBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(1684, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 39);
+            this.button1.TabIndex = 8;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_cerrar
             // 
@@ -208,7 +229,7 @@
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.MenuStrip1.ShowItemToolTips = true;
-            this.MenuStrip1.Size = new System.Drawing.Size(449, 32);
+            this.MenuStrip1.Size = new System.Drawing.Size(299, 32);
             this.MenuStrip1.TabIndex = 7;
             // 
             // bt_MenuPrinci
@@ -928,7 +949,7 @@
             this.btn_minimi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimi.ForeColor = System.Drawing.Color.White;
             this.btn_minimi.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimi.Image")));
-            this.btn_minimi.Location = new System.Drawing.Point(1680, 11);
+            this.btn_minimi.Location = new System.Drawing.Point(1633, 17);
             this.btn_minimi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimi.Name = "btn_minimi";
             this.btn_minimi.Size = new System.Drawing.Size(43, 39);
@@ -970,6 +991,7 @@
             this.PanelLateral.Controls.Add(this.lbl_Rol);
             this.PanelLateral.Controls.Add(this.lbl_user);
             this.PanelLateral.Controls.Add(this.PicUser);
+            this.PanelLateral.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.PanelLateral.Location = new System.Drawing.Point(0, 69);
             this.PanelLateral.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLateral.Name = "PanelLateral";
@@ -1028,6 +1050,7 @@
             this.bt_DocEmitidos.Text = "       Ver Facturas y Otras Ventas";
             this.bt_DocEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_DocEmitidos.UseVisualStyleBackColor = true;
+            this.bt_DocEmitidos.Click += new System.EventHandler(this.bt_DocEmitidos_Click);
             // 
             // bt_cliente
             // 
@@ -1073,7 +1096,6 @@
             // 
             // Bt_cotizar
             // 
-            this.Bt_cotizar.Enabled = false;
             this.Bt_cotizar.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.Bt_cotizar.FlatAppearance.BorderSize = 0;
             this.Bt_cotizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
@@ -1091,6 +1113,7 @@
             this.Bt_cotizar.Text = "      Crear Cotizaciones";
             this.Bt_cotizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Bt_cotizar.UseVisualStyleBackColor = true;
+            this.Bt_cotizar.Click += new System.EventHandler(this.Bt_cotizar_Click);
             // 
             // Bt_ventas
             // 
@@ -1219,6 +1242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1362,6 +1386,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator21;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
+        private System.Windows.Forms.Button button1;
     }
 }
 

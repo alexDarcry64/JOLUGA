@@ -144,10 +144,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RN_Categoria.cs" />
     <Compile Include="RN_Cliente.cs" />
+    <Compile Include="RN_Cotizacion.cs" />
     <Compile Include="RN_Distrito.cs" />
     <Compile Include="RN_IngresoCompra.cs" />
     <Compile Include="RN_Kardex.cs" />
     <Compile Include="RN_Marcas.cs" />
+    <Compile Include="RN_Pedido.cs" />
     <Compile Include="RN_Productos.cs" />
     <Compile Include="RN_Proveedor.cs" />
     <Compile Include="RN_TipoDoc.cs" />

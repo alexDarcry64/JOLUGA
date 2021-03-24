@@ -35,6 +35,7 @@ namespace Microsell_Lite.Productos
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
+            this.Tag = "";
             this.Close();
         }
 

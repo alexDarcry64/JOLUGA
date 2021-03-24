@@ -18,6 +18,8 @@ namespace Microsell_Lite.Clientes
 {
     public partial class Frm_ListadoCliente : Form
     {
+        public static string tipo = "";
+
         public Frm_ListadoCliente()
         {
             InitializeComponent();
@@ -104,10 +106,18 @@ namespace Microsell_Lite.Clientes
 
         private void Frm_ListadoCliente_Load(object sender, EventArgs e)
         {
-            Configurar_listView();
-            Cargar_todos_Clientes();
-
-
+            if (tipo.Trim().Length == 0)
+            {
+                Configurar_listView();
+                Cargar_todos_Clientes();
+            }
+            else
+            {
+                Configurar_listView();
+                buscar_Clientes(tipo);
+            }
+            //Configurar_listView();
+            //Cargar_todos_Clientes();
         }
 
         private void llenar_Listview(DataTable data)
@@ -143,7 +153,7 @@ namespace Microsell_Lite.Clientes
             }
         }
 
-        private void buscar_Clientes(string valor)
+        public void buscar_Clientes(string valor)
         {
             RN_Cliente obj = new RN_Cliente();
             DataTable dato = new DataTable();
@@ -265,6 +275,11 @@ namespace Microsell_Lite.Clientes
         {
             pnlAddCliente.Visible = false;
             limpiar();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -167,9 +167,18 @@ namespace Microsell_Lite.Compras
             ad.ShowDialog();
             fil.Hide();
 
-            if(ad.Tag.ToString()=="A")
+            try
             {
-                Cargar_todos_Compras();
+                if (ad.Tag.ToString() == "A")
+                {
+                    Cargar_todos_Compras();
+                }
+            }
+            catch (Exception)
+            {
+
+                ad.Tag = "";
+                ad.Close();
             }
         }
 

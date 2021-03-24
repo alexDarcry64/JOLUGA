@@ -41,7 +41,7 @@ using System.Globalization;
         private const Char sub = (Char)26;
         //Cambiar acá si se quiere otro comportamiento en los métodos de clase
         public const String SeparadorDecimalSalidaDefault = "con";
-        public const String MascaraSalidaDecimalDefault = "00'/100 Soles'";
+        public const String MascaraSalidaDecimalDefault = "00'/100 Pesos'";
         public const Int32 DecimalesDefault = 2;
         public const Boolean LetraCapitalDefault = false;
         public const Boolean ConvertirDecimalesDefault = false;

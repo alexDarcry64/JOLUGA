@@ -1,6 +1,6 @@
-﻿namespace Microsell_Lite.Compras
+﻿namespace Microsell_Lite.Cotizacion
 {
-    partial class Frm_Compras
+    partial class Frm_Cotizacion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Compras));
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle2 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cotizacion));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu = new System.Windows.Forms.Panel();
             this.btn_minimi = new System.Windows.Forms.Button();
@@ -50,13 +51,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_procesar = new Klik.Windows.Forms.v1.EntryLib.ELButton();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbo_provee = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_NroFisico = new System.Windows.Forms.TextBox();
             this.elGroupBox1 = new Klik.Windows.Forms.v1.EntryLib.ELGroupBox();
+            this.lbl_totalGanancia = new System.Windows.Forms.Label();
+            this.bunifuSeparator10 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.lbl_Frank = new System.Windows.Forms.Label();
+            this.bunifuSeparator9 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuSeparator8 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.lbl_TotalItem = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbl_TotalPagar = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lbl_igv = new System.Windows.Forms.Label();
@@ -66,35 +73,45 @@
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuSeparator7 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbo_tipoPago = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtp_FechaCom = new System.Windows.Forms.DateTimePicker();
-            this.txt_IdComp = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dtp_FechaVenc = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbo_tipoDoc = new System.Windows.Forms.ComboBox();
+            this.dtp_FechaEmi = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_obser = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chk_sinIgv = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Label17 = new System.Windows.Forms.Label();
-            this.ElDivider3 = new Klik.Windows.Forms.v1.EntryLib.ELDivider();
-            this.btn_Nuevo_buscarProd = new Klik.Windows.Forms.v1.EntryLib.ELButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lbl_BusCli = new System.Windows.Forms.Label();
+            this.lbl_son = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
+            this.txt_cliente = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txt_condicion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.nud_vigencia = new System.Windows.Forms.NumericUpDown();
+            this.txtNroCotiza = new System.Windows.Forms.TextBox();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.pnl_sinProd = new System.Windows.Forms.Panel();
+            this.pnl_subtitu = new System.Windows.Forms.Panel();
+            this.chkCapital = new System.Windows.Forms.CheckBox();
+            this.btn_Nuevo_buscarProd = new Klik.Windows.Forms.v1.EntryLib.ELButton();
+            this.ElDivider3 = new Klik.Windows.Forms.v1.EntryLib.ELDivider();
+            this.Label17 = new System.Windows.Forms.Label();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_titu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gru_det)).BeginInit();
             this.gru_det.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_procesar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elGroupBox1)).BeginInit();
             this.elGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ElDivider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_son)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_vigencia)).BeginInit();
             this.pnl_sinProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElDivider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -126,7 +143,7 @@
             this.btn_minimi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimi.ForeColor = System.Drawing.Color.White;
             this.btn_minimi.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimi.Image")));
-            this.btn_minimi.Location = new System.Drawing.Point(1121, 3);
+            this.btn_minimi.Location = new System.Drawing.Point(970, 3);
             this.btn_minimi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimi.Name = "btn_minimi";
             this.btn_minimi.Size = new System.Drawing.Size(35, 31);
@@ -145,7 +162,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(1180, 4);
+            this.btn_cerrar.Location = new System.Drawing.Point(1029, 4);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(31, 30);
@@ -162,9 +179,9 @@
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Registro de Compras";
+            this.label1.Text = "Registro de Cotizaciones";
             // 
             // gru_det
             // 
@@ -202,11 +219,12 @@
             this.gru_det.Controls.Add(this.label6);
             this.gru_det.Controls.Add(this.label7);
             this.gru_det.Controls.Add(this.label5);
+            this.gru_det.Controls.Add(this.bunifuSeparator2);
             this.gru_det.Location = new System.Drawing.Point(7, 48);
             this.gru_det.Margin = new System.Windows.Forms.Padding(4);
             this.gru_det.Name = "gru_det";
             this.gru_det.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gru_det.Size = new System.Drawing.Size(783, 280);
+            this.gru_det.Size = new System.Drawing.Size(824, 280);
             this.gru_det.TabIndex = 2;
             this.gru_det.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
             // 
@@ -220,7 +238,7 @@
             this.bt_Delete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Delete.ForeColor = System.Drawing.Color.White;
             this.bt_Delete.Image = ((System.Drawing.Image)(resources.GetObject("bt_Delete.Image")));
-            this.bt_Delete.Location = new System.Drawing.Point(749, 175);
+            this.bt_Delete.Location = new System.Drawing.Point(790, 175);
             this.bt_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Delete.Name = "bt_Delete";
             this.bt_Delete.Size = new System.Drawing.Size(26, 26);
@@ -234,9 +252,9 @@
             // 
             this.lsv_Det.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lsv_Det.HideSelection = false;
-            this.lsv_Det.Location = new System.Drawing.Point(3, 30);
+            this.lsv_Det.Location = new System.Drawing.Point(3, 35);
             this.lsv_Det.Name = "lsv_Det";
-            this.lsv_Det.Size = new System.Drawing.Size(739, 239);
+            this.lsv_Det.Size = new System.Drawing.Size(780, 239);
             this.lsv_Det.TabIndex = 18;
             this.lsv_Det.UseCompatibleStateImageBehavior = false;
             // 
@@ -250,7 +268,7 @@
             this.bt_editCant.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_editCant.ForeColor = System.Drawing.Color.White;
             this.bt_editCant.Image = ((System.Drawing.Image)(resources.GetObject("bt_editCant.Image")));
-            this.bt_editCant.Location = new System.Drawing.Point(749, 129);
+            this.bt_editCant.Location = new System.Drawing.Point(790, 129);
             this.bt_editCant.Margin = new System.Windows.Forms.Padding(4);
             this.bt_editCant.Name = "bt_editCant";
             this.bt_editCant.Size = new System.Drawing.Size(26, 26);
@@ -283,7 +301,7 @@
             this.bt_editPre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_editPre.ForeColor = System.Drawing.Color.White;
             this.bt_editPre.Image = ((System.Drawing.Image)(resources.GetObject("bt_editPre.Image")));
-            this.bt_editPre.Location = new System.Drawing.Point(749, 83);
+            this.bt_editPre.Location = new System.Drawing.Point(790, 83);
             this.bt_editPre.Margin = new System.Windows.Forms.Padding(4);
             this.bt_editPre.Name = "bt_editPre";
             this.bt_editPre.Size = new System.Drawing.Size(26, 26);
@@ -316,7 +334,7 @@
             this.bt_add.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_add.ForeColor = System.Drawing.Color.White;
             this.bt_add.Image = ((System.Drawing.Image)(resources.GetObject("bt_add.Image")));
-            this.bt_add.Location = new System.Drawing.Point(749, 38);
+            this.bt_add.Location = new System.Drawing.Point(790, 38);
             this.bt_add.Margin = new System.Windows.Forms.Padding(4);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(26, 26);
@@ -344,7 +362,7 @@
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(103, 3);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(78, 3);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(11, 23);
@@ -393,9 +411,9 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(111, 3);
+            this.label7.Location = new System.Drawing.Point(85, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(351, 23);
+            this.label7.Size = new System.Drawing.Size(377, 23);
             this.label7.TabIndex = 9;
             this.label7.Text = "Descripcion del Producto";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -407,15 +425,28 @@
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(5, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 23);
+            this.label5.Size = new System.Drawing.Size(80, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Id Prod.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
+            this.bunifuSeparator2.LineThickness = 2;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 27);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(783, 10);
+            this.bunifuSeparator2.TabIndex = 13;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
             // btn_procesar
             // 
             this.btn_procesar.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            this.btn_procesar.BackgroundStyle.SolidColor = System.Drawing.Color.DodgerBlue;
+            this.btn_procesar.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
             this.btn_procesar.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Circle;
             this.btn_procesar.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Circle;
             this.btn_procesar.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Circle;
@@ -428,15 +459,15 @@
             this.btn_procesar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_procesar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_procesar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_procesar.Location = new System.Drawing.Point(26, 351);
+            this.btn_procesar.Location = new System.Drawing.Point(20, 411);
             this.btn_procesar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_procesar.Name = "btn_procesar";
             this.btn_procesar.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ModernBlack;
-            this.btn_procesar.Size = new System.Drawing.Size(209, 72);
+            this.btn_procesar.Size = new System.Drawing.Size(199, 54);
             this.btn_procesar.TabIndex = 6;
             this.btn_procesar.TextStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_procesar.TextStyle.ForeColor = System.Drawing.Color.White;
-            this.btn_procesar.TextStyle.Text = "Procesar Compra";
+            this.btn_procesar.TextStyle.Text = "Crear Cotizacion";
             this.btn_procesar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_procesar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom;
             this.btn_procesar.Click += new System.EventHandler(this.btn_procesar_Click);
@@ -444,50 +475,30 @@
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator1.LineThickness = 108;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-21, 322);
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
+            this.bunifuSeparator1.LineThickness = 2;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(20, 460);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(292, 26);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(199, 17);
             this.bunifuSeparator1.TabIndex = 7;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 356);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 24);
-            this.label2.TabIndex = 481;
-            this.label2.Text = "Proveedor:";
-            // 
-            // cbo_provee
-            // 
-            this.cbo_provee.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbo_provee.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbo_provee.FormattingEnabled = true;
-            this.cbo_provee.Location = new System.Drawing.Point(149, 354);
-            this.cbo_provee.Name = "cbo_provee";
-            this.cbo_provee.Size = new System.Drawing.Size(507, 32);
-            this.cbo_provee.TabIndex = 482;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 399);
+            this.label3.Location = new System.Drawing.Point(42, 512);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 24);
+            this.label3.Size = new System.Drawing.Size(355, 24);
             this.label3.TabIndex = 483;
-            this.label3.Text = "Nro Doc. Fisico:";
+            this.label3.Text = "Vigencia de los precios de la Cotizacion?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_NroFisico
             // 
-            this.txt_NroFisico.Location = new System.Drawing.Point(149, 394);
+            this.txt_NroFisico.Location = new System.Drawing.Point(616, 380);
             this.txt_NroFisico.Name = "txt_NroFisico";
             this.txt_NroFisico.Size = new System.Drawing.Size(140, 29);
             this.txt_NroFisico.TabIndex = 484;
@@ -514,6 +525,13 @@
             this.elGroupBox1.CaptionStyle.TextStyle.TextType = Klik.Windows.Forms.v1.Common.TextTypes.BlockShadow;
             this.elGroupBox1.CaptionStyle.Visible = false;
             this.elGroupBox1.CaptionStyle.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
+            this.elGroupBox1.Controls.Add(this.lbl_totalGanancia);
+            this.elGroupBox1.Controls.Add(this.bunifuSeparator10);
+            this.elGroupBox1.Controls.Add(this.lbl_Frank);
+            this.elGroupBox1.Controls.Add(this.bunifuSeparator9);
+            this.elGroupBox1.Controls.Add(this.bunifuSeparator8);
+            this.elGroupBox1.Controls.Add(this.lbl_TotalItem);
+            this.elGroupBox1.Controls.Add(this.label2);
             this.elGroupBox1.Controls.Add(this.lbl_TotalPagar);
             this.elGroupBox1.Controls.Add(this.label23);
             this.elGroupBox1.Controls.Add(this.lbl_igv);
@@ -524,22 +542,105 @@
             this.elGroupBox1.Controls.Add(this.btn_procesar);
             this.elGroupBox1.Controls.Add(this.bunifuSeparator1);
             this.elGroupBox1.Controls.Add(this.bunifuSeparator7);
-            this.elGroupBox1.Location = new System.Drawing.Point(809, 48);
+            this.elGroupBox1.Location = new System.Drawing.Point(839, 48);
             this.elGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.elGroupBox1.Name = "elGroupBox1";
             this.elGroupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.elGroupBox1.Size = new System.Drawing.Size(249, 498);
+            this.elGroupBox1.Size = new System.Drawing.Size(231, 498);
             this.elGroupBox1.TabIndex = 485;
             this.elGroupBox1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
             // 
+            // lbl_totalGanancia
+            // 
+            this.lbl_totalGanancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalGanancia.ForeColor = System.Drawing.Color.Tomato;
+            this.lbl_totalGanancia.Location = new System.Drawing.Point(97, 373);
+            this.lbl_totalGanancia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_totalGanancia.Name = "lbl_totalGanancia";
+            this.lbl_totalGanancia.Size = new System.Drawing.Size(126, 27);
+            this.lbl_totalGanancia.TabIndex = 504;
+            this.lbl_totalGanancia.Text = "00.00";
+            this.lbl_totalGanancia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bunifuSeparator10
+            // 
+            this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator10.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.bunifuSeparator10.LineThickness = 2;
+            this.bunifuSeparator10.Location = new System.Drawing.Point(36, 309);
+            this.bunifuSeparator10.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.bunifuSeparator10.Name = "bunifuSeparator10";
+            this.bunifuSeparator10.Size = new System.Drawing.Size(196, 19);
+            this.bunifuSeparator10.TabIndex = 502;
+            this.bunifuSeparator10.Transparency = 255;
+            this.bunifuSeparator10.Vertical = false;
+            // 
+            // lbl_Frank
+            // 
+            this.lbl_Frank.AutoSize = true;
+            this.lbl_Frank.Location = new System.Drawing.Point(14, 477);
+            this.lbl_Frank.Name = "lbl_Frank";
+            this.lbl_Frank.Size = new System.Drawing.Size(20, 24);
+            this.lbl_Frank.TabIndex = 500;
+            this.lbl_Frank.Text = "0";
+            // 
+            // bunifuSeparator9
+            // 
+            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.bunifuSeparator9.LineThickness = 2;
+            this.bunifuSeparator9.Location = new System.Drawing.Point(36, 208);
+            this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(9);
+            this.bunifuSeparator9.Name = "bunifuSeparator9";
+            this.bunifuSeparator9.Size = new System.Drawing.Size(196, 13);
+            this.bunifuSeparator9.TabIndex = 501;
+            this.bunifuSeparator9.Transparency = 255;
+            this.bunifuSeparator9.Vertical = false;
+            // 
+            // bunifuSeparator8
+            // 
+            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.bunifuSeparator8.LineThickness = 2;
+            this.bunifuSeparator8.Location = new System.Drawing.Point(36, 129);
+            this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuSeparator8.Name = "bunifuSeparator8";
+            this.bunifuSeparator8.Size = new System.Drawing.Size(196, 17);
+            this.bunifuSeparator8.TabIndex = 500;
+            this.bunifuSeparator8.Transparency = 255;
+            this.bunifuSeparator8.Vertical = false;
+            // 
+            // lbl_TotalItem
+            // 
+            this.lbl_TotalItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TotalItem.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_TotalItem.Location = new System.Drawing.Point(92, 343);
+            this.lbl_TotalItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TotalItem.Name = "lbl_TotalItem";
+            this.lbl_TotalItem.Size = new System.Drawing.Size(44, 27);
+            this.lbl_TotalItem.TabIndex = 499;
+            this.lbl_TotalItem.Text = "00";
+            this.lbl_TotalItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 347);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 24);
+            this.label2.TabIndex = 498;
+            this.label2.Text = "Cant Items:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbl_TotalPagar
             // 
-            this.lbl_TotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalPagar.ForeColor = System.Drawing.Color.Tomato;
-            this.lbl_TotalPagar.Location = new System.Drawing.Point(30, 261);
+            this.lbl_TotalPagar.Location = new System.Drawing.Point(12, 261);
             this.lbl_TotalPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TotalPagar.Name = "lbl_TotalPagar";
-            this.lbl_TotalPagar.Size = new System.Drawing.Size(156, 37);
+            this.lbl_TotalPagar.Size = new System.Drawing.Size(174, 47);
             this.lbl_TotalPagar.TabIndex = 496;
             this.lbl_TotalPagar.Text = "00.00";
             this.lbl_TotalPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -559,7 +660,7 @@
             // 
             this.lbl_igv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_igv.ForeColor = System.Drawing.Color.Tomato;
-            this.lbl_igv.Location = new System.Drawing.Point(50, 178);
+            this.lbl_igv.Location = new System.Drawing.Point(51, 174);
             this.lbl_igv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_igv.Name = "lbl_igv";
             this.lbl_igv.Size = new System.Drawing.Size(126, 27);
@@ -582,7 +683,7 @@
             // 
             this.lbl_subtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_subtotal.ForeColor = System.Drawing.Color.Tomato;
-            this.lbl_subtotal.Location = new System.Drawing.Point(50, 105);
+            this.lbl_subtotal.Location = new System.Drawing.Point(50, 101);
             this.lbl_subtotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(126, 27);
@@ -605,7 +706,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
             this.label16.Location = new System.Drawing.Point(85, 15);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
@@ -617,19 +718,19 @@
             // bunifuSeparator7
             // 
             this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator7.LineThickness = 108;
-            this.bunifuSeparator7.Location = new System.Drawing.Point(38, 45);
+            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
+            this.bunifuSeparator7.LineThickness = 2;
+            this.bunifuSeparator7.Location = new System.Drawing.Point(55, 39);
             this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
-            this.bunifuSeparator7.Size = new System.Drawing.Size(176, 12);
+            this.bunifuSeparator7.Size = new System.Drawing.Size(149, 12);
             this.bunifuSeparator7.TabIndex = 491;
             this.bunifuSeparator7.Transparency = 255;
             this.bunifuSeparator7.Vertical = false;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label4.Location = new System.Drawing.Point(0, 581);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -638,105 +739,18 @@
             this.label4.TabIndex = 486;
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label10
+            // dtp_FechaEmi
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(27, 434);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 24);
-            this.label10.TabIndex = 487;
-            this.label10.Text = "Tipo Pago";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbo_tipoPago
-            // 
-            this.cbo_tipoPago.FormattingEnabled = true;
-            this.cbo_tipoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Deposito",
-            "Credito"});
-            this.cbo_tipoPago.Location = new System.Drawing.Point(149, 426);
-            this.cbo_tipoPago.Name = "cbo_tipoPago";
-            this.cbo_tipoPago.Size = new System.Drawing.Size(140, 32);
-            this.cbo_tipoPago.TabIndex = 488;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(27, 474);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(136, 24);
-            this.label11.TabIndex = 489;
-            this.label11.Text = "Fecha Compra";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dtp_FechaCom
-            // 
-            this.dtp_FechaCom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_FechaCom.Location = new System.Drawing.Point(149, 470);
-            this.dtp_FechaCom.Name = "dtp_FechaCom";
-            this.dtp_FechaCom.Size = new System.Drawing.Size(140, 29);
-            this.dtp_FechaCom.TabIndex = 490;
-            // 
-            // txt_IdComp
-            // 
-            this.txt_IdComp.Enabled = false;
-            this.txt_IdComp.Location = new System.Drawing.Point(516, 392);
-            this.txt_IdComp.Name = "txt_IdComp";
-            this.txt_IdComp.Size = new System.Drawing.Size(140, 29);
-            this.txt_IdComp.TabIndex = 492;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(394, 397);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 24);
-            this.label12.TabIndex = 491;
-            this.label12.Text = "Primary Key";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dtp_FechaVenc
-            // 
-            this.dtp_FechaVenc.Enabled = false;
-            this.dtp_FechaVenc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_FechaVenc.Location = new System.Drawing.Point(516, 428);
-            this.dtp_FechaVenc.Name = "dtp_FechaVenc";
-            this.dtp_FechaVenc.Size = new System.Drawing.Size(140, 29);
-            this.dtp_FechaVenc.TabIndex = 494;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(394, 432);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 24);
-            this.label13.TabIndex = 493;
-            this.label13.Text = "Fecha Vencim.";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbo_tipoDoc
-            // 
-            this.cbo_tipoDoc.FormattingEnabled = true;
-            this.cbo_tipoDoc.Items.AddRange(new object[] {
-            "Factura",
-            "Guia",
-            "Nota",
-            "Nota Credito",
-            "Otro"});
-            this.cbo_tipoDoc.Location = new System.Drawing.Point(516, 466);
-            this.cbo_tipoDoc.Name = "cbo_tipoDoc";
-            this.cbo_tipoDoc.Size = new System.Drawing.Size(140, 32);
-            this.cbo_tipoDoc.TabIndex = 496;
+            this.dtp_FechaEmi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_FechaEmi.Location = new System.Drawing.Point(35, 422);
+            this.dtp_FechaEmi.Name = "dtp_FechaEmi";
+            this.dtp_FechaEmi.Size = new System.Drawing.Size(140, 29);
+            this.dtp_FechaEmi.TabIndex = 490;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(392, 470);
+            this.label14.Location = new System.Drawing.Point(392, 461);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(145, 24);
@@ -744,75 +758,265 @@
             this.label14.Text = "Tipo Documnto.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_obser
+            // chk_sinIgv
             // 
-            this.txt_obser.Location = new System.Drawing.Point(149, 502);
-            this.txt_obser.Name = "txt_obser";
-            this.txt_obser.Size = new System.Drawing.Size(507, 29);
-            this.txt_obser.TabIndex = 498;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(27, 507);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 24);
-            this.label15.TabIndex = 497;
-            this.label15.Text = "Observacion:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(149, 545);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(173, 28);
-            this.checkBox1.TabIndex = 499;
-            this.checkBox1.Text = "Recibí Conforme";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.chk_sinIgv.AutoSize = true;
+            this.chk_sinIgv.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chk_sinIgv.Location = new System.Drawing.Point(42, 549);
+            this.chk_sinIgv.Name = "chk_sinIgv";
+            this.chk_sinIgv.Size = new System.Drawing.Size(276, 28);
+            this.chk_sinIgv.TabIndex = 499;
+            this.chk_sinIgv.Text = "Los Precios NO incluyen IGV";
+            this.chk_sinIgv.UseVisualStyleBackColor = true;
             // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
             // 
-            // PictureBox3
+            // label19
             // 
-            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox3.ForeColor = System.Drawing.Color.Black;
-            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(478, 113);
-            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(96, 96);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureBox3.TabIndex = 406;
-            this.PictureBox3.TabStop = false;
+            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
+            this.label19.Location = new System.Drawing.Point(8, 379);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(26, 26);
+            this.label19.TabIndex = 502;
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label19, "Buscar el Cliente");
             // 
-            // Label17
+            // label11
             // 
-            this.Label17.AutoSize = true;
-            this.Label17.BackColor = System.Drawing.Color.Transparent;
-            this.Label17.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label17.ForeColor = System.Drawing.Color.White;
-            this.Label17.Location = new System.Drawing.Point(284, 246);
-            this.Label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(465, 41);
-            this.Label17.TabIndex = 405;
-            this.Label17.Text = "Tu carrito de Compras está Vacio";
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(8, 423);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 26);
+            this.label11.TabIndex = 503;
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label11, "Fecha de Emision");
             // 
-            // ElDivider3
+            // label15
             // 
-            this.ElDivider3.FadeStyle = Klik.Windows.Forms.v1.EntryLib.DividerFadeStyles.Center;
-            this.ElDivider3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ElDivider3.Location = new System.Drawing.Point(-2, 296);
-            this.ElDivider3.Margin = new System.Windows.Forms.Padding(4);
-            this.ElDivider3.Name = "ElDivider3";
-            this.ElDivider3.Size = new System.Drawing.Size(1059, 34);
-            this.ElDivider3.TabIndex = 408;
-            this.ElDivider3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
+            this.label15.Image = ((System.Drawing.Image)(resources.GetObject("label15.Image")));
+            this.label15.Location = new System.Drawing.Point(8, 464);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(26, 26);
+            this.label15.TabIndex = 504;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label15, "Condiciones de la Cotizacion");
+            // 
+            // label13
+            // 
+            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
+            this.label13.Location = new System.Drawing.Point(8, 508);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 26);
+            this.label13.TabIndex = 506;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label13, "Indique la Vigencia de esta Cotizacion");
+            // 
+            // label20
+            // 
+            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
+            this.label20.Location = new System.Drawing.Point(8, 546);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(26, 26);
+            this.label20.TabIndex = 508;
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label20, "Si tu cotizacion no incluye Igv, entonces Marca esta Opcion");
+            // 
+            // label12
+            // 
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.Location = new System.Drawing.Point(583, 380);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 26);
+            this.label12.TabIndex = 509;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label12, "Nro Cotizacion");
+            // 
+            // label22
+            // 
+            this.label22.Image = ((System.Drawing.Image)(resources.GetObject("label22.Image")));
+            this.label22.Location = new System.Drawing.Point(583, 425);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(26, 26);
+            this.label22.TabIndex = 511;
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label22, "Id Pedido");
+            // 
+            // lbl_BusCli
+            // 
+            this.lbl_BusCli.Image = ((System.Drawing.Image)(resources.GetObject("lbl_BusCli.Image")));
+            this.lbl_BusCli.Location = new System.Drawing.Point(473, 377);
+            this.lbl_BusCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_BusCli.Name = "lbl_BusCli";
+            this.lbl_BusCli.Size = new System.Drawing.Size(26, 26);
+            this.lbl_BusCli.TabIndex = 512;
+            this.lbl_BusCli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.lbl_BusCli, "Nro Cotizacion");
+            this.lbl_BusCli.Click += new System.EventHandler(this.lbl_BusCli_Click);
+            // 
+            // lbl_son
+            // 
+            this.lbl_son.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            this.lbl_son.BackgroundStyle.SolidColor = System.Drawing.Color.White;
+            this.lbl_son.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
+            this.lbl_son.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
+            this.lbl_son.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
+            paintStyle2.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle2.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.lbl_son.FlashStyle = paintStyle2;
+            this.lbl_son.Location = new System.Drawing.Point(7, 328);
+            this.lbl_son.Name = "lbl_son";
+            this.lbl_son.Size = new System.Drawing.Size(824, 30);
+            this.lbl_son.TabIndex = 500;
+            this.lbl_son.TabStop = false;
+            this.lbl_son.TextStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_son.TextStyle.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_son.TextStyle.Text = "Son 00/100 Soles";
+            this.lbl_son.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
+            // 
+            // txt_cliente
+            // 
+            this.txt_cliente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_cliente.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_cliente.HintForeColor = System.Drawing.Color.LightSlateGray;
+            this.txt_cliente.HintText = "Buscar Cliente";
+            this.txt_cliente.isPassword = false;
+            this.txt_cliente.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_cliente.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_cliente.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_cliente.LineThickness = 2;
+            this.txt_cliente.Location = new System.Drawing.Point(35, 372);
+            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cliente.Name = "txt_cliente";
+            this.txt_cliente.Size = new System.Drawing.Size(465, 33);
+            this.txt_cliente.TabIndex = 501;
+            this.txt_cliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_cliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_cliente_KeyDown);
+            // 
+            // txt_condicion
+            // 
+            this.txt_condicion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_condicion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_condicion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_condicion.HintForeColor = System.Drawing.Color.LightSlateGray;
+            this.txt_condicion.HintText = "Condiciones de la Cotizacion";
+            this.txt_condicion.isPassword = false;
+            this.txt_condicion.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_condicion.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_condicion.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_condicion.LineThickness = 2;
+            this.txt_condicion.Location = new System.Drawing.Point(35, 455);
+            this.txt_condicion.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_condicion.Name = "txt_condicion";
+            this.txt_condicion.Size = new System.Drawing.Size(465, 33);
+            this.txt_condicion.TabIndex = 505;
+            this.txt_condicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // nud_vigencia
+            // 
+            this.nud_vigencia.Location = new System.Drawing.Point(332, 508);
+            this.nud_vigencia.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nud_vigencia.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nud_vigencia.Name = "nud_vigencia";
+            this.nud_vigencia.Size = new System.Drawing.Size(49, 29);
+            this.nud_vigencia.TabIndex = 507;
+            this.nud_vigencia.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // txtNroCotiza
+            // 
+            this.txtNroCotiza.Location = new System.Drawing.Point(616, 425);
+            this.txtNroCotiza.Name = "txtNroCotiza";
+            this.txtNroCotiza.Size = new System.Drawing.Size(140, 29);
+            this.txtNroCotiza.TabIndex = 510;
+            // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Location = new System.Drawing.Point(517, 385);
+            this.lblIdCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(20, 24);
+            this.lblIdCliente.TabIndex = 513;
+            this.lblIdCliente.Text = "0";
+            this.lblIdCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(583, 477);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 26);
+            this.label10.TabIndex = 515;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.label10, "Id Pedido");
+            // 
+            // txtIdPedido
+            // 
+            this.txtIdPedido.Location = new System.Drawing.Point(616, 477);
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.Size = new System.Drawing.Size(140, 29);
+            this.txtIdPedido.TabIndex = 514;
+            // 
+            // pnl_sinProd
+            // 
+            this.pnl_sinProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
+            this.pnl_sinProd.Controls.Add(this.pnl_subtitu);
+            this.pnl_sinProd.Controls.Add(this.chkCapital);
+            this.pnl_sinProd.Controls.Add(this.btn_Nuevo_buscarProd);
+            this.pnl_sinProd.Controls.Add(this.ElDivider3);
+            this.pnl_sinProd.Controls.Add(this.Label17);
+            this.pnl_sinProd.Controls.Add(this.PictureBox3);
+            this.pnl_sinProd.ForeColor = System.Drawing.Color.Black;
+            this.pnl_sinProd.Location = new System.Drawing.Point(0, 38);
+            this.pnl_sinProd.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_sinProd.Name = "pnl_sinProd";
+            this.pnl_sinProd.Size = new System.Drawing.Size(1071, 546);
+            this.pnl_sinProd.TabIndex = 516;
+            // 
+            // pnl_subtitu
+            // 
+            this.pnl_subtitu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_subtitu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_subtitu.Name = "pnl_subtitu";
+            this.pnl_subtitu.Size = new System.Drawing.Size(1071, 36);
+            this.pnl_subtitu.TabIndex = 732;
+            // 
+            // chkCapital
+            // 
+            this.chkCapital.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chkCapital.AutoSize = true;
+            this.chkCapital.Checked = true;
+            this.chkCapital.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCapital.Enabled = false;
+            this.chkCapital.ForeColor = System.Drawing.Color.White;
+            this.chkCapital.Location = new System.Drawing.Point(7, 511);
+            this.chkCapital.Name = "chkCapital";
+            this.chkCapital.Size = new System.Drawing.Size(134, 28);
+            this.chkCapital.TabIndex = 731;
+            this.chkCapital.Text = "Letra Capital";
+            this.chkCapital.UseVisualStyleBackColor = true;
             // 
             // btn_Nuevo_buscarProd
             // 
@@ -830,10 +1034,10 @@
             this.btn_Nuevo_buscarProd.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.btn_Nuevo_buscarProd.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btn_Nuevo_buscarProd.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Nuevo_buscarProd.Location = new System.Drawing.Point(303, 391);
+            this.btn_Nuevo_buscarProd.Location = new System.Drawing.Point(401, 348);
             this.btn_Nuevo_buscarProd.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Nuevo_buscarProd.Name = "btn_Nuevo_buscarProd";
-            this.btn_Nuevo_buscarProd.Size = new System.Drawing.Size(423, 73);
+            this.btn_Nuevo_buscarProd.Size = new System.Drawing.Size(258, 46);
             this.btn_Nuevo_buscarProd.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.White;
             this.btn_Nuevo_buscarProd.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.White;
             this.btn_Nuevo_buscarProd.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.White;
@@ -847,62 +1051,85 @@
             this.btn_Nuevo_buscarProd.TextStyle.Text = "Buscar Productos | Nuevo [F1]";
             this.btn_Nuevo_buscarProd.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Nuevo_buscarProd.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom;
-            this.btn_Nuevo_buscarProd.Click += new System.EventHandler(this.btn_Nuevo_buscarProd_Click);
+            this.btn_Nuevo_buscarProd.Click += new System.EventHandler(this.btn_Nuevo_buscarProd_Click_1);
             // 
-            // pnl_sinProd
+            // ElDivider3
             // 
-            this.pnl_sinProd.AutoSize = true;
-            this.pnl_sinProd.BackColor = System.Drawing.Color.SkyBlue;
-            this.pnl_sinProd.Controls.Add(this.btn_Nuevo_buscarProd);
-            this.pnl_sinProd.Controls.Add(this.ElDivider3);
-            this.pnl_sinProd.Controls.Add(this.Label17);
-            this.pnl_sinProd.Controls.Add(this.PictureBox3);
-            this.pnl_sinProd.ForeColor = System.Drawing.Color.Black;
-            this.pnl_sinProd.Location = new System.Drawing.Point(0, 38);
-            this.pnl_sinProd.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_sinProd.Name = "pnl_sinProd";
-            this.pnl_sinProd.Size = new System.Drawing.Size(1071, 546);
-            this.pnl_sinProd.TabIndex = 480;
-            this.pnl_sinProd.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_sinProd_Paint);
+            this.ElDivider3.FadeStyle = Klik.Windows.Forms.v1.EntryLib.DividerFadeStyles.Center;
+            this.ElDivider3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ElDivider3.Location = new System.Drawing.Point(8, 306);
+            this.ElDivider3.Margin = new System.Windows.Forms.Padding(4);
+            this.ElDivider3.Name = "ElDivider3";
+            this.ElDivider3.Size = new System.Drawing.Size(1059, 34);
+            this.ElDivider3.TabIndex = 408;
+            this.ElDivider3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
             // 
-            // Frm_Compras
+            // Label17
+            // 
+            this.Label17.AutoSize = true;
+            this.Label17.BackColor = System.Drawing.Color.Transparent;
+            this.Label17.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label17.ForeColor = System.Drawing.Color.White;
+            this.Label17.Location = new System.Drawing.Point(335, 269);
+            this.Label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(434, 41);
+            this.Label17.TabIndex = 405;
+            this.Label17.Text = "Tu carrito de Ventas está Vacio";
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox3.ForeColor = System.Drawing.Color.Black;
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(474, 197);
+            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(68, 68);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureBox3.TabIndex = 406;
+            this.PictureBox3.TabStop = false;
+            // 
+            // Frm_Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 584);
             this.Controls.Add(this.pnl_sinProd);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.txt_obser);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.cbo_tipoDoc);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.dtp_FechaVenc);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txt_IdComp);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.dtp_FechaCom);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.cbo_tipoPago);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtIdPedido);
+            this.Controls.Add(this.lblIdCliente);
+            this.Controls.Add(this.lbl_BusCli);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.txtNroCotiza);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.nud_vigencia);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txt_condicion);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.txt_cliente);
+            this.Controls.Add(this.lbl_son);
+            this.Controls.Add(this.chk_sinIgv);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.dtp_FechaEmi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.elGroupBox1);
             this.Controls.Add(this.txt_NroFisico);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbo_provee);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.gru_det);
             this.Controls.Add(this.pnl_titu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_Compras";
+            this.Name = "Frm_Cotizacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ingreso de Compras";
             this.Load += new System.EventHandler(this.Frm_Ventana_Ventas_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Compras_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Cotizacion_KeyDown);
             this.pnl_titu.ResumeLayout(false);
             this.pnl_titu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gru_det)).EndInit();
@@ -911,11 +1138,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.elGroupBox1)).EndInit();
             this.elGroupBox1.ResumeLayout(false);
             this.elGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ElDivider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_son)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_vigencia)).EndInit();
             this.pnl_sinProd.ResumeLayout(false);
             this.pnl_sinProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElDivider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,8 +1162,6 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.TextBox txt_NroFisico;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbo_provee;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private Klik.Windows.Forms.v1.EntryLib.ELGroupBox elGroupBox1;
         private System.Windows.Forms.Label label9;
@@ -942,24 +1169,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator6;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private System.Windows.Forms.ListView lsv_Det;
-        private System.Windows.Forms.DateTimePicker dtp_FechaCom;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbo_tipoPago;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txt_obser;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cbo_tipoDoc;
+        private System.Windows.Forms.DateTimePicker dtp_FechaEmi;
+        private System.Windows.Forms.CheckBox chk_sinIgv;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtp_FechaVenc;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_IdComp;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_TotalPagar;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lbl_igv;
@@ -973,7 +1191,32 @@
         private System.Windows.Forms.Button bt_editPre;
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbl_Frank;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator10;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator9;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator8;
+        private System.Windows.Forms.Label lbl_TotalItem;
+        private System.Windows.Forms.Label label2;
+        private Klik.Windows.Forms.v1.EntryLib.ELLabel lbl_son;
+        private System.Windows.Forms.Label label19;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_cliente;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_condicion;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown nud_vigencia;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtNroCotiza;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_BusCli;
+        private System.Windows.Forms.Label lbl_totalGanancia;
+        private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIdPedido;
         internal System.Windows.Forms.Panel pnl_sinProd;
+        private System.Windows.Forms.Panel pnl_subtitu;
+        private System.Windows.Forms.CheckBox chkCapital;
         internal Klik.Windows.Forms.v1.EntryLib.ELButton btn_Nuevo_buscarProd;
         internal Klik.Windows.Forms.v1.EntryLib.ELDivider ElDivider3;
         internal System.Windows.Forms.Label Label17;

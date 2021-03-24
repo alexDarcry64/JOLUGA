@@ -13,6 +13,7 @@ using Microsell_Lite.Ventas;
 using Microsell_Lite.Compras;
 using Microsell_Lite.Proveedores;
 using Microsell_Lite.Utilitarios;
+using Microsell_Lite.Cotizacion;
 
 namespace Microsell_Lite
 {
@@ -45,6 +46,10 @@ namespace Microsell_Lite
 
             pro.MdiParent = this;
             pro.Show();
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -65,7 +70,7 @@ namespace Microsell_Lite
         private void Pnl_Menu_MouseMove(object sender, MouseEventArgs e)
         {
             Utilitario obj = new Utilitario();
-           if (e.Button ==MouseButtons.Left )
+            if (e.Button == MouseButtons.Left)
             {
                 obj.Mover_formulario(this);
             }
@@ -79,15 +84,15 @@ namespace Microsell_Lite
         private void btn_hide_Click(object sender, EventArgs e)
         {
 
-          if( PanelLateral.Width == 247)
+            if (PanelLateral.Width == 247)
             {
                 PanelLateral.Width = 40;
                 PicUser_2.Visible = true;
             }
-          else
+            else
             {
                 PanelLateral.Width = 247;
-                PicUser.Visible = true ;
+                PicUser.Visible = true;
                 PicUser_2.Visible = false;
             }
         }
@@ -100,7 +105,10 @@ namespace Microsell_Lite
             ven.MdiParent = this;
             ven.Show();
 
-
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
         }
 
         private void bt_cliente_Click(object sender, EventArgs e)
@@ -108,6 +116,10 @@ namespace Microsell_Lite
             Frm_Explor_Cliente cli = new Frm_Explor_Cliente();
             cli.MdiParent = this;
             cli.Show();
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
         }
 
         private void bt_compras_Click(object sender, EventArgs e)
@@ -115,6 +127,10 @@ namespace Microsell_Lite
             Frm_Compras com = new Frm_Compras();
             com.MdiParent = this;
             com.Show();
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
         }
 
         private void Bt_AbrirExploradorDeCompras_Click(object sender, EventArgs e)
@@ -129,6 +145,37 @@ namespace Microsell_Lite
             Frm_Explor_Proveedor pro = new Frm_Explor_Proveedor();
             pro.MdiParent = this;
             pro.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void Bt_cotizar_Click(object sender, EventArgs e)
+        {
+            Frm_Cotizacion coti = new Frm_Cotizacion();
+            coti.MdiParent = this;
+            coti.Show();
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
+        }
+
+        private void bt_DocEmitidos_Click(object sender, EventArgs e)
+        {
+            if (PanelLateral.Width == 247)
+            {
+                PanelLateral.Width = 40;
+            }
         }
     }
 }
