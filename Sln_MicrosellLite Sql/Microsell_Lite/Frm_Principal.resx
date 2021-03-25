@@ -4343,6 +4343,13 @@
         IUWkGP8F/T3VYBq1TDUAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAGpJREFUSEvt
+        1cEKgEAIBFC/L+r/L0Et1HfYtMxtkGjtFD7wpI57KiuvuPuC2lCjVtTEOIXm0cdydsYpDqQxTrGfxjjF
+        fjzwgOt1IMb1OhDjeh2Icf3nB774XDfGKTRn1NnHxtwPjH84RZldcepp9V9dc7oAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btn_cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAUlJREFUOE/d

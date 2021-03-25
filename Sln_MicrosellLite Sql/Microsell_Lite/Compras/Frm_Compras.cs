@@ -13,6 +13,7 @@ using System.IO;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Productos;
 using Prj_Capa_Negocio;
+using Microsell_Lite.Ventas;
 
 namespace Microsell_Lite.Compras
 {
@@ -26,6 +27,7 @@ namespace Microsell_Lite.Compras
         private void Frm_Ventana_Ventas_Load(object sender, EventArgs e)
         {
             Configurar_listView();
+            
             Llenar_Combo_Proveedores();
         }
 
@@ -43,8 +45,8 @@ namespace Microsell_Lite.Compras
 
             //configurar las columnas
 
-            lis.Columns.Add("Id Producto", 40, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Descripcion Producto", 240, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Id Producto", 109, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Descripcion Producto", 351, HorizontalAlignment.Left);//0
             lis.Columns.Add("Cantidad", 80, HorizontalAlignment.Left);//0
             lis.Columns.Add("Pre Unitario", 90, HorizontalAlignment.Right);//0
             lis.Columns.Add("Importe", 90, HorizontalAlignment.Right);//0
@@ -87,6 +89,7 @@ namespace Microsell_Lite.Compras
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
+            this.Tag = "";
             this.Close();
         }
 
@@ -128,18 +131,18 @@ namespace Microsell_Lite.Compras
             lbl_TotalPagar.Text = xtotal.ToString("###0.00");
         }
 
-        private void Agregar_Productos_carro()
+        private void Agregar_Productos_carro(string xxidProd, string xxnomprod, double xxcant, double xxprecio, double xximporte)
         {
             try
             {
                 if (lsv_Det.Items.Count == 0)
                 {
                     ListViewItem item = new ListViewItem();
-                    item = lsv_Det.Items.Add(xidProducto);
-                    item.SubItems.Add(xnombreProducto.Trim());
-                    item.SubItems.Add(xcant.ToString());
-                    item.SubItems.Add(xprecio.ToString("###0.00"));
-                    item.SubItems.Add(ximporte.ToString("###0.00"));
+                    item = lsv_Det.Items.Add(xxidProd);
+                    item.SubItems.Add(xxnomprod.Trim());
+                    item.SubItems.Add(xxcant.ToString());
+                    item.SubItems.Add(xxprecio.ToString("###0.00"));
+                    item.SubItems.Add(xximporte.ToString("###0.00"));
 
 
                     Calcular();
@@ -158,11 +161,11 @@ namespace Microsell_Lite.Compras
                     }
 
                     ListViewItem item = new ListViewItem();
-                    item = lsv_Det.Items.Add(xidProducto);
-                    item.SubItems.Add(xidProducto.Trim());
-                    item.SubItems.Add(xcant.ToString());
-                    item.SubItems.Add(xprecio.ToString("###0.00"));
-                    item.SubItems.Add(ximporte.ToString("###0.00"));
+                    item = lsv_Det.Items.Add(xxidProd);
+                    item.SubItems.Add(xxnomprod.Trim());
+                    item.SubItems.Add(xxcant.ToString());
+                    item.SubItems.Add(xxprecio.ToString("###0.00"));
+                    item.SubItems.Add(xximporte.ToString("###0.00"));
 
                     Calcular();
                     lsv_Det.Focus();
@@ -179,8 +182,10 @@ namespace Microsell_Lite.Compras
         private void btn_Nuevo_buscarProd_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_ListadoProducto pro = new Frm_ListadoProducto();
+            Frm_ListadoProd_Compra pro = new Frm_ListadoProd_Compra();
             fil.Show();
+            Frm_ListadoProd_Compra.tipoVenta = "venta";
+            //pro.cbxCotizacion.Checked = true;
             pro.txtbuscar.Focus();
             pro.ShowDialog();
             fil.Hide();
@@ -188,7 +193,13 @@ namespace Microsell_Lite.Compras
             {
                 if (pro.Tag.ToString() == "A")
                 {
-                    Agregar_Productos_carro();
+                    string _idProd = pro.lblIdProducto.Text;
+                    string _nomprod = pro.lblNomProd.Text;
+                    double _cant = Convert.ToDouble(pro.lblCant.Text);
+                    double _precio = Convert.ToDouble(pro.lblPreUnid.Text);
+                    double _importe = Convert.ToDouble(pro.lblImport.Text);
+
+                    Agregar_Productos_carro(_idProd,_nomprod,_cant,_precio,_importe);
                     txt_IdComp.Text = RN_TipoDoc.RN_Nro_id(9);
                 }
             }
@@ -213,7 +224,6 @@ namespace Microsell_Lite.Compras
             {
                 if (pro.Tag.ToString() == "A")
                 {
-                    Agregar_Productos_carro();
                 }
             }
             catch (Exception)

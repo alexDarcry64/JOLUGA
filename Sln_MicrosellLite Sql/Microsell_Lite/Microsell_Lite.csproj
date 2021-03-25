@@ -177,6 +177,12 @@
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cls_UsuLogin.cs" />
+    <Compile Include="Cotizacion\Frm_Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotizacion\Frm_Cotizacion.designer.cs">
+      <DependentUpon>Frm_Cotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\Frm_Explor_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,12 @@
     <Compile Include="Ventas\Frm_Edit_Precio.Designer.cs">
       <DependentUpon>Frm_Edit_Precio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventas\Frm_ListadoProd_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Frm_ListadoProd_Compra.Designer.cs">
+      <DependentUpon>Frm_ListadoProd_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Frm_Ventana_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\Frm_Explor_Cliente.resx">
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotizacion\Frm_Cotizacion.resx">
+      <DependentUpon>Frm_Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\Frm_Explor_Compra.resx">
       <DependentUpon>Frm_Explor_Compra.cs</DependentUpon>
@@ -430,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Frm_Edit_Precio.resx">
       <DependentUpon>Frm_Edit_Precio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Frm_ListadoProd_Compra.resx">
+      <DependentUpon>Frm_ListadoProd_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Frm_Ventana_Ventas.resx">
       <DependentUpon>Frm_Ventana_Ventas.cs</DependentUpon>
