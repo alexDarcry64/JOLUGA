@@ -154,7 +154,7 @@ namespace Microsell_Lite.Compras
                 {
                     for (int i = 0; i < lsv_Det.Items.Count; i++)
                     {
-                        if (lsv_Det.Items[i].Text.Trim() == xidProducto.Trim())
+                        if (lsv_Det.Items[i].Text.Trim() == xxidProd.Trim())
                         {
                             MessageBox.Show("El producto ya fue agregado al carrito de compras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
@@ -182,15 +182,26 @@ namespace Microsell_Lite.Compras
         private void btn_Nuevo_buscarProd_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_Explor_Compra pro = new Frm_Explor_Compra();
+            Frm_ListadoProd_Compra pro = new Frm_ListadoProd_Compra();
             fil.Show();
-            //pro.cbxCotizacion.Checked = true;
+            Frm_ListadoProd_Compra.tipoVenta = "compra";
+            pro.cbxCotizacion.Checked = true;
+            pro.txtbuscar.Focus();
             pro.ShowDialog();
             fil.Hide();
             try
             {
                 if (pro.Tag.ToString() == "A")
                 {
+                    string _idProd = pro.lblIdProducto.Text;
+                    string _nomprod = pro.lblNomProd.Text;
+                    double _cant = Convert.ToDouble(pro.lblCant.Text);
+                    double _precio = Convert.ToDouble(pro.lblPreUnid.Text);
+                    double _importe = Convert.ToDouble(pro.lblImport.Text);
+
+                    Agregar_Productos_carro(_idProd,_nomprod,_cant,_precio,_importe);
+                    txt_IdComp.Text = RN_TipoDoc.RN_Nro_id(9);
+                    this.pnl_sinProd.Hide();
                 }
             }
             catch (Exception)
@@ -204,21 +215,30 @@ namespace Microsell_Lite.Compras
         private void bt_add_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_ListadoProducto pro = new Frm_ListadoProducto();
+            Frm_ListadoProd_Compra pro = new Frm_ListadoProd_Compra();
             fil.Show();
+            Frm_ListadoProd_Compra.tipoVenta = "compra";
+            pro.cbxCotizacion.Checked = true;
             pro.txtbuscar.Focus();
             pro.ShowDialog();
             fil.Hide();
-
             try
             {
                 if (pro.Tag.ToString() == "A")
                 {
+                    string _idProd = pro.lblIdProducto.Text;
+                    string _nomprod = pro.lblNomProd.Text;
+                    double _cant = Convert.ToDouble(pro.lblCant.Text);
+                    double _precio = Convert.ToDouble(pro.lblPreUnid.Text);
+                    double _importe = Convert.ToDouble(pro.lblImport.Text);
+
+                    Agregar_Productos_carro(_idProd, _nomprod, _cant, _precio, _importe);
+                    txt_IdComp.Text = RN_TipoDoc.RN_Nro_id(9);
+                    this.pnl_sinProd.Hide();
                 }
             }
             catch (Exception)
             {
-
                 pro.Tag = "";
                 pro.Close();
             }

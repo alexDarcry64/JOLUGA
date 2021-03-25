@@ -269,7 +269,7 @@
             this.buscarComprasDelMesToolStripMenuItem,
             this.coomprasDelDiaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 206);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 178);
             // 
             // mostrarTodosToolStripMenuItem
             // 
