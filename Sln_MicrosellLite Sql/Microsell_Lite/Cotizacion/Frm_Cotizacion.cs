@@ -18,7 +18,7 @@ using Microsell_Lite.Productos;
 using Microsell_Lite.Ventas;
 using Microsell_Lite.Compras;
 using Microsell_Lite.Clientes;
-
+using Microsell_Lite.Informe;
 
 namespace Microsell_Lite.Cotizacion
 {
@@ -406,7 +406,8 @@ namespace Microsell_Lite.Cotizacion
         {
             RN_Cotizacion obj = new RN_Cotizacion();
             EN_Cotizacion coti = new EN_Cotizacion();
-
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Print_Cotizaciones informeCot = new Frm_Print_Cotizaciones();
             try
             {
 
@@ -434,6 +435,14 @@ namespace Microsell_Lite.Cotizacion
 
                     if (BD_Cotizacion.guardo == true)
                     {
+
+                        //Mandar a imprimir cotizacion
+                        fil.Show();
+                        informeCot.Tag = txtNroCotiza.Text;
+                        informeCot.ShowDialog();
+                        fil.Hide();
+
+                                
                         RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(11);
                         MessageBox.Show("Cotizacion Guardada Exitosamente", "Cotizacion Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         pnl_sinProd.Visible = true;

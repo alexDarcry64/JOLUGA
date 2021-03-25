@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.4.1.1\lib\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -184,6 +185,7 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalReports.Shared.13.0.4000\lib\net40\CrystalDecisions.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
@@ -196,6 +198,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -232,6 +236,12 @@
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cls_UsuLogin.cs" />
+    <Compile Include="Compras\Frm_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Frm_Compras.Designer.cs">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cotizacion\Frm_Cotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +295,12 @@
     </Compile>
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\Frm_Print_Cotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe\Frm_Print_Cotizaciones.Designer.cs">
+      <DependentUpon>Frm_Print_Cotizaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Informe\Rpte_Cotizacion.cs">
       <AutoGen>True</AutoGen>
@@ -428,6 +444,9 @@
     <EmbeddedResource Include="Clientes\Frm_Explor_Cliente.resx">
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Frm_Compras.resx">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cotizacion\Frm_Cotizacion.resx">
       <DependentUpon>Frm_Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe\Frm_Print_Cotizaciones.resx">
+      <DependentUpon>Frm_Print_Cotizaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informe\Rpte_Cotizacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
