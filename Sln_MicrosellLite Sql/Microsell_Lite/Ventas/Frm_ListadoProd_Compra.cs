@@ -366,7 +366,6 @@ namespace Microsell_Lite.Ventas
                     Agregar_Producto_Pedido(lblIdProducto.Text, lblNomProd.Text, lblUnid.Text, Convert.ToDouble(lblCant.Text),
                         Convert.ToDouble(lblPreUnid.Text), Convert.ToDouble(lblImport.Text), Convert.ToDouble(lblUtiUnit.Text),
                         Convert.ToDouble(lblTotal.Text), lblTipoProd.Text);
-                    LimpiarLabels();
                 }
             }
             else
@@ -376,6 +375,7 @@ namespace Microsell_Lite.Ventas
                 solo.lblNom.Text = lblNomProd.Text;
                 solo.ShowDialog();
                 fil.Hide();
+                
 
                 try
                 {
@@ -383,10 +383,13 @@ namespace Microsell_Lite.Ventas
                     {
                         lblCant.Text = solo.txtCantidad.Text;
                         solo.txtCantidad.Text = "";
+                        double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
+                        lblImport.Text = importxx.ToString("###0.00");
                         xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
                         lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                         this.Tag = "A";
                         solo.Close();
+                        this.Close();
                     }
                 }
                 catch (Exception)
@@ -639,68 +642,68 @@ namespace Microsell_Lite.Ventas
             Cargar_todos_Productos();
         }
 
-        //private void Seleccionar_Producto2()
-        //{
-            
-        //        Frm_Filtro fil = new Frm_Filtro();
-        //        Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
-        //        if (ltsProductos.SelectedIndices.Count == 0)
-        //        {
+        private void Seleccionar_Producto2()
+        {
 
-        //        }
-        //        else
-        //        {
-        //            string tipoProducto = "";
-        //            double stock = 0;
-        //            double importe = 0;
-        //            string xnomprod = "";
-        //            double xcanti = 0;
-        //            double ximporte = 0;
-        //            double xprecioCompra = 0;
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+            if (ltsProductos.SelectedIndices.Count == 0)
+            {
 
-        //            var lis = ltsProductos.SelectedItems[0];
-        //            tipoProducto = lis.SubItems[6].Text;
+            }
+            else
+            {
+                string tipoProducto = "";
+                double stock = 0;
+                double importe = 0;
+                string xnomprod = "";
+                double xcanti = 0;
+                double ximporte = 0;
+                double xprecioCompra = 0;
 
-        //            if (tipoProducto.Trim() == "Producto")
-        //            {
-        //                Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
-        //                xnomprod = lis.SubItems[1].Text;
-        //                Frm_Compras.xidProducto = lis.SubItems[0].Text;
-        //                Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
-        //                xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
-        //                stock = Convert.ToDouble(lis.SubItems[2].Text);
+                var lis = ltsProductos.SelectedItems[0];
+                tipoProducto = lis.SubItems[6].Text;
+
+                if (tipoProducto.Trim() == "Producto")
+                {
+                    Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
+                    xnomprod = lis.SubItems[1].Text;
+                    Frm_Compras.xidProducto = lis.SubItems[0].Text;
+                    Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
+                    xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
+                    stock = Convert.ToDouble(lis.SubItems[2].Text);
 
 
-        //                fil.Show();
-        //                solo.lblNom.Text = xnomprod;
-        //                solo.lblStock.Text = stock.ToString();
-        //                solo.ShowDialog();
-        //                fil.Hide();
-        //            try
-        //            {
-        //                if (solo.Tag.ToString() == "A")
-        //                {
-        //                    xcanti = Convert.ToDouble(solo.txtCantidad.Text);
-        //                    solo.txtCantidad.Text = "";
+                    fil.Show();
+                    solo.lblNom.Text = xnomprod;
+                    solo.lblStock.Text = stock.ToString();
+                    solo.ShowDialog();
+                    fil.Hide();
+                    try
+                    {
+                        if (solo.Tag.ToString() == "A")
+                        {
+                            xcanti = Convert.ToDouble(solo.txtCantidad.Text);
+                            solo.txtCantidad.Text = "";
 
-        //                    ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
-        //                    Frm_Compras.ximporte = importe;
-        //                    Frm_Compras.xcant = xcanti;
+                            ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
+                            Frm_Compras.ximporte = importe;
+                            Frm_Compras.xcant = xcanti;
 
-        //                    this.Tag = "A";
-        //                    this.Close();
-        //                }
-        //            }
-        //            catch (Exception)
-        //            {
-        //                solo.Tag = "";
-        //                solo.Close();
-        //            }
+                            this.Tag = "A";
+                            this.Close();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        solo.Tag = "";
+                        solo.Close();
+                    }
 
-        //        }
-        //    }
-            
-        //}
+                }
+            }
+
+        }
 
         private void ltsProductos_DoubleClick(object sender, EventArgs e)
         {
