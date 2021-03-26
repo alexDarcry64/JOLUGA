@@ -20,11 +20,10 @@ namespace Microsell_Lite.Informe
 
         private void Frm_Print_Cotizaciones_Load(object sender, EventArgs e)
         {
-            Crear_Impresion_Cotizacion();
         }
 
 
-        private void Crear_Impresion_Cotizacion()
+        public void Crear_Impresion_Cotizacion()
         {
             RN_Cotizacion cotizacion = new RN_Cotizacion();
             DataTable datos = new DataTable();

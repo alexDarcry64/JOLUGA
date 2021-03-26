@@ -294,13 +294,18 @@ namespace Microsell_Lite.Compras
                 solo.txtCantidad.Text = cantidad_ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
-
-                if (solo.Tag.ToString() == "A")
+                try {
+                    if (solo.Tag.ToString() == "A")
+                    {
+                        cantidad_editado = Convert.ToDouble(solo.txtCantidad.Text);
+                        lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
+                        Calcular();
+                    }
+                } catch (Exception io)
                 {
-                    cantidad_editado = Convert.ToDouble(solo.txtCantidad.Text);
-                    lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
-                    Calcular();
+
                 }
+                
             }
         }
 
