@@ -346,16 +346,14 @@ namespace Microsell_Lite.Productos
 
 
                         fil.Show();
-                        solo.lblNom.Text = xnomprod;
-                        solo.lblStock.Text = stock.ToString();
                         solo.ShowDialog();
                         fil.Hide();
                     try
                     {
                         if (solo.Tag.ToString() == "A")
                         {
-                            xcanti = Convert.ToDouble(solo.txtCantidad.Text);
-                            solo.txtCantidad.Text = "";
+                            xcanti = Convert.ToDouble(solo.txt_cant.Text);
+                            solo.txt_cant.Text = "";
 
                             ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
                             Frm_Compras.ximporte = importe;

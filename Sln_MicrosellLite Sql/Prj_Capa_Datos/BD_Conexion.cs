@@ -10,12 +10,12 @@ namespace Prj_Capa_Datos
     {
         public string Conectar()
         {
-            return "data source=DESKTOP-42JH8V9;Initial Catalog=JOLUGAGO;Integrated security=true";
+            return "data source=DESKTOP-BJONN1L;Initial Catalog=JOLUGAGO;Integrated security=true";
         }
 
         public static string Conectar2()
         {
-            return "data source=DESKTOP-42JH8V9;Initial Catalog=JOLUGAGO;Integrated security=true";
+            return "data source=DESKTOP-BJONN1L;Initial Catalog=JOLUGAGO;Integrated security=true";
         }
     }
 }

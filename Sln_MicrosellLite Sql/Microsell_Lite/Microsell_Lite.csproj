@@ -130,8 +130,8 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.4.1.1\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
@@ -188,7 +188,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
+      <HintPath>..\..\..\JOLUGAGO\Sln_MicrosellLite Sql\Microsell_Lite\bin\Debug\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
@@ -242,6 +242,12 @@
     <Compile Include="Compras\Frm_Compras.Designer.cs">
       <DependentUpon>Frm_Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras\Frm_Solo_Cantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Frm_Solo_Cantidad.designer.cs">
+      <DependentUpon>Frm_Solo_Cantidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cotizacion\Frm_Cotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,23 +266,11 @@
     <Compile Include="Compras\Frm_Msm_Bueno.designer.cs">
       <DependentUpon>Frm_Msm_Bueno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\Frm_SoloCantidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Compras\Frm_SoloCantidad.Designer.cs">
-      <DependentUpon>Frm_SoloCantidad.cs</DependentUpon>
-    </Compile>
     <Compile Include="Compras\Frm_Solo_Precio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compras\Frm_Solo_Precio.designer.cs">
       <DependentUpon>Frm_Solo_Precio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Compras\Frm_SoloPrecio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Compras\Frm_SoloPrecio.Designer.cs">
-      <DependentUpon>Frm_SoloPrecio.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Filtro.cs">
       <SubType>Form</SubType>
@@ -402,11 +396,11 @@
     <Compile Include="Utilitarios\Frm_Sino.Designer.cs">
       <DependentUpon>Frm_Sino.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilitarios\Frm_SoloFecha.cs">
+    <Compile Include="Utilitarios\Frm_Solo_Fecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilitarios\Frm_SoloFecha.Designer.cs">
-      <DependentUpon>Frm_SoloFecha.cs</DependentUpon>
+    <Compile Include="Utilitarios\Frm_Solo_Fecha.designer.cs">
+      <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventas\Frm_Edit_Cant.cs">
       <SubType>Form</SubType>
@@ -447,6 +441,9 @@
     <EmbeddedResource Include="Compras\Frm_Compras.resx">
       <DependentUpon>Frm_Compras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Frm_Solo_Cantidad.resx">
+      <DependentUpon>Frm_Solo_Cantidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cotizacion\Frm_Cotizacion.resx">
       <DependentUpon>Frm_Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,14 +453,8 @@
     <EmbeddedResource Include="Compras\Frm_Msm_Bueno.resx">
       <DependentUpon>Frm_Msm_Bueno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Compras\Frm_SoloCantidad.resx">
-      <DependentUpon>Frm_SoloCantidad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Compras\Frm_Solo_Precio.resx">
       <DependentUpon>Frm_Solo_Precio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Compras\Frm_SoloPrecio.resx">
-      <DependentUpon>Frm_SoloPrecio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Filtro.resx">
       <DependentUpon>Frm_Filtro.cs</DependentUpon>
@@ -533,8 +524,8 @@
     <EmbeddedResource Include="Utilitarios\Frm_Sino.resx">
       <DependentUpon>Frm_Sino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilitarios\Frm_SoloFecha.resx">
-      <DependentUpon>Frm_SoloFecha.cs</DependentUpon>
+    <EmbeddedResource Include="Utilitarios\Frm_Solo_Fecha.resx">
+      <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Frm_Edit_Cant.resx">
       <DependentUpon>Frm_Edit_Cant.cs</DependentUpon>

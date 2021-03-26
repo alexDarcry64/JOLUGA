@@ -272,7 +272,7 @@ namespace Microsell_Lite.Cotizacion
         private void bt_editPre_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_SoloPrecio solo = new Frm_SoloPrecio();
+            Frm_Solo_Precio solo = new Frm_Solo_Precio();
 
             if (lsv_Det.SelectedIndices.Count == 0)
             {
@@ -285,13 +285,13 @@ namespace Microsell_Lite.Cotizacion
                 precio_Ingresado = Convert.ToDouble(lsv_Det.SelectedItems[0].SubItems[3].Text);
 
                 fil.Show();
-                solo.txtPrecio.Text = precio_Ingresado.ToString();
+                solo.txt_cant.Text = precio_Ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
 
                 if (solo.Tag.ToString() == "A")
                 {
-                    precio_Editado = Convert.ToDouble(solo.txtPrecio.Text);
+                    precio_Editado = Convert.ToDouble(solo.txt_cant.Text);
                     lsv_Det.SelectedItems[0].SubItems[3].Text = precio_Editado.ToString("###0.00");
                     Calcular();
                 }
@@ -301,7 +301,7 @@ namespace Microsell_Lite.Cotizacion
         private void bt_editCant_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_SoloPrecio solo = new Frm_SoloPrecio();
+            Frm_Solo_Precio solo = new Frm_Solo_Precio();
 
             if (lsv_Det.SelectedIndices.Count == 0)
             {
@@ -314,13 +314,13 @@ namespace Microsell_Lite.Cotizacion
                 precio_Ingresado = Convert.ToDouble(lsv_Det.SelectedItems[0].SubItems[2].Text);
 
                 fil.Show();
-                solo.txtPrecio.Text = precio_Ingresado.ToString();
+                solo.txt_cant.Text = precio_Ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
 
                 if (solo.Tag.ToString() == "A")
                 {
-                    precio_Editado = Convert.ToDouble(solo.txtPrecio.Text);
+                    precio_Editado = Convert.ToDouble(solo.txt_cant.Text);
                     lsv_Det.SelectedItems[0].SubItems[2].Text = precio_Editado.ToString("###0.00");
                     Calcular();
                 }

@@ -349,14 +349,10 @@ namespace Microsell_Lite.Ventas
             if (cbxLlenarCarrito.Checked == true)
             {
                 fil.Show();
-                solo.lblStock.Text = stock.ToString();
-                solo.lblNom.Text = lblNomProd.Text;
                 solo.ShowDialog();
                 fil.Hide();
                 if (solo.Tag.ToString() == "A")
                 {
-                    lblCant.Text = solo.txtCantidad.Text;
-                    solo.txtCantidad.Text = "";
                     xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
                     lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                     double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
@@ -371,8 +367,6 @@ namespace Microsell_Lite.Ventas
             else
             {
                 fil.Show();
-                solo.lblStock.Text = stock.ToString();
-                solo.lblNom.Text = lblNomProd.Text;
                 solo.ShowDialog();
                 fil.Hide();
                 
@@ -381,8 +375,8 @@ namespace Microsell_Lite.Ventas
                 {
                     if (solo.Tag.ToString() == "A")
                     {
-                        lblCant.Text = solo.txtCantidad.Text;
-                        solo.txtCantidad.Text = "";
+                        lblCant.Text = solo.txt_cant.Text;
+                        solo.txt_cant.Text = "";
                         double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
                         lblImport.Text = importxx.ToString("###0.00");
                         xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
@@ -451,14 +445,12 @@ namespace Microsell_Lite.Ventas
                 if (cbxLlenarCarrito.Checked == true)
                 {
                     fil.Show();
-                    solo.lblStock.Text = stock.ToString();
-                    solo.lblNom.Text = lblNomProd.Text;
                     solo.ShowDialog();
                     fil.Hide();
                     if (solo.Tag.ToString() == "A")
                     {
-                        lblCant.Text = solo.txtCantidad.Text;
-                        solo.txtCantidad.Text = "";
+                        lblCant.Text = solo.txt_cant.Text;
+                        solo.txt_cant.Text = "";
                         xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
                         lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                         double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
@@ -474,8 +466,6 @@ namespace Microsell_Lite.Ventas
                 else
                 {
                     fil.Show();
-                    solo.lblStock.Text = stock.ToString();
-                    solo.lblNom.Text = lblNomProd.Text;
                     solo.ShowDialog();
                     fil.Hide();
 
@@ -483,8 +473,8 @@ namespace Microsell_Lite.Ventas
                     {
                         if (solo.Tag.ToString() == "A")
                         {
-                            lblCant.Text = solo.txtCantidad.Text;
-                            solo.txtCantidad.Text = "";
+                            lblCant.Text = solo.txt_cant.Text;
+                            solo.txt_cant.Text = "";
                             xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
                             lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                             this.Tag = "A";
@@ -675,16 +665,14 @@ namespace Microsell_Lite.Ventas
 
 
                     fil.Show();
-                    solo.lblNom.Text = xnomprod;
-                    solo.lblStock.Text = stock.ToString();
                     solo.ShowDialog();
                     fil.Hide();
                     try
                     {
                         if (solo.Tag.ToString() == "A")
                         {
-                            xcanti = Convert.ToDouble(solo.txtCantidad.Text);
-                            solo.txtCantidad.Text = "";
+                            xcanti = Convert.ToDouble(solo.txt_cant.Text);
+                            solo.txt_cant.Text = "";
 
                             ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
                             Frm_Compras.ximporte = importe;

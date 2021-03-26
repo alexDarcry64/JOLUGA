@@ -11,9 +11,9 @@ using Microsell_Lite.Utilitarios;
 
 namespace Microsell_Lite.Compras
 {
-    public partial class Frm_Solo_Precio : Form
+    public partial class Frm_Solo_Cantidad : Form
     {
-        public Frm_Solo_Precio()
+        public Frm_Solo_Cantidad()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace Microsell_Lite.Compras
 
         private void Frm_Solo_Canti_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode ==Keys.Escape )
+            if (e.KeyCode == Keys.Escape)
             {
                 this.Tag = "";
                 this.Close();
@@ -36,13 +36,12 @@ namespace Microsell_Lite.Compras
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia adver = new Frm_Advertencia();
-            
-            if (e.KeyCode ==Keys.Enter )
+            if (e.KeyCode == Keys.Enter)
             {
                 if (txt_cant.Text.Trim() == "") return;
-                if (txt_cant.Text.Trim().Length == 0) { fil.Show(); adver.lbl_Msm1.Text = "Por favor agrege un precio"; fil.Hide(); txt_cant.Focus(); return; }
-                if (Convert.ToDouble(txt_cant.Text) == 0) { fil.Show(); adver.lbl_Msm1.Text = "El precio no puede ser 0"; fil.Hide(); txt_cant.Focus(); return; }
 
+                if (txt_cant.Text.Trim().Length == 0) { fil.Show(); adver.lbl_Msm1.Text = "La cantidad no puede ser 0"; txt_cant.Focus(); return; }
+                if (Convert.ToDouble(txt_cant.Text) == 0) { fil.Show(); adver.lbl_Msm1.Text = "La cantidad debe ser mayor a 0"; txt_cant.Focus(); return; }
                 this.Tag = "A";
                 this.Close();
             }
@@ -59,19 +58,23 @@ namespace Microsell_Lite.Compras
         private void txt_cant_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilitario ui = new Utilitario();
-            e.KeyChar = Convert.ToChar(ui.Solo_Numeros (e.KeyChar ));
+            e.KeyChar = Convert.ToChar(ui.Solo_Numeros(e.KeyChar));
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia adver = new Frm_Advertencia();
-            if (txt_cant.Text.Trim() == "") return;
-            if (txt_cant.Text.Trim().Length == 0) { fil.Show(); adver.lbl_Msm1.Text = "Por favor agrege un precio"; fil.Hide(); return; }
-            if (Convert.ToDouble(txt_cant.Text) == 0) { fil.Show(); adver.lbl_Msm1.Text = "Por favor agrege un precio"; fil.Hide(); txt_cant.Focus(); return; }
 
+            if (txt_cant.Text.Trim() == "") return;
+            if (txt_cant.Text.Trim().Length == 0) { fil.Show(); adver.lbl_Msm1.Text = "La cantidad no puede ser 0"; txt_cant.Focus(); return; }
+            if (Convert.ToDouble(txt_cant.Text) == 0) {fil.Show(); adver.lbl_Msm1.Text = "La cantidad debe ser mayor a 0"; txt_cant.Focus(); return;}
             this.Tag = "A";
             this.Close();
         }
+
+        
+    
+        }
     }
-}
+

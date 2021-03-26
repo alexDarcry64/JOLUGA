@@ -10,35 +10,39 @@ using System.Windows.Forms;
 
 namespace Microsell_Lite.Utilitarios
 {
-    public partial class Frm_SoloFecha: Form
+    public partial class Frm_Solo_Fecha : Form
     {
-        public Frm_SoloFecha()
+        public Frm_Solo_Fecha()
         {
             InitializeComponent();
         }
 
+        private void Frm_Solo_Canti_Load(object sender, EventArgs e)
+        {
+            dtpFecha.Focus();
+        }
+
+        private void Frm_Solo_Canti_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode ==Keys.Escape )
+            {
+                this.Tag = "";
+                this.Close();
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Tag = "";
             this.Close();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btn_Aceptar_Click(object sender, EventArgs e)
         {
             this.Tag = "A";
             this.Close();
         }
 
-        private void Frm_SoloFecha_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Tag = "";
-                this.Close();
-            }
-        }
-
-        private void Frm_SoloFecha_MouseMove(object sender, MouseEventArgs e)
+        private void pnl_titu_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

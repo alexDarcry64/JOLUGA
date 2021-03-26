@@ -247,7 +247,7 @@ namespace Microsell_Lite.Compras
         private void bt_editPre_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_SoloPrecio solo = new Frm_SoloPrecio();
+            Frm_Solo_Precio solo = new Frm_Solo_Precio();
             if (lsv_Det.SelectedIndices.Count == 0)
             {
                 MessageBox.Show("Selecciona un producto para editar su precio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -258,13 +258,13 @@ namespace Microsell_Lite.Compras
                 double precio_editado = 0;
                 precio_ingresado = Convert.ToDouble(lsv_Det.SelectedItems[0].SubItems[3].Text);
                 fil.Show();
-                solo.txtPrecio.Text = precio_ingresado.ToString();
+                solo.txt_cant.Text = precio_ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
                 try {
                     if (solo.Tag.ToString() == "A")
                     {
-                        precio_editado = Convert.ToDouble(solo.txtPrecio.Text);
+                        precio_editado = Convert.ToDouble(solo.txt_cant.Text);
                         lsv_Det.SelectedItems[0].SubItems[3].Text = precio_editado.ToString("###0.00");
                         Calcular();
                     }
@@ -291,15 +291,24 @@ namespace Microsell_Lite.Compras
                 double cantidad_editado = 0;
                 cantidad_ingresado = Convert.ToDouble(lsv_Det.SelectedItems[0].SubItems[2].Text);
                 fil.Show();
-                solo.txtCantidad.Text = cantidad_ingresado.ToString();
+                solo.txt_cant.Text = cantidad_ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
 
-                if (solo.Tag.ToString() == "A")
+                try
                 {
-                    cantidad_editado = Convert.ToDouble(solo.txtCantidad.Text);
-                    lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
-                    Calcular();
+                    if (solo.Tag.ToString() == "A")
+                    {
+                        cantidad_editado = Convert.ToDouble(solo.txt_cant.Text);
+                        lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
+                        Calcular();
+                    }
+                }
+                catch (Exception)
+                {
+
+                    solo.Tag = "";
+                    solo.Close();
                 }
             }
         }

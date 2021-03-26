@@ -333,14 +333,14 @@ namespace Microsell_Lite.Compras
         private void coomprasDelDiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_SoloFecha solo = new Frm_SoloFecha();
+            Frm_Solo_Fecha solo = new Frm_Solo_Fecha();
             fil.Show();
             solo.ShowDialog();
             fil.Hide();
 
             if (solo.Tag.ToString() == "A")
             {
-                DateTime xfecha = solo.dtpCambioFecha.Value;
+                DateTime xfecha = solo.dtpFecha.Value;
                 buscar_Compras_Dia(xfecha);
             }
         }
@@ -348,14 +348,14 @@ namespace Microsell_Lite.Compras
         private void buscarComprasDelMesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_SoloFecha solo = new Frm_SoloFecha();
+            Frm_Solo_Fecha solo = new Frm_Solo_Fecha();
             fil.Show();
             solo.ShowDialog();
             fil.Hide();
 
             if (solo.Tag.ToString() == "A")
             {
-                DateTime xfecha = solo.dtpCambioFecha.Value;
+                DateTime xfecha = solo.dtpFecha.Value;
                 buscar_Compras_Mes(xfecha);
             }
         }
