@@ -251,6 +251,25 @@ namespace Prj_Capa_Datos
             }
         }
 
+        public decimal BD_Sumar_Stock_Cantidad_Productos()
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlCommand da = new SqlCommand("sp_cargar_Stock_Cantidad_Productos", cn);
+                da.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                Decimal res =  (decimal)da.ExecuteScalar();
+                return res;
+            }
+            catch (Exception io)
+            {
+                return 0;
+            }
+        }
+
+
         public void BD_Restar_Stock_Producto(string idprod, double stock)
 
         {

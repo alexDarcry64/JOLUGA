@@ -26,6 +26,8 @@ namespace Microsell_Lite.Productos
             Configurar_listView();
             Cargar_todos_Productos();
             txtbuscar.Focus();
+
+            Cargar_Total_ProductosCosto();
         }
 
         private void btn_minimi_Click(object sender, EventArgs e)
@@ -116,6 +118,19 @@ namespace Microsell_Lite.Productos
             }
         }
 
+        private void Cargar_Total_ProductosCosto()
+        {
+            try {
+
+                RN_Productos productos = new RN_Productos();
+
+                lblTotal.Text = productos.RN_Sumar_Stock_Cantidad_Productos().ToString();
+
+            } catch(Exception io)
+            {
+                
+            }
+        }
 
         private void buscar_Productos(string valor)
         {

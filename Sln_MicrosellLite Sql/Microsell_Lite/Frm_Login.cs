@@ -18,6 +18,8 @@ namespace Microsell_Lite
         public Frm_Login()
         {
             InitializeComponent();
+
+
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace Microsell_Lite
                 {
                     DataRow dr = dato.Rows[0];
                     Cls_Libreria.IdRol = dr["Id_Rol"].ToString();
-                    Cls_Libreria.IdRol = dr["Nombres"].ToString();
+                    Cls_Libreria.Nombre = dr["Nombres"].ToString();
                     Cls_Libreria.Foto = dr["Ubicacion_Foto"].ToString();
                     Cls_Libreria.Rol = dr["Rol"].ToString();
                     Cls_Libreria.IdUsu = dr["id_Usu"].ToString();
@@ -105,6 +107,26 @@ namespace Microsell_Lite
             if (e.KeyCode == Keys.Enter)
             {
                 bunifuButton1_Click(sender,e);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Sino sino = new Frm_Sino();
+            fil.Show();
+            sino.Lbl_msm1.Text = "¿Quieres salir del sistema?";
+            sino.ShowDialog();
+            fil.Hide();
+
+            if (sino.Tag.ToString() == "Si")
+            {
+                Application.Exit();
             }
         }
     }

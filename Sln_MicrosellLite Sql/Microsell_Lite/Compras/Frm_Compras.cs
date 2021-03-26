@@ -261,13 +261,19 @@ namespace Microsell_Lite.Compras
                 solo.txtPrecio.Text = precio_ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
+                try {
+                    if (solo.Tag.ToString() == "A")
+                    {
+                        precio_editado = Convert.ToDouble(solo.txtPrecio.Text);
+                        lsv_Det.SelectedItems[0].SubItems[3].Text = precio_editado.ToString("###0.00");
+                        Calcular();
+                    }
 
-                if (solo.Tag.ToString() == "A")
+                } catch(Exception io)
                 {
-                    precio_editado = Convert.ToDouble(solo.txtPrecio.Text);
-                    lsv_Det.SelectedItems[0].SubItems[3].Text = precio_editado.ToString("###0.00");
-                    Calcular();
+
                 }
+                
             }
         }
 
@@ -541,6 +547,11 @@ namespace Microsell_Lite.Compras
             {
                 conforme = false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

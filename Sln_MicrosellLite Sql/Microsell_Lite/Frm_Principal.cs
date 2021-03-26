@@ -22,11 +22,23 @@ namespace Microsell_Lite
         public Frm_Principal()
         {
             InitializeComponent();
+            if (Cls_Libreria.Nombre != null)
+            {
+                lbl_user.Text = Cls_Libreria.Nombre;
+                lbl_Rol.Text = Cls_Libreria.Rol;
+            }
         }
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void bt_almacen_Click(object sender, EventArgs e)

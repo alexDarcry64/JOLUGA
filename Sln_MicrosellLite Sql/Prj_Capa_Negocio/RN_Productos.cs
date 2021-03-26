@@ -55,6 +55,12 @@ namespace Prj_Capa_Negocio
             obj.BD_Sumar_Stock_Producto(idprod, stock);
         }
 
+        public decimal RN_Sumar_Stock_Cantidad_Productos()
+        {
+            BD_Productos obj = new BD_Productos();
+            return obj.BD_Sumar_Stock_Cantidad_Productos();
+        }
+
         public void RN_Restar_Stock_Producto(string idprod, double stock)
         {
             BD_Productos obj = new BD_Productos();

@@ -359,5 +359,10 @@ namespace Microsell_Lite.Compras
                 buscar_Compras_Mes(xfecha);
             }
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

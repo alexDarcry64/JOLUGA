@@ -149,12 +149,17 @@ namespace Microsell_Lite.Productos
             fil.Show();
             cat.ShowDialog();
             fil.Hide();
-
-            if(cat.Tag.ToString()=="A")
+            try {
+                if (cat.Tag.ToString() == "A")
+                {
+                    txtcategoria.Text = cat.txtnombre.Text;
+                    lblidcat.Text = cat.txtid.Text;
+                }
+            } catch(Exception io)
             {
-                txtcategoria.Text = cat.txtnombre.Text;
-                lblidcat.Text = cat.txtid.Text;
+
             }
+            
 
         }
 
@@ -389,6 +394,26 @@ namespace Microsell_Lite.Productos
         {
             this.Tag = "";
             this.Close();
+        }
+
+        private void piclogo_Click(object sender, EventArgs e)
+        {
+            var FilePath = string.Empty;
+
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    xFotoruta = openFileDialog1.FileName;
+                    piclogo.Load(xFotoruta);
+                }
+            }
+            catch (Exception ex)
+            {
+                piclogo.Load(Application.StartupPath + @"\user.png");
+                xFotoruta = Application.StartupPath + @"\user.png";
+                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
+            }
         }
     }
 }
