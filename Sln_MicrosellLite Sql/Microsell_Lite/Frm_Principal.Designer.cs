@@ -969,7 +969,7 @@
             // 
             this.PanelLateral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.PanelLateral.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelLateral.BackColor = System.Drawing.SystemColors.Window;
             this.PanelLateral.Controls.Add(this.label1);
             this.PanelLateral.Controls.Add(this.label3);
             this.PanelLateral.Controls.Add(this.PicUser_2);
@@ -1221,8 +1221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.PanelLateral);
