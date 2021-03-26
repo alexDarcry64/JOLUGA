@@ -363,7 +363,7 @@ namespace Microsell_Lite.Cotizacion
 
             try
             {
-                txt_NroFisico.Text = RN_TipoDoc.RN_Nro_id(10);
+                txtIdPedido.Text = RN_TipoDoc.RN_Nro_id(10);
                 ped.Id_pedido = txtIdPedido.Text;
                 ped.IdCliente = lblIdCliente.Text;
                 ped.SubTotal = Convert.ToDouble(lbl_subtotal.Text);
@@ -439,6 +439,7 @@ namespace Microsell_Lite.Cotizacion
                         //Mandar a imprimir cotizacion
                         fil.Show();
                         informeCot.Tag = txtNroCotiza.Text;
+                        informeCot.Crear_Impresion_Cotizacion();
                         informeCot.ShowDialog();
                         fil.Hide();
 

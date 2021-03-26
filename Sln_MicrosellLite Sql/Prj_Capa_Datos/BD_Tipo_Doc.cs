@@ -47,7 +47,7 @@ namespace Prj_Capa_Datos
             try
             {
                 cn.ConnectionString = Conectar2();
-                SqlCommand cmd = new SqlCommand("Sp_Actualiza_Tipo_Doc", cn);
+                SqlCommand cmd = new SqlCommand("dbo.Sp_Actualiza_Tipo_Doc", cn);
                 cmd.CommandTimeout = 20;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id_Tipo", idTipo);

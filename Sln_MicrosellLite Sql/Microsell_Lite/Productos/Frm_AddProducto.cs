@@ -100,10 +100,7 @@ namespace Microsell_Lite.Productos
 
             return true;
         }
-
         
-
-
         private void limpiar()
         {
             txtIdProducto.Text = "";
@@ -359,6 +356,7 @@ namespace Microsell_Lite.Productos
                 }
                 else
                 {
+                    RN_TipoDoc.RN_Actualizar_Tipo_Doc(6);
                     string idKardex = RN_TipoDoc.RN_Nro_id(6);
                     obj.RN_Registrar_Kardex(idKardex, idProducto, lblidproveedor.Text);
 
