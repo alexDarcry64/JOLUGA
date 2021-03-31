@@ -96,7 +96,10 @@ namespace Microsell_Lite.Utilitarios
         private void btn_listo_Click(object sender, EventArgs e)
         {
             RN_Marcas obj = new RN_Marcas();
-            if(txtnombre.Text.Trim().Length < 0) { MessageBox.Show("Ingresa el nombre de la Marca", "Registrar Marca", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); return; }
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
+            if (txtnombre.Text.Trim().Length < 0) { fil.Show(); adv.lbl_Msm1.Text = "Ingresa el nombre de la marca"; adv.ShowDialog(); return; }
             
             if(editar==false)
             {
@@ -122,9 +125,15 @@ namespace Microsell_Lite.Utilitarios
         public bool editar = false;
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if(lsv_mar.SelectedIndices.Count==0)
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
+
+            if (lsv_mar.SelectedIndices.Count==0)
             {
-                MessageBox.Show("Seleccionar el Item para Editar", "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccionar el Item para Editar";
+                adv.ShowDialog();
+                fil.Hide();
                 return;
             }
             else
@@ -142,9 +151,14 @@ namespace Microsell_Lite.Utilitarios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
             if (lsv_mar.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Seleccionar el Item para Eliminar", "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccionar el Item para Eliminar";
+                adv.ShowDialog();
+                fil.Hide();
                 return;
             }
             else
@@ -183,9 +197,15 @@ namespace Microsell_Lite.Utilitarios
 
         private void btn_Selecc_Click(object sender, EventArgs e)
         {
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
+
             if (lsv_mar.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Seleccionar una Marca", "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Selecciona una marca";
+                adv.ShowDialog();
+                fil.Hide();
                 return;
             }
             else

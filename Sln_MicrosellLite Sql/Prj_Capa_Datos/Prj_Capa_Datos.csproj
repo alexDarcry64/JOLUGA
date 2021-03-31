@@ -194,10 +194,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_Caja.cs" />
     <Compile Include="BD_Categoria.cs" />
     <Compile Include="BD_Conexion.cs" />
     <Compile Include="BD_Cotizacion.cs" />
+    <Compile Include="BD_Credito.cs" />
     <Compile Include="BD_Distrito.cs" />
+    <Compile Include="BD_Documento.cs" />
     <Compile Include="BD_IngresoCompra.cs" />
     <Compile Include="BD_Kardex.cs" />
     <Compile Include="BD_Marcas.cs" />

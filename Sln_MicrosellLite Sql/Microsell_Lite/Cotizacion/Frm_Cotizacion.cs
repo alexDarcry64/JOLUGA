@@ -96,8 +96,9 @@ namespace Microsell_Lite.Cotizacion
         private bool Validar_Cotizacion()
         {
             Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
-            if (lsv_Det.Items.Count == 0) { fil.Show(); MessageBox.Show("INgresa Almenos un Producto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); lsv_Det.Focus(); return false; }
+            if (lsv_Det.Items.Count == 0) { fil.Show(); adv.lbl_Msm1.Text = "Ingresa al menos un proucto"; adv.ShowDialog(); fil.Hide(); lsv_Det.Focus(); return false; }
             //if (cbo_provee.SelectedIndex ==-1) { fil.Show(); MessageBox.Show("INgresa Almenos un Proveedor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); cbo_provee.Focus(); return false; }
             //if (txt_NroFisico.Text.Trim().Length < 2) { fil.Show(); MessageBox.Show("INgresa el Nro de FActura Fisica", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); txt_NroFisico.Focus(); return false; }
             //if (cbo_tipoPago.SelectedIndex == -1) { fil.Show(); MessageBox.Show("Selecciona el Tipo de Pago", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); cbo_tipoPago.Focus(); return false; }
@@ -129,6 +130,8 @@ namespace Microsell_Lite.Cotizacion
 
         private void Agregar_Productos_carro(string xxidProd, string xxnomprod, double xxcant, double xxprecio, double xximporte, string xunid, string xtipoProd, double xutilidadUnit)
         {
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
             try
             {
 
@@ -156,7 +159,11 @@ namespace Microsell_Lite.Cotizacion
                     {
                         if (lsv_Det.Items[i].Text.Trim() == xxidProd.Trim())
                         {
-                            MessageBox.Show("El producto ya fue agregado al carrito de compras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            fil.Show();
+                            adv.lbl_Msm1.Text = "El producto ya fue agregado al carrito de compras";
+                            adv.ShowDialog();
+                            fil.Hide();
+                            
                         }
                     }
 
@@ -179,7 +186,10 @@ namespace Microsell_Lite.Cotizacion
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Ha ocurrido un error al guardar: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -273,10 +283,14 @@ namespace Microsell_Lite.Cotizacion
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Solo_Precio solo = new Frm_Solo_Precio();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Seleccione un producto","Editar Precio",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccione un producto";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -302,10 +316,14 @@ namespace Microsell_Lite.Cotizacion
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Solo_Precio solo = new Frm_Solo_Precio();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Seleccione un producto", "Editar Cantidad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccione un producto";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -331,9 +349,13 @@ namespace Microsell_Lite.Cotizacion
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Sino sino = new Frm_Sino();
+            Frm_Advertencia adv = new Frm_Advertencia();
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Selecciona un producto a quitar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Selecciona un producto a quitar";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -360,6 +382,8 @@ namespace Microsell_Lite.Cotizacion
             RN_Pedido obj = new RN_Pedido();
             EN_Pedido ped = new EN_Pedido();
             EN_Det_Pedido det = new EN_Det_Pedido();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
 
             try
             {
@@ -397,8 +421,10 @@ namespace Microsell_Lite.Cotizacion
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error al guardar:" + ex.Message, "Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -407,6 +433,8 @@ namespace Microsell_Lite.Cotizacion
             RN_Cotizacion obj = new RN_Cotizacion();
             EN_Cotizacion coti = new EN_Cotizacion();
             Frm_Filtro fil = new Frm_Filtro();
+            Frm_Exito ex = new Frm_Exito();
+            Frm_Advertencia adv = new Frm_Advertencia();
             Frm_Print_Cotizaciones informeCot = new Frm_Print_Cotizaciones();
             try
             {
@@ -445,7 +473,11 @@ namespace Microsell_Lite.Cotizacion
 
                                 
                         RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(11);
-                        MessageBox.Show("Cotizacion Guardada Exitosamente", "Cotizacion Guardada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        fil.Show();
+                        ex.lbl_Msm1.Text = "Cotizacion Guardada Exitosamente.";
+                        ex.ShowDialog();
+                        fil.Hide();
+
                         pnl_sinProd.Visible = true;
                         lsv_Det.Items.Clear();
                         txt_cliente.Text = "";
@@ -457,17 +489,24 @@ namespace Microsell_Lite.Cotizacion
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-
-                MessageBox.Show("Error al guardar:"+ex.Message,"Adevertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar la cotización: " + e.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
         private void btn_procesar_Click(object sender, EventArgs e)
         {
-            if (lsv_Det.Items.Count == 0){ MessageBox.Show("El carrito debe contener al menos un producto", "Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            if (lblIdCliente.Text.Trim().Length < 2) { MessageBox.Show("Agrega un cliente", "Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
+            fil.Hide();
+            if (lsv_Det.Items.Count == 0){ fil.Show(); adv.lbl_Msm1.Text = "El carrito debe contener al menos un producto"; adv.ShowDialog(); fil.Hide(); }
+            if (lblIdCliente.Text.Trim().Length < 2) { fil.Show(); adv.lbl_Msm1.Text = "Debes agregar un cliente"; adv.ShowDialog(); fil.Hide(); }
+            
 
             Guardar_Cotizacion();
         }

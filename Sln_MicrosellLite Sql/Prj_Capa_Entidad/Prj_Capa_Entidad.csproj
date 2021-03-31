@@ -194,10 +194,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EN_Caja.cs" />
     <Compile Include="EN_Cliente.cs" />
     <Compile Include="EN_Cotizacion.cs" />
+    <Compile Include="EN_Credito.cs" />
+    <Compile Include="EN_Det_Credito.cs" />
     <Compile Include="EN_Det_IngresoCompra.cs" />
     <Compile Include="EN_Det_Pedido.cs" />
+    <Compile Include="EN_Documento.cs" />
     <Compile Include="EN_IngresoCompra.cs" />
     <Compile Include="EN_Kardexcs.cs" />
     <Compile Include="EN_Pedido.cs" />

@@ -72,7 +72,10 @@ namespace Microsell_Lite.Clientes
         {
             RN_Cliente obj = new RN_Cliente();
             EN_Cliente cli = new EN_Cliente();
-
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Exito ex = new Frm_Exito();
+            Frm_Advertencia adv = new Frm_Advertencia();
+                
             try
             {
                 cli.Idcliente = txtIdCliente.Text;
@@ -95,12 +98,18 @@ namespace Microsell_Lite.Clientes
 
                     this.Tag = "A";
                     this.Close();
-                    MessageBox.Show("El cliente se ha insertado correctamente", "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fil.Show();
+                    ex.lbl_Msm1.Text = "El cliente se ha guardado correctamente.";
+                    ex.ShowDialog();
+                    fil.Hide();
                 }
             }
-            catch(Exception ex)
+            catch(Exception e)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message, "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Ha ocurrido un error al guardar: "+e.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 

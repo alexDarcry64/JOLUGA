@@ -180,6 +180,9 @@ namespace Microsell_Lite.Ventas
 
         private void Agregar_Producto_Pedido(string xxidPro, string xxnombre,string xxund, double xxcant, double xxprecio, double xximporte, double xxutilidad_unit, double xxgananciaTotal, string xxtipoProd)
         {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
             if (lsv_Pedido.Items.Count == 0)
             {
                 ListViewItem item = new ListViewItem();
@@ -201,7 +204,10 @@ namespace Microsell_Lite.Ventas
                 {
                     if (lsv_Pedido.Items[i].Text.Trim() == xxidPro.Trim())
                     {
-                        MessageBox.Show("El producto ya fue agregado al carrito de compras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        fil.Show();
+                        adv.lbl_Msm1.Text = "El producto ya fue agregado al carrito de compras";
+                        adv.ShowDialog();
+                        fil.Hide();
                     }
                 }
 
@@ -321,8 +327,9 @@ namespace Microsell_Lite.Ventas
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
-            if (ltsProductos.SelectedIndices.Count == 0) { fil.Show(); MessageBox.Show("Seleccione un producto", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
+            if (ltsProductos.SelectedIndices.Count == 0) { fil.Show(); adv.lbl_Msm1.Text = "Debes seleccionar un producto"; adv.ShowDialog(); fil.Hide(); ; return; }
             double stock = 0;
             string estadoProd = "";
             double xpreCompr = 0;
@@ -340,7 +347,7 @@ namespace Microsell_Lite.Ventas
             lblTipoProd.Text = lis.SubItems[11].Text;
             lblUnid.Text = lis.SubItems[8].Text;
 
-            if (estadoProd.Trim() == "Eliminado") { fil.Show(); MessageBox.Show("El producto esta eliminado", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
+            if (estadoProd.Trim() == "Eliminado") { fil.Show(); adv.lbl_Msm1.Text = "El producto esta eliminado"; adv.ShowDialog(); fil.Hide(); return; }
             //if (lblTipoProd.Text.Trim().ToString() == "Producto")
             //{
             //    if (stock == 0) { fil.Show(); MessageBox.Show("El producto no cuenta con la cantidad suficiente", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
@@ -349,12 +356,15 @@ namespace Microsell_Lite.Ventas
             if (cbxLlenarCarrito.Checked == true)
             {
                 fil.Show();
+                solo.txt_cant.Text = "1";
                 solo.ShowDialog();
                 fil.Hide();
                 if (solo.Tag.ToString() == "A")
                 {
-                    xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
-                    lblUtiUnit.Text = xUtilidad.ToString("###0.00");
+                    lblCant.Text = solo.txt_cant.Text;
+                    solo.txt_cant.Text = "";
+                    //xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
+                    //lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                     double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
                     lblImport.Text = importxx.ToString("###0.00");
                     lblTotal.Text = importxx.ToString(); ;
@@ -367,6 +377,7 @@ namespace Microsell_Lite.Ventas
             else
             {
                 fil.Show();
+                solo.txt_cant.Text = "1";
                 solo.ShowDialog();
                 fil.Hide();
                 
@@ -377,10 +388,11 @@ namespace Microsell_Lite.Ventas
                     {
                         lblCant.Text = solo.txt_cant.Text;
                         solo.txt_cant.Text = "";
+
                         double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
                         lblImport.Text = importxx.ToString("###0.00");
-                        xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
-                        lblUtiUnit.Text = xUtilidad.ToString("###0.00");
+                        //xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
+                        //lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                         this.Tag = "A";
                         solo.Close();
                         this.Close();
@@ -410,9 +422,10 @@ namespace Microsell_Lite.Ventas
         private void Seleccionar_Producto_Vender()
         {
             Frm_Filtro fil = new Frm_Filtro();
-            Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+            Frm_Edit_Cant solo = new Frm_Edit_Cant(); 
+            Frm_Advertencia adv = new Frm_Advertencia();
 
-            if (ltsProductos.SelectedIndices.Count == 0){ fil.Show(); MessageBox.Show("Seleccione un producto", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
+            if (ltsProductos.SelectedIndices.Count == 0){ fil.Show(); adv.lbl_Msm1.Text = "Debes seleccionar un producto"; adv.ShowDialog(); fil.Hide(); return; }
 
             if (cbxCotizacion.Checked == true)
             {
@@ -437,22 +450,25 @@ namespace Microsell_Lite.Ventas
                 lblTipoProd.Text = lis.SubItems[11].Text;
                 lblUnid.Text = lis.SubItems[8].Text;
 
-                if (estadoProd.Trim() == "Eliminado") { fil.Show(); MessageBox.Show("El producto esta eliminado", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
+                if (estadoProd.Trim() == "Eliminado") { fil.Show(); adv.lbl_Msm1.Text = "El producto esta eliminado"; adv.ShowDialog(); fil.Hide(); return; }
                 if (lblTipoProd.Text.Trim().ToString() == "Producto")
                 {
-                    if (stock == 0) { fil.Show(); MessageBox.Show("El producto no cuenta con la cantidad suficiente", "Seleccion de Productos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return; }
+                    if (stock == 0) { fil.Show(); adv.lbl_Msm1.Text = "El producto no cuenta con la cantidad suficiente"; adv.ShowDialog(); fil.Hide(); return; }
                 }
                 if (cbxLlenarCarrito.Checked == true)
                 {
                     fil.Show();
+                    solo.lblTipoProd.Text = lblTipoProd.Text;
+                    solo.lblStock.Text = stock.ToString();
+                    solo.txt_cant.Text = "1";
                     solo.ShowDialog();
                     fil.Hide();
                     if (solo.Tag.ToString() == "A")
                     {
                         lblCant.Text = solo.txt_cant.Text;
                         solo.txt_cant.Text = "";
-                        xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
-                        lblUtiUnit.Text = xUtilidad.ToString("###0.00");
+                        //xUtilidad = Convert.ToDouble(lblCant.Text) - Convert.ToDouble(xpreCompr);
+                        //lblUtiUnit.Text = xUtilidad.ToString("###0.00");
                         double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
                         lblImport.Text = importxx.ToString("###0.00");
                         lblTotal.Text = importxx.ToString(); ;
@@ -466,6 +482,9 @@ namespace Microsell_Lite.Ventas
                 else
                 {
                     fil.Show();
+                    solo.lblTipoProd.Text = lblTipoProd.Text;
+                    solo.lblStock.Text = stock.ToString();
+                    solo.txt_cant.Text = "1";
                     solo.ShowDialog();
                     fil.Hide();
 
@@ -475,17 +494,19 @@ namespace Microsell_Lite.Ventas
                         {
                             lblCant.Text = solo.txt_cant.Text;
                             solo.txt_cant.Text = "";
-                            xUtilidad = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(xpreCompr);
-                            lblUtiUnit.Text = xUtilidad.ToString("###0.00");
+                            //xUtilidad = Convert.ToDouble(lblCant.Text) - Convert.ToDouble(xpreCompr);
+                            //lblUtiUnit.Text = xUtilidad.ToString("###0.00");
+                            double importxx = Convert.ToDouble(lblCant.Text) * Convert.ToDouble(lblPreUnid.Text);
+                            lblImport.Text = importxx.ToString("###0.00");
                             this.Tag = "A";
-                            solo.Close();
+                            this.Close();
                         }
                     }
                     catch (Exception)
                     {
 
                         solo.Tag = "";
-                        solo.Close();
+                        this.Close();
                     }
                 }
             }
@@ -632,77 +653,16 @@ namespace Microsell_Lite.Ventas
             Cargar_todos_Productos();
         }
 
-        private void Seleccionar_Producto2()
-        {
-
-            Frm_Filtro fil = new Frm_Filtro();
-            Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
-            if (ltsProductos.SelectedIndices.Count == 0)
-            {
-
-            }
-            else
-            {
-                string tipoProducto = "";
-                double stock = 0;
-                double importe = 0;
-                string xnomprod = "";
-                double xcanti = 0;
-                double ximporte = 0;
-                double xprecioCompra = 0;
-
-                var lis = ltsProductos.SelectedItems[0];
-                tipoProducto = lis.SubItems[6].Text;
-
-                if (tipoProducto.Trim() == "Producto")
-                {
-                    Frm_Compras.xnombreProducto = lis.SubItems[1].Text;
-                    xnomprod = lis.SubItems[1].Text;
-                    Frm_Compras.xidProducto = lis.SubItems[0].Text;
-                    Frm_Compras.xprecio = Convert.ToDouble(lis.SubItems[3].Text);
-                    xprecioCompra = Convert.ToDouble(lis.SubItems[3].Text);
-                    stock = Convert.ToDouble(lis.SubItems[2].Text);
-
-
-                    fil.Show();
-                    solo.ShowDialog();
-                    fil.Hide();
-                    try
-                    {
-                        if (solo.Tag.ToString() == "A")
-                        {
-                            xcanti = Convert.ToDouble(solo.txt_cant.Text);
-                            solo.txt_cant.Text = "";
-
-                            ximporte = Convert.ToDouble(xcanti) * Convert.ToDouble(xprecioCompra);
-                            Frm_Compras.ximporte = importe;
-                            Frm_Compras.xcant = xcanti;
-
-                            this.Tag = "A";
-                            this.Close();
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        solo.Tag = "";
-                        solo.Close();
-                    }
-
-                }
-            }
-
-        }
-
         private void ltsProductos_DoubleClick(object sender, EventArgs e)
         {
-            Seleccionar_Producto_Vender();
+            btnElegirProducto_Click(sender, e);
         }
 
         private void ltsProductos_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Seleccionar_Producto_Vender();
+                btnElegirProducto_Click(sender, e);
             }
         }
 
@@ -742,9 +702,14 @@ namespace Microsell_Lite.Ventas
         private void lsv_Pedido_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
             if (lsv_Pedido.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Selecciona un producto a quitar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Selecciona un producto a quitar";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {

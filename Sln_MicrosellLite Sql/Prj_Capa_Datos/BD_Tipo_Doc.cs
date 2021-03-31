@@ -151,5 +151,30 @@ namespace Prj_Capa_Datos
                 return 0;
             }
         }
+        
+        public DataTable BD_Listar_Docs_Especial()
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Tipod_Doc_Spcial", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
+    
     }
 }

@@ -133,6 +133,8 @@ namespace Microsell_Lite.Compras
 
         private void Agregar_Productos_carro(string xxidProd, string xxnomprod, double xxcant, double xxprecio, double xximporte)
         {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
             try
             {
                 if (lsv_Det.Items.Count == 0)
@@ -156,7 +158,10 @@ namespace Microsell_Lite.Compras
                     {
                         if (lsv_Det.Items[i].Text.Trim() == xxidProd.Trim())
                         {
-                            MessageBox.Show("El producto ya fue agregado al carrito de compras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            fil.Show();
+                            adv.lbl_Msm1.Text = "El producto ya fue agregado al carrito.";
+                            adv.ShowDialog();
+                            fil.Hide();
                         }
                     }
 
@@ -248,9 +253,13 @@ namespace Microsell_Lite.Compras
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Solo_Precio solo = new Frm_Solo_Precio();
+            Frm_Advertencia adv = new Frm_Advertencia();
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Selecciona un producto para editar su precio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccione un producto para editar";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -281,9 +290,13 @@ namespace Microsell_Lite.Compras
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Solo_Cantidad solo = new Frm_Solo_Cantidad();
+            Frm_Advertencia adv = new Frm_Advertencia();
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Selecciona un producto para editar su cantidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Selecciona un producto para editar su cantidad";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -294,16 +307,6 @@ namespace Microsell_Lite.Compras
                 solo.txt_cant.Text = cantidad_ingresado.ToString();
                 solo.ShowDialog();
                 fil.Hide();
-                try {
-                    if (solo.Tag.ToString() == "A")
-                    {
-                        cantidad_editado = Convert.ToDouble(solo.txtCantidad.Text);
-                        lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
-                        Calcular();
-                    }
-                } catch (Exception io)
-                {
-
                 try
                 {
                     if (solo.Tag.ToString() == "A")
@@ -313,11 +316,24 @@ namespace Microsell_Lite.Compras
                         Calcular();
                     }
                 }
-                catch (Exception)
+                catch (Exception io)
                 {
 
-                    solo.Tag = "";
-                    solo.Close();
+                    try
+                    {
+                        if (solo.Tag.ToString() == "A")
+                        {
+                            cantidad_editado = Convert.ToDouble(solo.txt_cant.Text);
+                            lsv_Det.SelectedItems[0].SubItems[2].Text = cantidad_editado.ToString("###0.00");
+                            Calcular();
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        solo.Tag = "";
+                        solo.Close();
+                    }
                 }
             }
         }
@@ -326,9 +342,13 @@ namespace Microsell_Lite.Compras
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Sino sino = new Frm_Sino();
+            Frm_Advertencia adv = new Frm_Advertencia();
             if (lsv_Det.SelectedIndices.Count == 0)
             {
-                MessageBox.Show("Selecciona un producto a quitar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Selecciona un producto a quitar";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -373,7 +393,7 @@ namespace Microsell_Lite.Compras
             {
                 if (pnl_sinProd.Visible == false)
                 {
-                    btn_procesar_Click(sender, e);
+                    btn_procesar_Click_1(sender, e);
                 }
             }
 
@@ -422,6 +442,10 @@ namespace Microsell_Lite.Compras
             RN_IngresoCompra obj = new RN_IngresoCompra();
             RN_Productos pro = new RN_Productos();
 
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Exito exit = new Frm_Exito();
+
             try
             {
                 com.IdCom = txt_IdComp.Text;
@@ -469,7 +493,10 @@ namespace Microsell_Lite.Compras
                         pro.RN_Actualizar_PrecioCompra_Producto(det.Id_Pro1.Trim(),preCompra,
                             PreVenta,utilidad,valorAlmacen);
                     }
-                    MessageBox.Show("La compra se ha registrado correctamente","Copletado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    fil.Show();
+                    exit.lbl_Msm1.Text = "La compra se ha registrado correctamente";
+                    exit.ShowDialog();
+                    fil.Hide();
                     lsv_Det.Items.Clear();
                     cbo_provee.SelectedIndex = -1;
                     txt_NroFisico.Text = "";
@@ -480,8 +507,10 @@ namespace Microsell_Lite.Compras
             }
             catch (Exception ex)
             {
-
-                throw;
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar la compra: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -545,15 +574,6 @@ namespace Microsell_Lite.Compras
 
         }
 
-        
-
-        private void btn_procesar_Click(object sender, EventArgs e)
-        {
-            if (Validar_Compra() == true)
-            {
-                Registrar_Compra();
-            }
-        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -567,9 +587,17 @@ namespace Microsell_Lite.Compras
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_procesar_Click_1(object sender, EventArgs e)
+        {
+            if (Validar_Compra() == true)
+            {
+                Registrar_Compra();
+            }
         }
     }
 }

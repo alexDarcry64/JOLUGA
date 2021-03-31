@@ -112,7 +112,7 @@ namespace Microsell_Lite
         private void Bt_ventas_Click(object sender, EventArgs e)
         {
 
-            Frm_Ventana_Ventas ven = new Frm_Ventana_Ventas();
+            Frm_Crear_Ventas ven = new Frm_Crear_Ventas();
 
             ven.MdiParent = this;
             ven.Show();

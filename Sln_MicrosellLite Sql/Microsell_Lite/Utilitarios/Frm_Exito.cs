@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Microsell_Lite.Utilitarios
 {
-    public partial class Frm_Advertencia : Form
+    public partial class Frm_Exito : Form
     {
-        public Frm_Advertencia()
+        public Frm_Exito()
         {
             InitializeComponent();
-        }
-
-        
-
-        private void Frm_Advertencia_Load(object sender, EventArgs e)
-        {
-            //tocar_timbre();
         }
 
         //private void tocar_timbre()
@@ -34,9 +27,9 @@ namespace Microsell_Lite.Utilitarios
 
         //}
 
-        private void btnAceptar_Click_1(object sender, EventArgs e)
+        private void Frm_Advertencia_Load(object sender, EventArgs e)
         {
-            this.Close();
+            //tocar_timbre();
         }
 
         private void btnAceptar_MouseMove(object sender, MouseEventArgs e)
@@ -48,11 +41,16 @@ namespace Microsell_Lite.Utilitarios
             }
         }
 
-        private void btnAceptar_KeyDown(object sender, KeyEventArgs e)
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuButton1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnAceptar_Click_1(sender, e);
+                bunifuButton1_Click(sender, e);
             }
         }
     }

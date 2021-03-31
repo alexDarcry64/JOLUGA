@@ -47,6 +47,8 @@ namespace Microsell_Lite.Clientes
         
         private void lblAbrir_Click(object sender, EventArgs e)
         {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
             var FilePath = string.Empty;
 
             try
@@ -57,7 +59,10 @@ namespace Microsell_Lite.Clientes
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al Guardar el Cliente" + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el cliente: "+ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -84,6 +89,9 @@ namespace Microsell_Lite.Clientes
         {
             RN_Cliente obj = new RN_Cliente();
             EN_Cliente cli = new EN_Cliente();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Exito exit = new Frm_Exito();
 
             try
             {
@@ -106,12 +114,18 @@ namespace Microsell_Lite.Clientes
 
                     this.Tag = "A";
                     this.Close();
-                    MessageBox.Show("El cliente se ha editado correctamente", "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fil.Show();
+                    exit.lbl_Msm1.Text = "El cliente se ha guardado correctamente";
+                    adv.ShowDialog();
+                    fil.Hide();
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al editar:" + ex.Message, "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el cliente: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -156,6 +170,8 @@ namespace Microsell_Lite.Clientes
         {
             RN_Cliente obj = new RN_Cliente();
             DataTable data = new DataTable();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
             try
             {
                 data = obj.RN_Buscar_Cliente_Valor(idCliente,"Activo");
@@ -175,7 +191,10 @@ namespace Microsell_Lite.Clientes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message, "Form Add Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el cliente: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
     }

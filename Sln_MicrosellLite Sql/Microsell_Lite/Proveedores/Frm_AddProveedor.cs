@@ -44,6 +44,8 @@ namespace Microsell_Lite.Proveedores
         string xFotoruta;
         private void lblAbrir_Click(object sender, EventArgs e)
         {
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
             var FilePath = string.Empty;
 
             try
@@ -58,7 +60,10 @@ namespace Microsell_Lite.Proveedores
             {
                 piclogo.Load(Application.StartupPath + @"\user.png");
                 xFotoruta = Application.StartupPath + @"\user.png";
-                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el Personal: "+ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -78,6 +83,8 @@ namespace Microsell_Lite.Proveedores
         {
             RN_Proveedor obj = new RN_Proveedor();
             EN_Proveedor pro = new EN_Proveedor();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
 
             try
             {
@@ -100,7 +107,11 @@ namespace Microsell_Lite.Proveedores
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message, "Form Add Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar:" + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
+                
             }
         }
 

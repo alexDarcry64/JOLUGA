@@ -77,9 +77,14 @@ namespace Microsell_Lite.Proveedores
 
         private void ltsProveedor_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(ltsProveedor.SelectedIndices.Count==0)
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
+            if (ltsProveedor.SelectedIndices.Count==0)
             {
-                MessageBox.Show("Seleccionar un Proveedor", "Advertencia de Segiridad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Seleccionar un Proveedor";
+                adv.ShowDialog();
+                fil.Hide();
             }
             else
             {
@@ -93,11 +98,16 @@ namespace Microsell_Lite.Proveedores
 
         private void ltsProveedor_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
+            if (e.KeyCode==Keys.Enter)
             {
                 if(ltsProveedor.SelectedIndices.Count==0)
                 {
-                    MessageBox.Show("Selecciona un Proveedor", "Advertencia de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    fil.Show();
+                    adv.lbl_Msm1.Text = "Seleccionar un Proveedor";
+                    adv.ShowDialog();
+                    fil.Hide();
                 }
                 else
                 {

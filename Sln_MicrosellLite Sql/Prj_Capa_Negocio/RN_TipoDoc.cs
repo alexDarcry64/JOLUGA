@@ -35,5 +35,11 @@ namespace Prj_Capa_Negocio
         {
             BD_Tipo_Doc.BD_Actualizar_NumeroCorrelativo_Producto(idTipo);
         }
+
+        public DataTable RN_Listar_Docs_Especial()
+        {
+            BD_Tipo_Doc obj = new BD_Tipo_Doc();
+            return obj.BD_Listar_Docs_Especial();
+        }
     }
 }

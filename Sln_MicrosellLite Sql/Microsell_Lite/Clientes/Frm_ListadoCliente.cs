@@ -42,6 +42,9 @@ namespace Microsell_Lite.Clientes
         {
             RN_Cliente obj = new RN_Cliente();
             EN_Cliente cli = new EN_Cliente();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Exito exit = new Frm_Exito();
 
             try
             {
@@ -64,7 +67,10 @@ namespace Microsell_Lite.Clientes
                     limpiar();
 
                     this.Tag = "A";
-                    MessageBox.Show("El cliente se ha insertado correctamente", "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fil.Show();
+                    exit.lbl_Msm1.Text = "El cliente se ha guardado correctamente";
+                    adv.ShowDialog();
+                    fil.Hide();
                     txtbuscar.Text = txtId.Text;
                     limpiar();
                     pnlAddCliente.Visible = false;
@@ -72,7 +78,10 @@ namespace Microsell_Lite.Clientes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message, "Registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el cliente: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -263,14 +272,6 @@ namespace Microsell_Lite.Clientes
             this.Close();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (Validar_Texbox() == true)
-            {
-                Registrar_Cliente();
-            }
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             pnlAddCliente.Visible = false;
@@ -279,7 +280,10 @@ namespace Microsell_Lite.Clientes
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-
+            if (Validar_Texbox() == true)
+            {
+                Registrar_Cliente();
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Microsell_Lite.Informe
 
         private void Frm_Print_Cotizaciones_Load(object sender, EventArgs e)
         {
+            Crear_Impresion_Cotizacion();
         }
 
 
@@ -35,12 +36,6 @@ namespace Microsell_Lite.Informe
             reportEjemplo.Refresh();
 
             this.VzrCoti.ReportSource = reportEjemplo;
-
-
-
-
-
-
         }
 
     }

@@ -36,6 +36,7 @@ namespace Microsell_Lite.Compras
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia adver = new Frm_Advertencia();
+
             if (e.KeyCode == Keys.Enter)
             {
                 if (txt_cant.Text.Trim() == "") return;

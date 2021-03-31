@@ -65,7 +65,7 @@
             this.pnl_titu.Controls.Add(this.label1);
             this.pnl_titu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_titu.Location = new System.Drawing.Point(0, 0);
-            this.pnl_titu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_titu.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_titu.Name = "pnl_titu";
             this.pnl_titu.Size = new System.Drawing.Size(1587, 53);
             this.pnl_titu.TabIndex = 1;
@@ -82,7 +82,7 @@
             this.btn_minimi.ForeColor = System.Drawing.Color.White;
             this.btn_minimi.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimi.Image")));
             this.btn_minimi.Location = new System.Drawing.Point(1464, 5);
-            this.btn_minimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimi.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimi.Name = "btn_minimi";
             this.btn_minimi.Size = new System.Drawing.Size(43, 39);
             this.btn_minimi.TabIndex = 7;
@@ -101,7 +101,7 @@
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
             this.btn_cerrar.Location = new System.Drawing.Point(1531, 5);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(43, 39);
             this.btn_cerrar.TabIndex = 6;
@@ -144,7 +144,7 @@
             this.gru_det.CaptionStyle.Visible = false;
             this.gru_det.CaptionStyle.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
             this.gru_det.Location = new System.Drawing.Point(9, 62);
-            this.gru_det.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gru_det.Margin = new System.Windows.Forms.Padding(4);
             this.gru_det.Name = "gru_det";
             this.gru_det.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gru_det.Size = new System.Drawing.Size(1015, 436);
@@ -168,7 +168,7 @@
             this.btn_listo.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
             this.btn_listo.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_listo.Location = new System.Drawing.Point(1193, 628);
-            this.btn_listo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_listo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_listo.Name = "btn_listo";
             this.btn_listo.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ModernBlack;
             this.btn_listo.Size = new System.Drawing.Size(328, 86);
@@ -185,7 +185,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(1116, 592);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(455, 43);
             this.bunifuSeparator1.TabIndex = 7;
@@ -201,7 +201,7 @@
             this.pnl_sinProd.Controls.Add(this.PictureBox3);
             this.pnl_sinProd.ForeColor = System.Drawing.Color.Black;
             this.pnl_sinProd.Location = new System.Drawing.Point(0, 52);
-            this.pnl_sinProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_sinProd.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_sinProd.Name = "pnl_sinProd";
             this.pnl_sinProd.Size = new System.Drawing.Size(1587, 694);
             this.pnl_sinProd.TabIndex = 480;
@@ -224,7 +224,7 @@
             this.btn_Nuevo_buscarProd.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btn_Nuevo_buscarProd.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Nuevo_buscarProd.Location = new System.Drawing.Point(588, 405);
-            this.btn_Nuevo_buscarProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Nuevo_buscarProd.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Nuevo_buscarProd.Name = "btn_Nuevo_buscarProd";
             this.btn_Nuevo_buscarProd.Size = new System.Drawing.Size(376, 62);
             this.btn_Nuevo_buscarProd.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.White;
@@ -246,7 +246,7 @@
             this.ElDivider3.FadeStyle = Klik.Windows.Forms.v1.EntryLib.DividerFadeStyles.Center;
             this.ElDivider3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ElDivider3.Location = new System.Drawing.Point(275, 302);
-            this.ElDivider3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ElDivider3.Margin = new System.Windows.Forms.Padding(4);
             this.ElDivider3.Name = "ElDivider3";
             this.ElDivider3.Size = new System.Drawing.Size(941, 28);
             this.ElDivider3.TabIndex = 408;
@@ -271,7 +271,7 @@
             this.PictureBox3.ForeColor = System.Drawing.Color.Black;
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
             this.PictureBox3.Location = new System.Drawing.Point(701, 148);
-            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(96, 96);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -289,7 +289,7 @@
             this.Controls.Add(this.pnl_titu);
             this.Controls.Add(this.bunifuSeparator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Ventana_Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atencion al Cliente";

@@ -366,6 +366,12 @@
     <Compile Include="Utilitarios\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\Frm_Exito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilitarios\Frm_Exito.Designer.cs">
+      <DependentUpon>Frm_Exito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilitarios\Frm_Advertencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,18 @@
     <Compile Include="Utilitarios\Frm_Solo_Fecha.designer.cs">
       <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventas\Frm_Crear_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Frm_Crear_Ventas.designer.cs">
+      <DependentUpon>Frm_Crear_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Frm_Tipo_Pago_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Frm_Tipo_Pago_Credito.Designer.cs">
+      <DependentUpon>Frm_Tipo_Pago_Credito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Frm_Edit_Cant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,7 +429,7 @@
     <Compile Include="Ventas\Frm_Edit_Precio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas\Frm_Edit_Precio.Designer.cs">
+    <Compile Include="Ventas\Frm_Edit_Precio.designer.cs">
       <DependentUpon>Frm_Edit_Precio.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventas\Frm_ListadoProd_Compra.cs">
@@ -509,6 +527,9 @@
     <EmbeddedResource Include="Proveedores\Frm_ListadoProveedores.resx">
       <DependentUpon>Frm_ListadoProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Utilitarios\Frm_Exito.resx">
+      <DependentUpon>Frm_Exito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utilitarios\Frm_Advertencia.resx">
       <DependentUpon>Frm_Advertencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -526,6 +547,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utilitarios\Frm_Solo_Fecha.resx">
       <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Frm_Crear_Ventas.resx">
+      <DependentUpon>Frm_Crear_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Frm_Tipo_Pago_Credito.resx">
+      <DependentUpon>Frm_Tipo_Pago_Credito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Frm_Edit_Cant.resx">
       <DependentUpon>Frm_Edit_Cant.cs</DependentUpon>

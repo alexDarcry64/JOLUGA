@@ -53,6 +53,8 @@ namespace Microsell_Lite.Productos
         string xFotoruta = "";
         private void lblAbrir_Click(object sender, EventArgs e)
         {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
             var FilePath = string.Empty;
 
             try
@@ -67,7 +69,10 @@ namespace Microsell_Lite.Productos
             {
                 piclogo.Load(Application.StartupPath + @"\user.png");
                 xFotoruta = Application.StartupPath + @"\user.png";
-                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el Personal: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -287,6 +292,9 @@ namespace Microsell_Lite.Productos
         {
             RN_Productos obj = new RN_Productos();
             EN_Producto producto = new EN_Producto();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Exito ex = new Frm_Exito();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
             try
             {
@@ -327,18 +335,21 @@ namespace Microsell_Lite.Productos
 
                     RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(4);
                     //RN_TipoDoc.RN_Actualizar_Tipo_Doc(4);
-                    Frm_Filtro fil = new Frm_Filtro();
                     fil.Show();
-                    MessageBox.Show("Producto guardado exitosamente");
+                    ex.lbl_Msm1.Text = "Producto Guardado Exitosamente.";
+                    ex.ShowDialog();
                     fil.Hide();
 
                     this.Tag = "A";
                     this.Close();
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show("Error al guardar:" + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar el producto: " + e.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
 
         }
@@ -347,6 +358,8 @@ namespace Microsell_Lite.Productos
         {
             RN_Kardex obj = new RN_Kardex();
             EN_Kardexcs kr = new EN_Kardexcs();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
 
             try
             {
@@ -391,9 +404,12 @@ namespace Microsell_Lite.Productos
                     }
                 }
             }
-            catch(Exception ex)
+            catch(Exception e)
             {
-                MessageBox.Show("Algo Salio Mal: " + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Algo Salio Mal: " + e.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -417,6 +433,8 @@ namespace Microsell_Lite.Productos
 
         private void piclogo_Click(object sender, EventArgs e)
         {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
             var FilePath = string.Empty;
 
             try
@@ -431,7 +449,10 @@ namespace Microsell_Lite.Productos
             {
                 piclogo.Load(Application.StartupPath + @"\user.png");
                 xFotoruta = Application.StartupPath + @"\user.png";
-                MessageBox.Show("Error al Guardar el Personal" + ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar el Personal: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
     }

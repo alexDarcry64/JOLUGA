@@ -188,7 +188,7 @@
             this.btn_Aceptar.OnPressedState.IconLeftImage = null;
             this.btn_Aceptar.OnPressedState.IconRightImage = null;
             this.btn_Aceptar.Size = new System.Drawing.Size(171, 50);
-            this.btn_Aceptar.TabIndex = 489;
+            this.btn_Aceptar.TabIndex = 2;
             this.btn_Aceptar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Aceptar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Aceptar.TextMarginLeft = 0;
@@ -278,7 +278,7 @@
             this.btnCancelar.OnPressedState.IconLeftImage = null;
             this.btnCancelar.OnPressedState.IconRightImage = null;
             this.btnCancelar.Size = new System.Drawing.Size(156, 50);
-            this.btnCancelar.TabIndex = 490;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancelar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCancelar.TextMarginLeft = 0;
@@ -296,6 +296,7 @@
             this.dtpFecha.DisabledColor = System.Drawing.Color.Gray;
             this.dtpFecha.DisplayWeekNumbers = false;
             this.dtpFecha.DPHeight = 0;
+            this.dtpFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpFecha.FillDatePicker = true;
             this.dtpFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFecha.ForeColor = System.Drawing.Color.Black;
@@ -304,10 +305,10 @@
             this.dtpFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpFecha.LeftTextMargin = 5;
             this.dtpFecha.Location = new System.Drawing.Point(84, 90);
-            this.dtpFecha.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dtpFecha.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(284, 32);
-            this.dtpFecha.TabIndex = 491;
+            this.dtpFecha.TabIndex = 1;
             this.dtpFecha.Value = new System.DateTime(2021, 3, 26, 11, 38, 0, 0);
             // 
             // Frm_Solo_Fecha

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle1 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle2 = new Klik.Windows.Forms.v1.Common.PaintStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cotizacion));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu = new System.Windows.Forms.Panel();
@@ -179,7 +179,7 @@
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 20);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de Cotizaciones";
             // 
@@ -282,7 +282,7 @@
             // 
             this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator6.LineThickness = 2;
+            this.bunifuSeparator6.LineThickness = 6;
             this.bunifuSeparator6.Location = new System.Drawing.Point(629, 3);
             this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
@@ -315,7 +315,7 @@
             // 
             this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator5.LineThickness = 2;
+            this.bunifuSeparator5.LineThickness = 6;
             this.bunifuSeparator5.Location = new System.Drawing.Point(536, 0);
             this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
@@ -348,7 +348,7 @@
             // 
             this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator4.LineThickness = 2;
+            this.bunifuSeparator4.LineThickness = 6;
             this.bunifuSeparator4.Location = new System.Drawing.Point(446, 3);
             this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(9);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
@@ -361,7 +361,7 @@
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator3.LineThickness = 2;
+            this.bunifuSeparator3.LineThickness = 6;
             this.bunifuSeparator3.Location = new System.Drawing.Point(78, 3);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
@@ -434,9 +434,9 @@
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
-            this.bunifuSeparator2.LineThickness = 3;
+            this.bunifuSeparator2.LineThickness = 9;
             this.bunifuSeparator2.Location = new System.Drawing.Point(0, 27);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(783, 10);
             this.bunifuSeparator2.TabIndex = 13;
@@ -476,9 +476,9 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
-            this.bunifuSeparator1.LineThickness = 3;
+            this.bunifuSeparator1.LineThickness = 9;
             this.bunifuSeparator1.Location = new System.Drawing.Point(20, 460);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(199, 17);
             this.bunifuSeparator1.TabIndex = 7;
@@ -491,7 +491,7 @@
             this.label3.Location = new System.Drawing.Point(42, 512);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 18);
+            this.label3.Size = new System.Drawing.Size(355, 24);
             this.label3.TabIndex = 483;
             this.label3.Text = "Vigencia de los precios de la Cotizacion?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -501,7 +501,7 @@
             this.txt_NroFisico.Enabled = false;
             this.txt_NroFisico.Location = new System.Drawing.Point(616, 380);
             this.txt_NroFisico.Name = "txt_NroFisico";
-            this.txt_NroFisico.Size = new System.Drawing.Size(140, 24);
+            this.txt_NroFisico.Size = new System.Drawing.Size(140, 29);
             this.txt_NroFisico.TabIndex = 484;
             // 
             // elGroupBox1
@@ -567,7 +567,7 @@
             // 
             this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator10.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator10.LineThickness = 3;
+            this.bunifuSeparator10.LineThickness = 9;
             this.bunifuSeparator10.Location = new System.Drawing.Point(36, 309);
             this.bunifuSeparator10.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.bunifuSeparator10.Name = "bunifuSeparator10";
@@ -581,7 +581,7 @@
             this.lbl_Frank.AutoSize = true;
             this.lbl_Frank.Location = new System.Drawing.Point(14, 477);
             this.lbl_Frank.Name = "lbl_Frank";
-            this.lbl_Frank.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Frank.Size = new System.Drawing.Size(20, 24);
             this.lbl_Frank.TabIndex = 500;
             this.lbl_Frank.Text = "0";
             // 
@@ -589,7 +589,7 @@
             // 
             this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator9.LineThickness = 3;
+            this.bunifuSeparator9.LineThickness = 9;
             this.bunifuSeparator9.Location = new System.Drawing.Point(36, 208);
             this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(9);
             this.bunifuSeparator9.Name = "bunifuSeparator9";
@@ -602,7 +602,7 @@
             // 
             this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator8.LineThickness = 3;
+            this.bunifuSeparator8.LineThickness = 9;
             this.bunifuSeparator8.Location = new System.Drawing.Point(36, 129);
             this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
@@ -629,7 +629,7 @@
             this.label2.Location = new System.Drawing.Point(8, 347);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 18);
+            this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 498;
             this.label2.Text = "Cant Items:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -652,7 +652,7 @@
             this.label23.Location = new System.Drawing.Point(52, 228);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(121, 18);
+            this.label23.Size = new System.Drawing.Size(150, 24);
             this.label23.TabIndex = 495;
             this.label23.Text = "Total Compra S/.";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -675,7 +675,7 @@
             this.label21.Location = new System.Drawing.Point(126, 146);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 18);
+            this.label21.Size = new System.Drawing.Size(56, 24);
             this.label21.TabIndex = 493;
             this.label21.Text = "Igv S/";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -698,7 +698,7 @@
             this.label18.Location = new System.Drawing.Point(79, 75);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 18);
+            this.label18.Size = new System.Drawing.Size(117, 24);
             this.label18.TabIndex = 490;
             this.label18.Text = "Sub Total S/.";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -711,7 +711,7 @@
             this.label16.Location = new System.Drawing.Point(85, 15);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 24);
+            this.label16.Size = new System.Drawing.Size(113, 29);
             this.label16.TabIndex = 484;
             this.label16.Text = "Importes ";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -720,7 +720,7 @@
             // 
             this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(151)))), ((int)(((byte)(191)))));
-            this.bunifuSeparator7.LineThickness = 3;
+            this.bunifuSeparator7.LineThickness = 9;
             this.bunifuSeparator7.Location = new System.Drawing.Point(55, 39);
             this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
@@ -745,7 +745,7 @@
             this.dtp_FechaEmi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_FechaEmi.Location = new System.Drawing.Point(35, 422);
             this.dtp_FechaEmi.Name = "dtp_FechaEmi";
-            this.dtp_FechaEmi.Size = new System.Drawing.Size(140, 24);
+            this.dtp_FechaEmi.Size = new System.Drawing.Size(140, 29);
             this.dtp_FechaEmi.TabIndex = 490;
             // 
             // label14
@@ -754,7 +754,7 @@
             this.label14.Location = new System.Drawing.Point(392, 461);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 18);
+            this.label14.Size = new System.Drawing.Size(145, 24);
             this.label14.TabIndex = 495;
             this.label14.Text = "Tipo Documnto.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -765,7 +765,7 @@
             this.chk_sinIgv.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chk_sinIgv.Location = new System.Drawing.Point(42, 549);
             this.chk_sinIgv.Name = "chk_sinIgv";
-            this.chk_sinIgv.Size = new System.Drawing.Size(219, 22);
+            this.chk_sinIgv.Size = new System.Drawing.Size(275, 28);
             this.chk_sinIgv.TabIndex = 499;
             this.chk_sinIgv.Text = "Los Precios NO incluyen IVA";
             this.chk_sinIgv.UseVisualStyleBackColor = true;
@@ -881,9 +881,9 @@
             this.lbl_son.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
             this.lbl_son.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
             this.lbl_son.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
-            paintStyle1.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle1.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.lbl_son.FlashStyle = paintStyle1;
+            paintStyle2.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle2.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.lbl_son.FlashStyle = paintStyle2;
             this.lbl_son.Location = new System.Drawing.Point(7, 328);
             this.lbl_son.Name = "lbl_son";
             this.lbl_son.Size = new System.Drawing.Size(824, 30);
@@ -947,7 +947,7 @@
             0,
             0});
             this.nud_vigencia.Name = "nud_vigencia";
-            this.nud_vigencia.Size = new System.Drawing.Size(49, 24);
+            this.nud_vigencia.Size = new System.Drawing.Size(49, 29);
             this.nud_vigencia.TabIndex = 507;
             this.nud_vigencia.Value = new decimal(new int[] {
             15,
@@ -959,7 +959,7 @@
             // 
             this.txtNroCotiza.Location = new System.Drawing.Point(616, 425);
             this.txtNroCotiza.Name = "txtNroCotiza";
-            this.txtNroCotiza.Size = new System.Drawing.Size(140, 24);
+            this.txtNroCotiza.Size = new System.Drawing.Size(140, 29);
             this.txtNroCotiza.TabIndex = 510;
             this.txtNroCotiza.Visible = false;
             // 
@@ -969,7 +969,7 @@
             this.lblIdCliente.Location = new System.Drawing.Point(517, 385);
             this.lblIdCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(16, 18);
+            this.lblIdCliente.Size = new System.Drawing.Size(20, 24);
             this.lblIdCliente.TabIndex = 513;
             this.lblIdCliente.Text = "0";
             this.lblIdCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -978,7 +978,7 @@
             // 
             this.txtIdPedido.Location = new System.Drawing.Point(616, 477);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(140, 24);
+            this.txtIdPedido.Size = new System.Drawing.Size(140, 29);
             this.txtIdPedido.TabIndex = 514;
             this.txtIdPedido.Visible = false;
             // 
@@ -1014,9 +1014,9 @@
             this.chkCapital.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCapital.Enabled = false;
             this.chkCapital.ForeColor = System.Drawing.Color.White;
-            this.chkCapital.Location = new System.Drawing.Point(7, 517);
+            this.chkCapital.Location = new System.Drawing.Point(7, 511);
             this.chkCapital.Name = "chkCapital";
-            this.chkCapital.Size = new System.Drawing.Size(109, 22);
+            this.chkCapital.Size = new System.Drawing.Size(134, 28);
             this.chkCapital.TabIndex = 731;
             this.chkCapital.Text = "Letra Capital";
             this.chkCapital.UseVisualStyleBackColor = true;
@@ -1076,7 +1076,7 @@
             this.Label17.Location = new System.Drawing.Point(335, 269);
             this.Label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(347, 32);
+            this.Label17.Size = new System.Drawing.Size(434, 41);
             this.Label17.TabIndex = 405;
             this.Label17.Text = "Tu carrito de Ventas está Vacio";
             // 
@@ -1095,7 +1095,7 @@
             // 
             // Frm_Cotizacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 584);
