@@ -806,6 +806,93 @@ namespace Microsell_Lite.Ventas
                         cja.TotalUtilidad = 0;
                         cja.TipoPago = "Credito";
                         cja.GeneradoPor = cboTipoDoc.Text;
+                        objCaja.RN_Registrar_Movimiento_Caja(cja);
+                    }
+                    else
+                    {
+                        cja.FechaCaja = dtp_FechaEmi.Value;
+                        cja.TipoCaja = "Entrada";
+                        cja.Concepto = "Ventas al publico a credito";
+                        cja.DePara_Cliente = txt_cliente.Text;
+                        cja.Nr_Documento = txtNroDoc.Text;
+                        cja.ImporteCaja = Convert.ToDouble(lbl_TotalPagar.Text);
+                        cja.IdUsu = Convert.ToInt32(Cls_Libreria.IdUsu);
+                        cja.TotalUtilidad = 0;
+                        cja.TipoPago = "Credito";
+                        cja.GeneradoPor = cboTipoDoc.Text;
+                        objCaja.RN_Registrar_Movimiento_Caja(cja);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void Registrar_Archivos_Temporales()
+        {
+            RN_Temporal obj = new RN_Temporal();
+            EN_Temporal tem = new EN_Temporal();
+            EN_Det_Temporal det = new EN_Det_Temporal();
+
+            string dias = dtp_FechaEmi.Value.Day.ToString();
+            string mes = dtp_FechaEmi.Value.Month.ToString();
+            string anio = dtp_FechaEmi.Value.Year.ToString();
+
+            int totalEspacio = 0;
+            int totalFila = lsv_Det.Items.Count;
+
+
+            try
+            {
+                tem.IdTemporal = txtNroDoc.Text;
+                tem.FechaEmi = dtp_FechaEmi.Value.ToString();
+                tem.NomCliente = txt_cliente.Text;
+                tem.Ruc = txtRfc.Text;
+                tem.Direccion = txtDireccion.Text;
+                tem.SubTotal = lbl_subtotal.Text;
+                tem.Igv = lbl_igv.Text;
+                tem.Total = lbl_TotalPagar.Text;
+                tem.Sonletra = lbl_son.Text;
+                tem.Vendedor = Cls_Libreria.Nombre;
+
+                obj.BD_Registrar_Temporal(tem);
+
+                if (BD_Temporal.guardado == true)
+                {
+                    for (int i = 0; i < lsv_Det.Items.Count -1; i++)
+                    {
+                        var lis = lsv_Det.Items[i];
+
+                        det.IdTempo = txtNroDoc.Text;
+                        det.CodProd = lis.SubItems[0].Text;
+                        det.Canti = lis.SubItems[2].Text;
+                        det.Producto = lis.SubItems[1].Text;
+                        det.Precio = lis.SubItems[3].Text;
+                        det.Importe = lis.SubItems[4].Text;
+
+                        obj.BD_Registrar_Detalle_Temporal(det);
+
+                    }
+                    int veces = 0;
+                    totalEspacio = 11 - totalFila;
+
+                    if (totalEspacio < 11)
+                    {
+                        for (int x = 1; x  <= totalEspacio; x ++)
+                        {
+                            det.IdTempo = txtNroDoc.Text;
+                            det.CodProd = "";
+                            det.Canti = "";
+                            det.Producto = "";
+                            det.Precio = "";
+                            det.Importe = "";
+
+                            obj.BD_Registrar_Detalle_Temporal(det);
+                        }
+                        veces += 1;
                     }
                 }
             }
@@ -822,6 +909,7 @@ namespace Microsell_Lite.Ventas
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Exito exito = new Frm_Exito();
             Frm_Tipo_Pago_Credito cred = new Frm_Tipo_Pago_Credito();
+            Frm_Print_NotaVenta nota = new Frm_Print_NotaVenta();
             try
                 {
                 if (Validar_Antes_Vender() == true)
@@ -877,8 +965,13 @@ namespace Microsell_Lite.Ventas
                                     exito.ShowDialog();
                                     fil.Hide();
 
-                                    //imprimir
-
+                                    
+                                    Registrar_Archivos_Temporales();
+                                    fil.Show();
+                                    nota.lbl_nroDoc.Text = "Nota de venta: " + txtNroDoc.Text;
+                                    nota.Tag = txtNroDoc.Text;
+                                    nota.ShowDialog();
+                                    fil.Hide();
                                     LimpiarTodo();
                                     pnl_sinProd.Visible = true;
                                 }
@@ -960,6 +1053,7 @@ namespace Microsell_Lite.Ventas
                     {
 
                         //Mandar a imprimir cotizacion
+
                         fil.Show();
                         informeCot.Tag = txt_NroCotiza.Text;
                         informeCot.Crear_Impresion_Cotizacion();

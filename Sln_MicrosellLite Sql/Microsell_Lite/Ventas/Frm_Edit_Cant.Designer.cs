@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle1 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle3 = new Klik.Windows.Forms.v1.Common.PaintStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Edit_Cant));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu = new System.Windows.Forms.Panel();
@@ -37,9 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.elLabel1 = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
             this.txt_cant = new System.Windows.Forms.TextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblStock = new System.Windows.Forms.Label();
-            this.lblTipoProd = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTipoProd = new System.Windows.Forms.Label();
             this.pnl_titu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elLabel1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.pnl_titu.Location = new System.Drawing.Point(0, 0);
             this.pnl_titu.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_titu.Name = "pnl_titu";
-            this.pnl_titu.Size = new System.Drawing.Size(488, 53);
+            this.pnl_titu.Size = new System.Drawing.Size(527, 53);
             this.pnl_titu.TabIndex = 2;
             // 
             // btn_cerrar
@@ -71,7 +71,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(432, 5);
+            this.btn_cerrar.Location = new System.Drawing.Point(471, 5);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(43, 39);
@@ -96,12 +96,12 @@
             // 
             this.elLabel1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.elLabel1.BackgroundStyle.SolidColor = System.Drawing.Color.White;
-            paintStyle1.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle1.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.elLabel1.FlashStyle = paintStyle1;
+            paintStyle3.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle3.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.elLabel1.FlashStyle = paintStyle3;
             this.elLabel1.ForegroundImageStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.elLabel1.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.elLabel1.Location = new System.Drawing.Point(76, 102);
+            this.elLabel1.Location = new System.Drawing.Point(32, 102);
             this.elLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.elLabel1.Name = "elLabel1";
             this.elLabel1.Size = new System.Drawing.Size(357, 90);
@@ -117,7 +117,7 @@
             this.txt_cant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_cant.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_cant.Location = new System.Drawing.Point(177, 138);
+            this.txt_cant.Location = new System.Drawing.Point(133, 138);
             this.txt_cant.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(245, 39);
@@ -126,54 +126,41 @@
             this.txt_cant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_cant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_cant_KeyDown);
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(528, 102);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(82, 20);
-            this.bunifuLabel1.TabIndex = 5;
-            this.bunifuLabel1.Text = "Stock Actual";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(558, 138);
+            this.lblStock.Location = new System.Drawing.Point(455, 138);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(16, 17);
             this.lblStock.TabIndex = 6;
             this.lblStock.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(422, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Stock Actual";
+            // 
             // lblTipoProd
             // 
-            this.lblTipoProd.AllowParentOverrides = false;
-            this.lblTipoProd.AutoEllipsis = false;
-            this.lblTipoProd.CursorType = null;
-            this.lblTipoProd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblTipoProd.Location = new System.Drawing.Point(528, 199);
+            this.lblTipoProd.AutoSize = true;
+            this.lblTipoProd.Location = new System.Drawing.Point(429, 212);
             this.lblTipoProd.Name = "lblTipoProd";
-            this.lblTipoProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTipoProd.Size = new System.Drawing.Size(6, 20);
-            this.lblTipoProd.TabIndex = 7;
+            this.lblTipoProd.Size = new System.Drawing.Size(13, 17);
+            this.lblTipoProd.TabIndex = 9;
             this.lblTipoProd.Text = "-";
-            this.lblTipoProd.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTipoProd.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Frm_Edit_Cant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 256);
+            this.ClientSize = new System.Drawing.Size(527, 253);
             this.Controls.Add(this.lblTipoProd);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.txt_cant);
             this.Controls.Add(this.elLabel1);
             this.Controls.Add(this.pnl_titu);
@@ -199,8 +186,8 @@
         private System.Windows.Forms.Label label1;
         private Klik.Windows.Forms.v1.EntryLib.ELLabel elLabel1;
         internal System.Windows.Forms.TextBox txt_cant;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         internal System.Windows.Forms.Label lblStock;
-        internal Bunifu.UI.WinForms.BunifuLabel lblTipoProd;
+        private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label lblTipoProd;
     }
 }

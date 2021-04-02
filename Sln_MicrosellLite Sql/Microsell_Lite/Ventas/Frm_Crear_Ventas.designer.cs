@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Crear_Ventas));
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle6 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle5 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle1 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle2 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle3 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle4 = new Klik.Windows.Forms.v1.Common.PaintStyle();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle7 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle8 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle9 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle10 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle11 = new Klik.Windows.Forms.v1.Common.PaintStyle();
+            Klik.Windows.Forms.v1.Common.PaintStyle paintStyle12 = new Klik.Windows.Forms.v1.Common.PaintStyle();
             this.pnl_titu = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -103,6 +102,9 @@
             this.lbl_idcliente = new System.Windows.Forms.Label();
             this.elGroupBox1 = new Klik.Windows.Forms.v1.EntryLib.ELGroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpVencimientoSaldo = new System.Windows.Forms.DateTimePicker();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblACuenta = new System.Windows.Forms.Label();
             this.txtNroOperacion = new System.Windows.Forms.TextBox();
             this.lblLimiteCredito = new System.Windows.Forms.Label();
             this.txtNroDoc = new System.Windows.Forms.TextBox();
@@ -112,9 +114,7 @@
             this.elLabel3 = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
             this.txtRfc = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
             this.txtDireccion = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
-            this.lblACuenta = new System.Windows.Forms.Label();
-            this.lblSaldo = new System.Windows.Forms.Label();
-            this.dtpVencimientoSaldo = new System.Windows.Forms.DateTimePicker();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_titu.SuspendLayout();
             this.pnl_sinProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).BeginInit();
@@ -139,11 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRfc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // pnl_titu
             // 
@@ -235,6 +230,7 @@
             // 
             // txtBuscar
             // 
+
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -817,7 +813,7 @@
             // 
             this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator9.LineThickness = 21;
+            this.bunifuSeparator9.LineThickness = 32;
             this.bunifuSeparator9.Location = new System.Drawing.Point(36, 208);
             this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.bunifuSeparator9.Name = "bunifuSeparator9";
@@ -830,7 +826,7 @@
             // 
             this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator8.LineThickness = 21;
+            this.bunifuSeparator8.LineThickness = 32;
             this.bunifuSeparator8.Location = new System.Drawing.Point(36, 129);
             this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
@@ -928,9 +924,9 @@
             this.lbl_TotalPagar.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.lbl_TotalPagar.BackgroundStyle.SolidColor = System.Drawing.Color.Tomato;
             this.lbl_TotalPagar.BorderStyle.SolidColor = System.Drawing.Color.Tomato;
-            paintStyle6.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle6.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.lbl_TotalPagar.FlashStyle = paintStyle6;
+            paintStyle7.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle7.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.lbl_TotalPagar.FlashStyle = paintStyle7;
             this.lbl_TotalPagar.Location = new System.Drawing.Point(0, 232);
             this.lbl_TotalPagar.Name = "lbl_TotalPagar";
             this.lbl_TotalPagar.Size = new System.Drawing.Size(232, 50);
@@ -1040,9 +1036,9 @@
             this.lbl_son.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
             this.lbl_son.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle;
             this.lbl_son.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
-            paintStyle5.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle5.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.lbl_son.FlashStyle = paintStyle5;
+            paintStyle8.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle8.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.lbl_son.FlashStyle = paintStyle8;
             this.lbl_son.Location = new System.Drawing.Point(7, 353);
             this.lbl_son.Name = "lbl_son";
             this.lbl_son.Size = new System.Drawing.Size(824, 30);
@@ -1066,7 +1062,7 @@
             this.txt_cliente.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txt_cliente.LineThickness = 2;
             this.txt_cliente.Location = new System.Drawing.Point(36, 13);
-            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4); 
             this.txt_cliente.Name = "txt_cliente";
             this.txt_cliente.Size = new System.Drawing.Size(422, 33);
             this.txt_cliente.TabIndex = 501;
@@ -1157,6 +1153,33 @@
             this.panel1.Size = new System.Drawing.Size(816, 182);
             this.panel1.TabIndex = 515;
             // 
+            // dtpVencimientoSaldo
+            // 
+            this.dtpVencimientoSaldo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimientoSaldo.Location = new System.Drawing.Point(5, 149);
+            this.dtpVencimientoSaldo.Name = "dtpVencimientoSaldo";
+            this.dtpVencimientoSaldo.Size = new System.Drawing.Size(112, 29);
+            this.dtpVencimientoSaldo.TabIndex = 527;
+            this.dtpVencimientoSaldo.Visible = false;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Location = new System.Drawing.Point(782, 55);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(20, 24);
+            this.lblSaldo.TabIndex = 526;
+            this.lblSaldo.Text = "0";
+            // 
+            // lblACuenta
+            // 
+            this.lblACuenta.AutoSize = true;
+            this.lblACuenta.Location = new System.Drawing.Point(782, 15);
+            this.lblACuenta.Name = "lblACuenta";
+            this.lblACuenta.Size = new System.Drawing.Size(20, 24);
+            this.lblACuenta.TabIndex = 523;
+            this.lblACuenta.Text = "0";
+            // 
             // txtNroOperacion
             // 
             this.txtNroOperacion.Location = new System.Drawing.Point(547, 12);
@@ -1197,9 +1220,9 @@
             this.elLabel4.BackgroundStyle.SolidColor = System.Drawing.Color.White;
             this.elLabel4.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
             this.elLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            paintStyle1.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle1.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.elLabel4.FlashStyle = paintStyle1;
+            paintStyle9.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle9.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.elLabel4.FlashStyle = paintStyle9;
             this.elLabel4.Location = new System.Drawing.Point(543, 101);
             this.elLabel4.Name = "elLabel4";
             this.elLabel4.Size = new System.Drawing.Size(180, 32);
@@ -1232,9 +1255,9 @@
             this.elLabel3.BackgroundStyle.SolidColor = System.Drawing.Color.White;
             this.elLabel3.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
             this.elLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            paintStyle2.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle2.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.elLabel3.FlashStyle = paintStyle2;
+            paintStyle10.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle10.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.elLabel3.FlashStyle = paintStyle10;
             this.elLabel3.Location = new System.Drawing.Point(543, 54);
             this.elLabel3.Name = "elLabel3";
             this.elLabel3.Size = new System.Drawing.Size(180, 32);
@@ -1251,9 +1274,9 @@
             this.txtRfc.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.txtRfc.BackgroundStyle.SolidColor = System.Drawing.Color.White;
             this.txtRfc.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
-            paintStyle3.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle3.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.txtRfc.FlashStyle = paintStyle3;
+            paintStyle11.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle11.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.txtRfc.FlashStyle = paintStyle11;
             this.txtRfc.Location = new System.Drawing.Point(36, 100);
             this.txtRfc.Name = "txtRfc";
             this.txtRfc.Size = new System.Drawing.Size(174, 32);
@@ -1269,9 +1292,9 @@
             this.txtDireccion.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
             this.txtDireccion.BackgroundStyle.SolidColor = System.Drawing.Color.White;
             this.txtDireccion.BorderStyle.SolidColor = System.Drawing.Color.Gainsboro;
-            paintStyle4.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
-            paintStyle4.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
-            this.txtDireccion.FlashStyle = paintStyle4;
+            paintStyle12.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid;
+            paintStyle12.SolidColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(240)))), ((int)(((byte)(191)))));
+            this.txtDireccion.FlashStyle = paintStyle12;
             this.txtDireccion.Location = new System.Drawing.Point(36, 55);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(422, 32);
@@ -1282,32 +1305,10 @@
             this.txtDireccion.TextStyle.Text = "150.20";
             this.txtDireccion.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom;
             // 
-            // lblACuenta
+            // bunifuElipse1
             // 
-            this.lblACuenta.AutoSize = true;
-            this.lblACuenta.Location = new System.Drawing.Point(782, 15);
-            this.lblACuenta.Name = "lblACuenta";
-            this.lblACuenta.Size = new System.Drawing.Size(20, 24);
-            this.lblACuenta.TabIndex = 523;
-            this.lblACuenta.Text = "0";
-            // 
-            // lblSaldo
-            // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(782, 55);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(20, 24);
-            this.lblSaldo.TabIndex = 526;
-            this.lblSaldo.Text = "0";
-            // 
-            // dtpVencimientoSaldo
-            // 
-            this.dtpVencimientoSaldo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVencimientoSaldo.Location = new System.Drawing.Point(5, 149);
-            this.dtpVencimientoSaldo.Name = "dtpVencimientoSaldo";
-            this.dtpVencimientoSaldo.Size = new System.Drawing.Size(112, 29);
-            this.dtpVencimientoSaldo.TabIndex = 527;
-            this.dtpVencimientoSaldo.Visible = false;
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // Frm_Crear_Ventas
             // 
@@ -1363,8 +1364,6 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel pnl_titu;
         private System.Windows.Forms.Button btn_minimi;
         private System.Windows.Forms.Button btn_cerrar;
@@ -1443,5 +1442,6 @@
         private System.Windows.Forms.DateTimePicker dtpVencimientoSaldo;
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.Label lblACuenta;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

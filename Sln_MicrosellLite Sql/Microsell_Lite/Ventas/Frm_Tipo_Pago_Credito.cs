@@ -41,7 +41,6 @@ namespace Microsell_Lite.Ventas
             Frm_Advertencia ver = new Frm_Advertencia();
             Frm_Filtro fil = new Frm_Filtro();
             if (txtCuenta.Text == "") { fil.Show(); ver.lbl_Msm1.Text = "Ingrese un monto"; ver.ShowDialog(); fil.Hide(); txtCuenta.Focus(); return; }
-            if (Convert.ToDouble(txtCuenta.Text) == 0) { fil.Show(); ver.lbl_Msm1.Text = "El monto no puede ser 0"; ver.ShowDialog(); fil.Hide(); txtCuenta.Focus(); return; }
             if (Convert.ToDouble(txtCuenta.Text) == Convert.ToDouble(lblTotalCuenta.Text)) { fil.Show(); ver.lbl_Msm1.Text = "El importe no puede ser igual a el total a pagar. Por vafor realice una venta en efectivo"; ver.ShowDialog(); fil.Hide(); txtCuenta.Focus(); return; }
             if (Convert.ToDouble(txtCuenta.Text) > Convert.ToDouble(lblTotalCuenta.Text)) { fil.Show(); ver.lbl_Msm1.Text = "El importe a cuenta no puede ser MAYOR al total a pagar"; ver.ShowDialog(); fil.Hide(); txtCuenta.Focus(); return; }
 

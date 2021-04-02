@@ -89,27 +89,6 @@ namespace Microsell_Lite
             }
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            Login();
-        }
-
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtPass.Focus();
-            }
-        }
-
-        private void txtPass_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                bunifuButton1_Click(sender,e);
-            }
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -127,6 +106,27 @@ namespace Microsell_Lite
             if (sino.Tag.ToString() == "Si")
             {
                 Application.Exit();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
             }
         }
     }

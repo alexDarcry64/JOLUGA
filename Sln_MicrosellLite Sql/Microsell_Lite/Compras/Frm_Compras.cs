@@ -180,7 +180,10 @@ namespace Microsell_Lite.Compras
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
             }
         }
 
@@ -409,11 +412,12 @@ namespace Microsell_Lite.Compras
         private bool Validar_Compra()
         {
             Frm_Filtro fil = new Frm_Filtro();
-            if(lsv_Det.Items.Count == 0) { fil.Show(); MessageBox.Show("Ingresa al menos un producto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); return false; }
-            if (cbo_provee.SelectedIndex == -1) { fil.Show(); MessageBox.Show("Selecciona un proveedor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); cbo_provee.Focus(); return false; }
-            if (txt_NroFisico.Text.Trim().Length < 2) { fil.Show(); MessageBox.Show("Ingrese el numero de factura fisica", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); txt_NroFisico.Focus(); return false; }
-            if (cbo_tipoPago.SelectedIndex == -1) { fil.Show(); MessageBox.Show("Selecciona el tipo de pago", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); cbo_tipoPago.Focus(); return false; }
-            if (cbo_tipoDoc.SelectedIndex == -1) { fil.Show(); MessageBox.Show("Selecciona el tipo de documento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); fil.Hide(); cbo_tipoDoc.Focus(); return false; }
+            Frm_Advertencia adv = new Frm_Advertencia();
+            if (lsv_Det.Items.Count == 0) { fil.Show(); adv.lbl_Msm1.Text = "Ingresa al menos un producto"; adv.ShowDialog(); fil.Hide(); return false; }
+            if (cbo_provee.SelectedIndex == -1) { fil.Show(); adv.lbl_Msm1.Text = "Selecciona un proveedor"; adv.ShowDialog(); fil.Hide(); cbo_provee.Focus(); return false; }
+            if (txt_NroFisico.Text.Trim().Length < 2) { fil.Show(); adv.lbl_Msm1.Text = "Ingrese el numero de factura fisica"; adv.ShowDialog(); fil.Hide(); txt_NroFisico.Focus(); return false; }
+            if (cbo_tipoPago.SelectedIndex == -1) { fil.Show(); adv.lbl_Msm1.Text = "Selecciona el tipo de pago"; adv.ShowDialog(); fil.Hide(); cbo_tipoPago.Focus(); return false; }
+            if (cbo_tipoDoc.SelectedIndex == -1) { fil.Show(); adv.lbl_Msm1.Text = "Selecciona el tipo de documento"; adv.ShowDialog(); fil.Hide(); cbo_tipoDoc.Focus(); return false; }
 
             return true;
         }

@@ -655,14 +655,14 @@ namespace Microsell_Lite.Ventas
 
         private void ltsProductos_DoubleClick(object sender, EventArgs e)
         {
-            btnElegirProducto_Click(sender, e);
+            btnElegir_Click(sender, e);
         }
 
         private void ltsProductos_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnElegirProducto_Click(sender, e);
+                btnElegir_Click(sender, e);
             }
         }
 
@@ -735,7 +735,12 @@ namespace Microsell_Lite.Ventas
             }
         }
 
-        private void btnElegirProducto_Click(object sender, EventArgs e)
+        private void btnElegirProducto(object sender, EventArgs e)
+        {
+            Seleccionar_Producto_Vender();
+        }
+
+        private void btnElegir_Click(object sender, EventArgs e)
         {
             Seleccionar_Producto_Vender();
         }

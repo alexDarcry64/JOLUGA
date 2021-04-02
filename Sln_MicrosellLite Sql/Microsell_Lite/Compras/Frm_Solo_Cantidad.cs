@@ -62,20 +62,17 @@ namespace Microsell_Lite.Compras
             e.KeyChar = Convert.ToChar(ui.Solo_Numeros(e.KeyChar));
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia adver = new Frm_Advertencia();
 
             if (txt_cant.Text.Trim() == "") return;
             if (txt_cant.Text.Trim().Length == 0) { fil.Show(); adver.lbl_Msm1.Text = "La cantidad no puede ser 0"; txt_cant.Focus(); return; }
-            if (Convert.ToDouble(txt_cant.Text) == 0) {fil.Show(); adver.lbl_Msm1.Text = "La cantidad debe ser mayor a 0"; txt_cant.Focus(); return;}
+            if (Convert.ToDouble(txt_cant.Text) == 0) { fil.Show(); adver.lbl_Msm1.Text = "La cantidad debe ser mayor a 0"; txt_cant.Focus(); return; }
             this.Tag = "A";
             this.Close();
         }
-
-        
-    
-        }
+    }
     }
 
