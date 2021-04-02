@@ -62,7 +62,7 @@ namespace Microsell_Lite.Compras
             e.KeyChar = Convert.ToChar(ui.Solo_Numeros (e.KeyChar ));
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             Frm_Filtro fil = new Frm_Filtro();
             Frm_Advertencia adver = new Frm_Advertencia();

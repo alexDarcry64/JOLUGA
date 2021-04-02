@@ -259,17 +259,19 @@ namespace Microsell_Lite.Clientes
             }
         }
 
-        private void btnNewCliente_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (Validar_Texbox() == true)
+            {
+                Registrar_Cliente();
+            }
+        }
+
+        private void btnNewCliente_Click(object sender, EventArgs e)
         {
             txtId.Text = RN_TipoDoc.RN_Nro_id(8);
             pnlAddCliente.Visible = true;
             txtNombre.Focus();
-        }
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            this.Tag = "";
-            this.Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -278,12 +280,10 @@ namespace Microsell_Lite.Clientes
             limpiar();
         }
 
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (Validar_Texbox() == true)
-            {
-                Registrar_Cliente();
-            }
+            this.Tag = "";
+            this.Close();
         }
     }
 }

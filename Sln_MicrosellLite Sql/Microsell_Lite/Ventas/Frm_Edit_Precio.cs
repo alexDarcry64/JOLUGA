@@ -56,13 +56,8 @@ namespace Microsell_Lite.Ventas
             }
         }
         
-        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utilitario ut = new Utilitario();
-            e.KeyChar = Convert.ToChar(ut.Solo_Numeros(e.KeyChar));
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.Tag = "";
             this.Close();
@@ -161,13 +156,13 @@ namespace Microsell_Lite.Ventas
             txtPrecio.SelectionStart = txtPrecio.Text.Length;
         }
 
-        private void txtPrecio_TextChange(object sender, EventArgs e)
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
             txtPrecio.Text = txtPrecio.Text.Replace(",", ".");
             txtPrecio.SelectionStart = txtPrecio.Text.Length;
         }
 
-        private void txtCantidad_TextChange(object sender, EventArgs e)
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
             txtCantidad.Text = txtCantidad.Text.Replace(",", ".");
             txtCantidad.SelectionStart = txtCantidad.Text.Length;
@@ -183,7 +178,7 @@ namespace Microsell_Lite.Ventas
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnAceptar_Click(sender,e);
+                btnAceptar_Click(sender, e);
             }
         }
     }
