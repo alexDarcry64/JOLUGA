@@ -45,11 +45,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlmsj = new System.Windows.Forms.Panel();
-            this.pnlCarrito = new System.Windows.Forms.Panel();
-            this.btnContinuarVenta = new System.Windows.Forms.Button();
-            this.lsv_Pedido = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTotalItem = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,20 +63,25 @@
             this.lblImport = new System.Windows.Forms.Label();
             this.lblCant = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlCarrito = new System.Windows.Forms.Panel();
+            this.lsv_Pedido = new System.Windows.Forms.ListView();
+            this.btnContinuarVenta = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalItem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlmsj.SuspendLayout();
-            this.pnlCarrito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlCarrito.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -265,84 +265,16 @@
             // pnlmsj
             // 
             this.pnlmsj.BackColor = System.Drawing.SystemColors.Window;
-            this.pnlmsj.Controls.Add(this.label13);
-            this.pnlmsj.Controls.Add(this.label11);
-            this.pnlmsj.Controls.Add(this.label10);
-            this.pnlmsj.Controls.Add(this.label9);
-            this.pnlmsj.Controls.Add(this.label8);
-            this.pnlmsj.Controls.Add(this.label7);
-            this.pnlmsj.Controls.Add(this.label5);
-            this.pnlmsj.Controls.Add(this.label4);
-            this.pnlmsj.Controls.Add(this.pnlCarrito);
             this.pnlmsj.Controls.Add(this.panel3);
             this.pnlmsj.Controls.Add(this.pictureBox2);
             this.pnlmsj.Controls.Add(this.label12);
             this.pnlmsj.Controls.Add(this.label6);
-            this.pnlmsj.Location = new System.Drawing.Point(0, 84);
+            this.pnlmsj.Location = new System.Drawing.Point(0, 130);
             this.pnlmsj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlmsj.Name = "pnlmsj";
-            this.pnlmsj.Size = new System.Drawing.Size(1366, 517);
+            this.pnlmsj.Size = new System.Drawing.Size(1253, 417);
             this.pnlmsj.TabIndex = 13;
             this.pnlmsj.Visible = false;
-            // 
-            // pnlCarrito
-            // 
-            this.pnlCarrito.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pnlCarrito.Controls.Add(this.btnContinuarVenta);
-            this.pnlCarrito.Controls.Add(this.lsv_Pedido);
-            this.pnlCarrito.Controls.Add(this.label3);
-            this.pnlCarrito.Controls.Add(this.lblTotalItem);
-            this.pnlCarrito.Location = new System.Drawing.Point(942, 41);
-            this.pnlCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlCarrito.Name = "pnlCarrito";
-            this.pnlCarrito.Size = new System.Drawing.Size(369, 90);
-            this.pnlCarrito.TabIndex = 45;
-            this.pnlCarrito.Visible = false;
-            // 
-            // btnContinuarVenta
-            // 
-            this.btnContinuarVenta.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnContinuarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuarVenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnContinuarVenta.Location = new System.Drawing.Point(211, 5);
-            this.btnContinuarVenta.Name = "btnContinuarVenta";
-            this.btnContinuarVenta.Size = new System.Drawing.Size(146, 32);
-            this.btnContinuarVenta.TabIndex = 4;
-            this.btnContinuarVenta.Text = "Continuar Compra F5";
-            this.btnContinuarVenta.UseVisualStyleBackColor = false;
-            this.btnContinuarVenta.Click += new System.EventHandler(this.btnContinuarVenta_Click);
-            // 
-            // lsv_Pedido
-            // 
-            this.lsv_Pedido.HideSelection = false;
-            this.lsv_Pedido.Location = new System.Drawing.Point(0, 50);
-            this.lsv_Pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lsv_Pedido.Name = "lsv_Pedido";
-            this.lsv_Pedido.Size = new System.Drawing.Size(367, 313);
-            this.lsv_Pedido.TabIndex = 3;
-            this.lsv_Pedido.UseCompatibleStateImageBehavior = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(5, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Cantidad Item:";
-            // 
-            // lblTotalItem
-            // 
-            this.lblTotalItem.AutoSize = true;
-            this.lblTotalItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalItem.Location = new System.Drawing.Point(141, 17);
-            this.lblTotalItem.Name = "lblTotalItem";
-            this.lblTotalItem.Size = new System.Drawing.Size(29, 20);
-            this.lblTotalItem.TabIndex = 2;
-            this.lblTotalItem.Text = "00";
             // 
             // panel3
             // 
@@ -529,83 +461,150 @@
             this.lblTotal.Text = "Total";
             this.lblTotal.Visible = false;
             // 
-            // label4
+            // label13
             // 
-            this.label4.Location = new System.Drawing.Point(13, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Id Prod";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(97, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 24);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Descripción";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(490, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 24);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Stock Actual";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(612, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 24);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "Pre Compra";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(730, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 24);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Marca";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(894, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 24);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "Venta Menor";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Location = new System.Drawing.Point(1018, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(122, 24);
+            this.label13.TabIndex = 61;
+            this.label13.Text = "Venta Mayor";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(1133, 18);
+            this.label11.Location = new System.Drawing.Point(1138, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(120, 24);
-            this.label11.TabIndex = 52;
+            this.label11.TabIndex = 60;
             this.label11.Text = "Estado";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // label10
             // 
-            this.label13.Location = new System.Drawing.Point(1013, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 24);
-            this.label13.TabIndex = 53;
-            this.label13.Text = "Venta Mayor";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Location = new System.Drawing.Point(899, 93);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 24);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "Venta Menor";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(735, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 24);
+            this.label9.TabIndex = 58;
+            this.label9.Text = "Marca";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(617, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 24);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Pre Compra";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(495, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 24);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "Stock Actual";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(102, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(387, 24);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Descripción";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(18, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Id Prod";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlCarrito
+            // 
+            this.pnlCarrito.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlCarrito.Controls.Add(this.lsv_Pedido);
+            this.pnlCarrito.Controls.Add(this.btnContinuarVenta);
+            this.pnlCarrito.Controls.Add(this.label3);
+            this.pnlCarrito.Controls.Add(this.lblTotalItem);
+            this.pnlCarrito.Location = new System.Drawing.Point(1009, 92);
+            this.pnlCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCarrito.Name = "pnlCarrito";
+            this.pnlCarrito.Size = new System.Drawing.Size(369, 360);
+            this.pnlCarrito.TabIndex = 62;
+            this.pnlCarrito.Visible = false;
+            // 
+            // lsv_Pedido
+            // 
+            this.lsv_Pedido.HideSelection = false;
+            this.lsv_Pedido.Location = new System.Drawing.Point(0, 50);
+            this.lsv_Pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lsv_Pedido.Name = "lsv_Pedido";
+            this.lsv_Pedido.Size = new System.Drawing.Size(367, 313);
+            this.lsv_Pedido.TabIndex = 3;
+            this.lsv_Pedido.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnContinuarVenta
+            // 
+            this.btnContinuarVenta.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnContinuarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuarVenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnContinuarVenta.Location = new System.Drawing.Point(211, 5);
+            this.btnContinuarVenta.Name = "btnContinuarVenta";
+            this.btnContinuarVenta.Size = new System.Drawing.Size(146, 32);
+            this.btnContinuarVenta.TabIndex = 4;
+            this.btnContinuarVenta.Text = "Continuar Compra F5";
+            this.btnContinuarVenta.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(5, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Cantidad Item:";
+            // 
+            // lblTotalItem
+            // 
+            this.lblTotalItem.AutoSize = true;
+            this.lblTotalItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalItem.Location = new System.Drawing.Point(151, 17);
+            this.lblTotalItem.Name = "lblTotalItem";
+            this.lblTotalItem.Size = new System.Drawing.Size(29, 20);
+            this.lblTotalItem.TabIndex = 2;
+            this.lblTotalItem.Text = "00";
             // 
             // Frm_ListadoProd_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 601);
+            this.Controls.Add(this.pnlCarrito);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblCant);
             this.Controls.Add(this.lblImport);
@@ -639,9 +638,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlmsj.ResumeLayout(false);
             this.pnlmsj.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlCarrito.ResumeLayout(false);
             this.pnlCarrito.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,12 +680,12 @@
         public System.Windows.Forms.CheckBox cbxCotizacion;
         public System.Windows.Forms.CheckBox cbxTodo;
         public System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnElegir;
         private System.Windows.Forms.Panel pnlCarrito;
         internal System.Windows.Forms.ListView lsv_Pedido;
+        private System.Windows.Forms.Button btnContinuarVenta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotalItem;
-        private System.Windows.Forms.Button btnElegir;
-        private System.Windows.Forms.Button btnContinuarVenta;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

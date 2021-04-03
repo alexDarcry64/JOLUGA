@@ -283,7 +283,7 @@
             // 
             this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator6.LineThickness = 3;
+            this.bunifuSeparator6.LineThickness = 4;
             this.bunifuSeparator6.Location = new System.Drawing.Point(629, 3);
             this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
@@ -316,7 +316,7 @@
             // 
             this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator5.LineThickness = 3;
+            this.bunifuSeparator5.LineThickness = 4;
             this.bunifuSeparator5.Location = new System.Drawing.Point(536, 0);
             this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
@@ -349,7 +349,7 @@
             // 
             this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator4.LineThickness = 3;
+            this.bunifuSeparator4.LineThickness = 4;
             this.bunifuSeparator4.Location = new System.Drawing.Point(446, 3);
             this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(9);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
@@ -362,7 +362,7 @@
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator3.LineThickness = 3;
+            this.bunifuSeparator3.LineThickness = 4;
             this.bunifuSeparator3.Location = new System.Drawing.Point(103, 3);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
@@ -464,7 +464,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator1.LineThickness = 225;
+            this.bunifuSeparator1.LineThickness = 338;
             this.bunifuSeparator1.Location = new System.Drawing.Point(-21, 322);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -637,7 +637,7 @@
             // 
             this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator7.LineThickness = 225;
+            this.bunifuSeparator7.LineThickness = 338;
             this.bunifuSeparator7.Location = new System.Drawing.Point(38, 45);
             this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
@@ -879,7 +879,7 @@
             this.pnl_sinProd.Location = new System.Drawing.Point(0, 38);
             this.pnl_sinProd.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_sinProd.Name = "pnl_sinProd";
-            this.pnl_sinProd.Size = new System.Drawing.Size(1080, 877);
+            this.pnl_sinProd.Size = new System.Drawing.Size(1071, 546);
             this.pnl_sinProd.TabIndex = 480;
             this.pnl_sinProd.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_sinProd_Paint);
             // 
