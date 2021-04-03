@@ -675,7 +675,7 @@ namespace Microsell_Lite.Ventas
             }
             if (e.KeyCode == Keys.F5)
             {
-                btnContinuarVenta_Click(sender,e);
+                btnContinuarVenta_Click_1(sender,e);
             }
             if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.A))
             {
@@ -745,7 +745,7 @@ namespace Microsell_Lite.Ventas
             Seleccionar_Producto_Vender();
         }
 
-        private void btnContinuarVenta_Click(object sender, EventArgs e)
+        private void btnContinuarVenta_Click_1(object sender, EventArgs e)
         {
             if (lsv_Pedido.Items.Count > 0)
             {

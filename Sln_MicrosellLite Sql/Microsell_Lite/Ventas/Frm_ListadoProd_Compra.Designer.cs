@@ -568,6 +568,7 @@
             this.btnContinuarVenta.TabIndex = 4;
             this.btnContinuarVenta.Text = "Continuar Compra F5";
             this.btnContinuarVenta.UseVisualStyleBackColor = false;
+            this.btnContinuarVenta.Click += new System.EventHandler(this.btnContinuarVenta_Click_1);
             // 
             // label3
             // 
