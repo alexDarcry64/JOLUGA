@@ -34,6 +34,7 @@ namespace Microsell_Lite.Ventas
            
             Configurar_listView();
             Llenar_Combo_Doc();
+            cboTipoPago.SelectedIndex = 0;
 
         }
 
@@ -413,7 +414,63 @@ namespace Microsell_Lite.Ventas
 
             }
         }
-                          
+
+        private void Guardar_Pedido_editado()
+        {
+            RN_Pedido obj = new RN_Pedido();
+            EN_Pedido ped = new EN_Pedido();
+            EN_Det_Pedido det = new EN_Det_Pedido();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            Frm_Filtro fil = new Frm_Filtro();
+
+            try
+            {
+                ped.Id_pedido = txt_nroPed.Text;
+                ped.IdCliente = lbl_idcliente.Text;
+                ped.SubTotal = Convert.ToDouble(lbl_subtotal.Text);
+                ped.Igv = Convert.ToDouble(lbl_igv.Text);
+                ped.TotalPedido = Convert.ToDouble(lbl_TotalPagar.Text);
+                ped.IdUsuario = Convert.ToInt32(Cls_Libreria.IdUsu);
+                ped.TotalGanancia = Convert.ToDouble(lbl_totalGanancia.Text);
+
+                obj.RN_Editar_Pedido(ped);
+
+                if (BD_Pedido.guarda == true)
+                {
+                    obj.RN_Eliminar_Detalle_Pedido(txt_nroPed.Text);
+                    RN_TipoDoc.RN_Actualizar_NumeroCorrelativo_Producto(10);
+                    //giuardar el detalle del pedido:
+
+                    det.IdPed = txt_nroPed.Text;
+
+                    for (int i = 0; i < lsv_Det.Items.Count; i++)
+                    {
+                        var lis = lsv_Det.Items[i];
+
+                        det.IdPro = lis.SubItems[0].Text;
+                        det.Precio = Convert.ToDouble(lis.SubItems[3].Text);
+                        det.Cantidad = Convert.ToDouble(lis.SubItems[2].Text);
+                        det.Importe = Convert.ToDouble(lis.SubItems[4].Text);
+                        det.TipoProd = lis.SubItems[5].Text;
+                        det.UnidadMedida = lis.SubItems[6].Text;
+                        det.UtilidadUnit = Convert.ToDouble(lis.SubItems[7].Text);
+                        det.TotalUtilidad = Convert.ToDouble(lis.SubItems[8].Text);
+
+                        obj.RN_Insertar_Detalle_Pedido(det);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al Guardar: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
+            }
+
+
+        }
 
         private void Guardar_Pedido()
         {
@@ -862,7 +919,7 @@ namespace Microsell_Lite.Ventas
 
                 if (BD_Temporal.guardado == true)
                 {
-                    for (int i = 0; i < lsv_Det.Items.Count -1; i++)
+                    for (int i = 0; i < lsv_Det.Items.Count; i++)
                     {
                         var lis = lsv_Det.Items[i];
 
@@ -910,10 +967,12 @@ namespace Microsell_Lite.Ventas
             Frm_Exito exito = new Frm_Exito();
             Frm_Tipo_Pago_Credito cred = new Frm_Tipo_Pago_Credito();
             Frm_Print_NotaVenta nota = new Frm_Print_NotaVenta();
+            RN_Cotizacion objCotiza = new RN_Cotizacion();
             try
                 {
                 if (Validar_Antes_Vender() == true)
                 {
+
 
                     if (cboTipoPago.SelectedIndex == 2)
                     {
@@ -932,7 +991,14 @@ namespace Microsell_Lite.Ventas
                         }
                     }
 
-                    Guardar_Pedido();
+                    if (chk_Cotizacion.Checked == true)
+                    {
+                        Guardar_Pedido_editado();
+                    }
+                    else
+                    {
+                        Guardar_Pedido();
+                    }
 
                     if (BD_Pedido.guarda == true && BD_Pedido.detalleguarda == true)
                     {
@@ -965,7 +1031,11 @@ namespace Microsell_Lite.Ventas
                                     exito.ShowDialog();
                                     fil.Hide();
 
-                                    
+                                    if (txt_NroCotiza.Text.Trim().Length > 5)
+                                    {
+                                        objCotiza.RN_Cambiar_Estado_Cotizacion(txt_NroCotiza.Text, "Atendido");
+                                    }
+
                                     Registrar_Archivos_Temporales();
                                     fil.Show();
                                     nota.lbl_nroDoc.Text = "Nota de venta: " + txtNroDoc.Text;
@@ -979,6 +1049,7 @@ namespace Microsell_Lite.Ventas
                         }
                     }
                 }
+
                 }
                 catch (Exception ex)
                 {
@@ -1085,6 +1156,210 @@ namespace Microsell_Lite.Ventas
                 adv.ShowDialog();
                 fil.Hide();
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Trim().Length > 6)
+            {
+                if (chk_Cotizacion.Checked == true)
+                {
+                    Buscar_Cotizacion_Atender(txtBuscar.Text);
+                }
+                else
+                {
+                    Buscar_Documento_Reimprimir(txtBuscar.Text);
+                }
+            }
+        }
+
+        private void Buscar_Cotizacion_Atender(string nroDoc)
+        {
+            RN_Documento obj = new RN_Documento();
+            RN_Cotizacion objCoti = new RN_Cotizacion();
+            DataTable dato = new DataTable();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
+            string idProd;
+            double xcant;
+
+            try
+            {
+                dato = objCoti.RN_Buscar_Cotizaciones_Editar(nroDoc.Trim());
+                if (dato.Rows.Count > 0)
+                {
+                    var dt = dato.Rows[0];
+                    txtNroDoc.Text = Convert.ToString(dt["id_Doc"]);
+                    txt_nroPed.Text = Convert.ToString(dt["id_Ped"]);
+                    txt_NroCotiza.Text = Convert.ToString(dt["Id_Cotiza"]);
+                    cboTipoDoc.Text = Convert.ToString(dt["Id_Tipo"]);
+                    dtp_FechaEmi.Text = Convert.ToString(dt["FechaCoti"]);
+                    txtNroOperacion.Text = Convert.ToString(dt["Nro_Operacion"]);
+                    cboTipoPago.Text = Convert.ToString(dt["TipoPago"]);
+                    lbl_idcliente.Text = Convert.ToString(dt["Id_Cliente"]);
+                    txt_cliente.Text = Convert.ToString(dt["Razon_Social_Nombres"]);
+                    txtDireccion.Text = Convert.ToString(dt["Direccion"]);
+                    txtRfc.Text = Convert.ToString(dt["RFC"]);
+                    lblEstadoCotizacion.Text = Convert.ToString(dt["EstadoCoti"]);
+                    if (lblEstadoCotizacion.Text.Trim() == "Atendido")
+                    {
+                        fil.Show();
+                        adv.lbl_Msm1.Text = "Esta cotizacion ya ha sido atendida";
+                        adv.ShowDialog();
+                        fil.Hide();
+                        LimpiarTodo();
+                        pnl_sinProd.Visible = true;
+                        txtBuscar.Text = "";
+                        chk_Cotizacion.Checked = false;
+                    }
+
+                    lsv_Det.Items.Clear();
+
+                    foreach (DataRow xitem in dato.Rows)
+                    {
+                        ListViewItem xList;
+                        idProd = xitem["Id_Pro"].ToString();
+                        xcant = Convert.ToDouble(xitem["Cantidad"].ToString());
+                        Buscar_Producto_Cotizacion(idProd.Trim());
+                        if (xcant > Convert.ToDouble(lblStockProducto.Text) && xlblTipoProd.Text.Trim().ToString() == "Producto")
+                        {
+                            if (Convert.ToDouble(lblStockProducto.Text) > 0 && Convert.ToDouble(lblStockProducto.Text) < xcant)
+                            {
+                                xList = lsv_Det.Items.Add(xitem["Id_Pro"].ToString());
+                                xList.SubItems.Add(xitem["Descripcion_Larga"].ToString());
+                                xList.SubItems.Add(xitem["Cantidad"].ToString());
+                                xList.SubItems.Add(xitem["Precio"].ToString());
+                                xList.SubItems.Add(xitem["Importe"].ToString());
+                                xList.SubItems.Add(xitem["Tipo_Prod"].ToString());
+                                xList.SubItems.Add(xitem["Und_Medida"].ToString());
+                                xList.SubItems.Add(xitem["Utilidad_Unit"].ToString());
+                                xList.SubItems.Add(xitem["TotalUtilidad"].ToString());
+                            }
+                        }
+                        else
+                        {
+                            xList = lsv_Det.Items.Add(xitem["Id_Pro"].ToString());
+                            xList.SubItems.Add(xitem["Descripcion_Larga"].ToString());
+                            xList.SubItems.Add(xitem["Cantidad"].ToString());
+                            xList.SubItems.Add(xitem["Precio"].ToString());
+                            xList.SubItems.Add(xitem["Importe"].ToString());
+                            xList.SubItems.Add(xitem["Tipo_Prod"].ToString());
+                            xList.SubItems.Add(xitem["Und_Medida"].ToString());
+                            xList.SubItems.Add(xitem["Utilidad_Unit"].ToString());
+                            xList.SubItems.Add(xitem["TotalUtilidad"].ToString());
+                        }
+
+                        
+                    }
+                    Calcular();
+                    pnl_sinProd.Visible = false;
+                }
+            }
+            catch (Exception e)
+            {
+
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar la cotización: " + e.Message;
+                adv.ShowDialog();
+                fil.Hide();
+            }
+        }
+
+        private void Buscar_Producto_Cotizacion(string idproducto)
+        {
+            RN_Productos obj = new RN_Productos();
+            DataTable data = new DataTable();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+            try
+            {
+                data = obj.RN_Buscar_Productos(idproducto);
+                if (data.Rows.Count > 0)
+                {
+                    lblStockProducto.Text = Convert.ToString(data.Rows[0]["Stock_Actual"]);
+                    xlblTipoProd.Text = Convert.ToString(data.Rows[0]["TipoProdcto"]);
+                
+                }
+            }
+            catch (Exception ex)
+            {
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar: " + ex.Message;
+                adv.ShowDialog();
+                fil.Hide();
+            }
+        }
+
+        private void Buscar_Documento_Reimprimir(string nroDoc)
+        {
+            RN_Documento obj = new RN_Documento();
+            DataTable dato = new DataTable();
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia adv = new Frm_Advertencia();
+
+            try
+            {
+                dato = obj.RN_Buscador_Detalle_PorID(nroDoc.Trim());
+                if (dato.Rows.Count > 0)
+                {
+                    var dt = dato.Rows[0];
+                    txtNroDoc.Text = Convert.ToString(dt["id_Doc"]);
+                    txt_nroPed.Text = Convert.ToString(dt["id_Ped"]);
+                    cboTipoDoc.Text = Convert.ToString(dt["Id_Tipo"]);
+                    dtp_FechaEmi.Text = Convert.ToString(dt["Fecha_Emi"]);
+                    txtNroOperacion.Text = Convert.ToString(dt["Nro_Operacion"]);
+                    cboTipoPago.Text = Convert.ToString(dt["TipoPago"]);
+                    lbl_idcliente.Text = Convert.ToString(dt["Id_Cliente"]);
+                    txt_cliente.Text = Convert.ToString(dt["Razon_Social_Nombres"]);
+                    txtDireccion.Text = Convert.ToString(dt["Direccion"]);
+                    txtRfc.Text = Convert.ToString(dt["RFC"]);
+
+                    foreach (DataRow xitem in dato.Rows)
+                    {
+                        ListViewItem xList;
+                        xList = lsv_Det.Items.Add(xitem["Id_Pro"].ToString());
+                        xList.SubItems.Add(xitem["Descripcion_Larga"].ToString());
+                        xList.SubItems.Add(xitem["Cantidad"].ToString());
+                        xList.SubItems.Add(xitem["Precio"].ToString());
+                        xList.SubItems.Add(xitem["Importe"].ToString());
+                        xList.SubItems.Add(xitem["Tipo_Prod"].ToString());
+                        xList.SubItems.Add(xitem["Und_Medida"].ToString());
+                        xList.SubItems.Add(xitem["Utilidad_Unit"].ToString());
+                        xList.SubItems.Add(xitem["TotalUtilidad"].ToString());
+                    }
+                    Calcular();
+                    pnl_sinProd.Visible = false;
+                }
+                else
+                {
+                    fil.Show();
+                    adv.lbl_Msm1.Text = "El documento no existe. Si es una cotizacion, por favor marque la casilla";
+                    adv.ShowDialog();
+                    fil.Hide();
+                }
+            }
+            catch (Exception e)
+            {
+
+                fil.Show();
+                adv.lbl_Msm1.Text = "Error al guardar la cotización: " + e.Message;
+                adv.ShowDialog();
+                fil.Hide();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Print_NotaVenta nota = new Frm_Print_NotaVenta();
+
+            Registrar_Archivos_Temporales();
+            fil.Show();
+            nota.lbl_nroDoc.Text = "Nota Venta: " + txtNroDoc.Text;
+            nota.Tag = txtNroDoc.Text;
+            nota.ShowDialog();
+            fil.Hide();
         }
     }
 }

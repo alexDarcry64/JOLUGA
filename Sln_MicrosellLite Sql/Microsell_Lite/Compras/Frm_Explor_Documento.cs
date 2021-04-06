@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using Prj_Capa_Negocio;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Productos;
+using Microsell_Lite.Ventas;
 
 
 namespace Microsell_Lite.Compras
 {
-    public partial class Frm_Explor_Compra: Form
+    public partial class Frm_Explor_Documento : Form
     {
-        public Frm_Explor_Compra()
+        public Frm_Explor_Documento()
         {
             InitializeComponent();
         }
@@ -24,7 +25,7 @@ namespace Microsell_Lite.Compras
         private void Frm_Explor_Proveedor_Load(object sender, EventArgs e)
         {
             Configurar_listView();
-            Cargar_todos_Compras();
+            buscar_Documentos_Dia(dtpHoy.Value);
         }
 
         private void btn_minimi_Click(object sender, EventArgs e)
@@ -62,16 +63,15 @@ namespace Microsell_Lite.Compras
 
             //configurar las columnas
 
-            lis.Columns.Add("ID", 100, HorizontalAlignment.Left);//0
-            lis.Columns.Add("No. Factura", 165, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Proveedor", 273, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Fecha", 167, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Importe", 140, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Forma Pago", 164, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Tipo Ingreso", 127, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Tipo Documento", 124, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Estado Factura", 121, HorizontalAlignment.Left);//0
-            lis.Columns.Add("Otros Datos", 121, HorizontalAlignment.Left);//0
+            lis.Columns.Add("ID Doc", 100, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Fecha Emision", 165, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Nombre Cliente", 273, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Tipo Documento", 167, HorizontalAlignment.Left);//0
+            lis.Columns.Add("NroPedido", 140, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Tipo Pago", 164, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Total", 90, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Estado Doc", 121, HorizontalAlignment.Left);//0
+            lis.Columns.Add("Vendedor", 121, HorizontalAlignment.Left);//0
         }
 
         //llenar list view
@@ -94,17 +94,14 @@ namespace Microsell_Lite.Compras
                 list.SubItems.Add(dr["Datos_Adicional"].ToString());
                 ltsCompras.Items.Add(list);//si no ponemos esto el list nunca llenara
             }
-            PintarFilas();
-            pnlmsj.Visible = false;
-            lblTotalItems.Text = contextMenuStrip1.Items.Count.ToString();
         }
 
-        private void Cargar_todos_Compras()
+        private void Cargar_todos_Ventas()
         {
-            RN_IngresoCompra obj = new RN_IngresoCompra();
+            RN_Documento obj = new RN_Documento();
             DataTable dato = new DataTable();
 
-            dato = obj.RN_Cargar_TodasCompras();
+            dato = obj.RN_ListarTodos_Documentos();
             if(dato.Rows.Count>0)
             {
                 llenar_Listview(dato);
@@ -117,12 +114,12 @@ namespace Microsell_Lite.Compras
         }
 
 
-        private void buscar_Compras(string valor)
+        private void buscar_Documentos_Ventas(string valor)
         {
-            RN_IngresoCompra obj = new RN_IngresoCompra();
+            RN_Documento obj = new RN_Documento();
             DataTable dato = new DataTable();
 
-            dato = obj.RN_Buscar_Compras(valor);
+            dato = obj.RN_Buscador_Documentos_Valor(valor);
             if (dato.Rows.Count > 0)
             {
                 llenar_Listview(dato);
@@ -138,7 +135,7 @@ namespace Microsell_Lite.Compras
        {
             if(txtbuscar.Text.Trim().Length > 2)
             {
-                buscar_Compras(txtbuscar.Text);
+                buscar_Documentos_Ventas(txtbuscar.Text);
             }
         }
 
@@ -148,37 +145,13 @@ namespace Microsell_Lite.Compras
             {
                 if (txtbuscar.Text.Trim().Length > 2)
                 {
-                    buscar_Compras(txtbuscar.Text);
+                    buscar_Documentos_Ventas(txtbuscar.Text);
                 }
                 else
                 {
-                    Cargar_todos_Compras();
+                    Cargar_todos_Ventas();
                 }
 
-            }
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Frm_Filtro fil = new Frm_Filtro();
-            Frm_AddProducto ad = new Frm_AddProducto();
-
-            fil.Show();
-            ad.ShowDialog();
-            fil.Hide();
-
-            try
-            {
-                if (ad.Tag.ToString() == "A")
-                {
-                    Cargar_todos_Compras();
-                }
-            }
-            catch (Exception)
-            {
-
-                ad.Tag = "";
-                ad.Close();
             }
         }
 
@@ -214,38 +187,7 @@ namespace Microsell_Lite.Compras
 
             if (ad.Tag.ToString() == "A")
             {
-                Cargar_todos_Compras();
-            }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            Frm_Filtro fil = new Frm_Filtro();
-            Frm_Advertencia ver = new Frm_Advertencia();
-            Frm_EditProducto edi = new Frm_EditProducto();
-
-            if (ltsCompras.SelectedIndices.Count == 0)
-            {
-                fil.Show();
-                ver.lbl_Msm1.Text = "Seleccione un producto";
-                ver.ShowDialog();
-                fil.Hide();
-            }
-            else
-            {
-                var lis = ltsCompras.SelectedItems[0];
-                string idproducto = lis.SubItems[0].Text;
-
-                fil.Show();
-                edi.Tag = idproducto;
-                edi.ShowDialog();
-                fil.Hide();
-
-                if(edi.Tag.ToString()=="A")
-                {
-                    Cargar_todos_Compras();
-                }
-                
+                Cargar_todos_Ventas();
             }
         }
 
@@ -289,20 +231,19 @@ namespace Microsell_Lite.Compras
 
         private void btnEditarProducto_Click(object sender, EventArgs e)
         {
-            btnEditar_Click(sender,e);
         }
 
         private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cargar_todos_Compras();
+            Cargar_todos_Ventas();
         }
 
-        private void buscar_Compras_Dia(DateTime fecha)
+        private void buscar_Documentos_Dia(DateTime fecha)
         {
-            RN_IngresoCompra obj = new RN_IngresoCompra();
+            RN_Documento obj = new RN_Documento();
             DataTable dato = new DataTable();
 
-            dato = obj.RN_Buscar_Compras_Dia("dia",fecha);
+            dato = obj.RN_Buscador_Documentos_Dia(fecha);
             if (dato.Rows.Count > 0)
             {
                 llenar_Listview(dato);
@@ -314,12 +255,12 @@ namespace Microsell_Lite.Compras
             }
         }
 
-        private void buscar_Compras_Mes(DateTime fecha)
+        private void buscar_Ventas_Mes(DateTime fecha)
         {
-            RN_IngresoCompra obj = new RN_IngresoCompra();
+            RN_Documento obj = new RN_Documento();
             DataTable dato = new DataTable();
 
-            dato = obj.RN_Buscar_Compras_Dia("mes", fecha);
+            dato = obj.RN_Buscador_Documentos_Mes(fecha);
             if (dato.Rows.Count > 0)
             {
                 llenar_Listview(dato);
@@ -342,7 +283,7 @@ namespace Microsell_Lite.Compras
             if (solo.Tag.ToString() == "A")
             {
                 DateTime xfecha = solo.dtpFecha.Value;
-                buscar_Compras_Dia(xfecha);
+                buscar_Documentos_Dia(xfecha);
             }
         }
 
@@ -357,7 +298,7 @@ namespace Microsell_Lite.Compras
             if (solo.Tag.ToString() == "A")
             {
                 DateTime xfecha = solo.dtpFecha.Value;
-                buscar_Compras_Mes(xfecha);
+                buscar_Ventas_Mes(xfecha);
             }
         }
 
@@ -391,7 +332,39 @@ namespace Microsell_Lite.Compras
 
                 if (edi.Tag.ToString() == "A")
                 {
-                    Cargar_todos_Compras();
+                    Cargar_todos_Ventas();
+                }
+
+            }
+        }
+
+        private void reimprimirDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            Frm_Advertencia ver = new Frm_Advertencia();
+            Form_VerDet_Compra edi = new Form_VerDet_Compra();
+            Frm_Crear_Ventas venta = new Frm_Crear_Ventas();
+
+            if (ltsCompras.SelectedIndices.Count == 0)
+            {
+                fil.Show();
+                ver.lbl_Msm1.Text = "Seleccione un producto";
+                ver.ShowDialog();
+                fil.Hide();
+            }
+            else
+            {
+                var lis = ltsCompras.SelectedItems[0];
+                string idDoc = lis.SubItems[0].Text;
+
+                fil.Show();
+                venta.txtBuscar.Text = idDoc;
+                venta.ShowDialog();
+                fil.Hide();
+
+                if (edi.Tag.ToString() == "A")
+                {
+                    Cargar_todos_Ventas();
                 }
 
             }

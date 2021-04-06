@@ -1,6 +1,6 @@
-﻿namespace Microsell_Lite.Compras
+﻿namespace Microsell_Lite.Cotizacion
 {
-    partial class Frm_Explor_Compra
+    partial class Frm_Explor_Cotizacion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Explor_Compra));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Explor_Cotizacion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_minimi = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();

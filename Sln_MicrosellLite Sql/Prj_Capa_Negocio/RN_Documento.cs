@@ -71,7 +71,7 @@ namespace Prj_Capa_Negocio
             obj.BD_Cambiar_TipoPago(idDoc, tipoPago);
         }
 
-        public DataTable BD_ListarTodos_Documentos()
+        public DataTable RN_ListarTodos_Documentos()
         {
             BD_Documento obj = new BD_Documento();
             return obj.BD_ListarTodos_Documentos();

@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using Prj_Capa_Negocio;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Productos;
+using Microsell_Lite.Compras;
 
 
-namespace Microsell_Lite.Compras
+namespace Microsell_Lite.Cotizacion
 {
-    public partial class Frm_Explor_Compra: Form
+    public partial class Frm_Explor_Cotizacion : Form
     {
-        public Frm_Explor_Compra()
+        public Frm_Explor_Cotizacion()
         {
             InitializeComponent();
         }

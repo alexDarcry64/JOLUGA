@@ -14,6 +14,9 @@ using Microsell_Lite.Compras;
 using Microsell_Lite.Proveedores;
 using Microsell_Lite.Utilitarios;
 using Microsell_Lite.Cotizacion;
+using System.IO;
+using Prj_Capa_Negocio;
+using Microsell_Lite.Caja;
 
 namespace Microsell_Lite
 {
@@ -184,10 +187,54 @@ namespace Microsell_Lite
 
         private void bt_DocEmitidos_Click(object sender, EventArgs e)
         {
+            Frm_Explor_Documento doc = new Frm_Explor_Documento();
+            doc.MdiParent = this;
+            doc.Show();
             if (PanelLateral.Width == 247)
             {
                 PanelLateral.Width = 40;
             }
+        }
+
+        public void CargarDatosUsuario()
+        {
+            Frm_Filtro fil = new Frm_Filtro();
+            RN_Cierre_Caja obj = new RN_Cierre_Caja();
+            Frm_InicioCaja ca = new Frm_InicioCaja();
+
+            fil.Show();
+            MessageBox.Show("Bienvenido " + Cls_Libreria.Nombre);
+            fil.Hide();
+
+            if (obj.RN_Validar_Inicio_Doble_Caja() == false)
+            {
+                fil.Show();
+                ca.ShowDialog();
+                fil.Hide();
+            }
+
+            lbl_user.Text = Cls_Libreria.Nombre;
+            lbl_Rol.Text = Cls_Libreria.Rol;
+
+            if (Cls_Libreria.Foto.Trim().Length == 0 | Cls_Libreria.Foto == null) return;
+
+            if (File.Exists (Cls_Libreria.Foto) == true)
+            {
+                PicUser.Load(Cls_Libreria.Foto);
+                PicUser_2.Load(Cls_Libreria.Foto);
+            }
+            else
+            {
+                //PicUser.Image = Properties.Resources.user114;
+                //PicUser_2.Image = Properties.Resources.user114;
+            }
+        }
+
+        private void Bt_HacerCierreDeCaja_Click(object sender, EventArgs e)
+        {
+            Frm_CerrarCaja caj = new Frm_CerrarCaja();
+            caj.MdiParent = this;
+            caj.Show();
         }
     }
 }

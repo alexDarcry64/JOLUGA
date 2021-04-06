@@ -98,6 +98,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RN_Caja.cs" />
     <Compile Include="RN_Categoria.cs" />
+    <Compile Include="RN_Cierre_Caja.cs" />
     <Compile Include="RN_Cliente.cs" />
     <Compile Include="RN_Cotizacion.cs" />
     <Compile Include="RN_Credito.cs" />

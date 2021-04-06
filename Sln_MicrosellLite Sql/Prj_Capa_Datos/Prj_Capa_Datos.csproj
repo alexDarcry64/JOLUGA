@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="BD_Caja.cs" />
     <Compile Include="BD_Categoria.cs" />
+    <Compile Include="BD_Cierre_Caja.cs" />
     <Compile Include="BD_Conexion.cs" />
     <Compile Include="BD_Cotizacion.cs" />
     <Compile Include="BD_Credito.cs" />

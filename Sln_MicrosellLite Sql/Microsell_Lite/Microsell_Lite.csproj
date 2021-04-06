@@ -219,6 +219,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caja\Frm_CerrarCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\Frm_CerrarCaja.designer.cs">
+      <DependentUpon>Frm_CerrarCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\Frm_InicioCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\Frm_InicioCaja.designer.cs">
+      <DependentUpon>Frm_InicioCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\Frm_Registrar_Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\Frm_Registrar_Gastos.designer.cs">
+      <DependentUpon>Frm_Registrar_Gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\Frm_Reg_otroIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\Frm_Reg_otroIngresos.designer.cs">
+      <DependentUpon>Frm_Reg_otroIngresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\Frm_EditCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,11 +268,23 @@
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cls_UsuLogin.cs" />
+    <Compile Include="Compras\Form_VerDet_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Form_VerDet_Compra.Designer.cs">
+      <DependentUpon>Form_VerDet_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\Frm_Compras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compras\Frm_Compras.Designer.cs">
       <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Frm_Explor_Documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Frm_Explor_Documento.Designer.cs">
+      <DependentUpon>Frm_Explor_Documento.cs</DependentUpon>
     </Compile>
     <Compile Include="Compras\Frm_Solo_Cantidad.cs">
       <SubType>Form</SubType>
@@ -279,6 +315,12 @@
     </Compile>
     <Compile Include="Compras\Frm_Solo_Precio.designer.cs">
       <DependentUpon>Frm_Solo_Precio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizacion\Frm_Explor_Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotizacion\Frm_Explor_Cotizacion.Designer.cs">
+      <DependentUpon>Frm_Explor_Cotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Filtro.cs">
       <SubType>Form</SubType>
@@ -464,6 +506,18 @@
       <DependentUpon>Rpt_Print_Nota_Venta.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Caja\Frm_CerrarCaja.resx">
+      <DependentUpon>Frm_CerrarCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\Frm_InicioCaja.resx">
+      <DependentUpon>Frm_InicioCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\Frm_Registrar_Gastos.resx">
+      <DependentUpon>Frm_Registrar_Gastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\Frm_Reg_otroIngresos.resx">
+      <DependentUpon>Frm_Reg_otroIngresos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\Frm_EditCliente.resx">
       <DependentUpon>Frm_EditCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -476,8 +530,14 @@
     <EmbeddedResource Include="Clientes\Frm_Explor_Cliente.resx">
       <DependentUpon>Frm_Explor_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Form_VerDet_Compra.resx">
+      <DependentUpon>Form_VerDet_Compra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\Frm_Compras.resx">
       <DependentUpon>Frm_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Frm_Explor_Documento.resx">
+      <DependentUpon>Frm_Explor_Documento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\Frm_Solo_Cantidad.resx">
       <DependentUpon>Frm_Solo_Cantidad.cs</DependentUpon>
@@ -493,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\Frm_Solo_Precio.resx">
       <DependentUpon>Frm_Solo_Precio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotizacion\Frm_Explor_Cotizacion.resx">
+      <DependentUpon>Frm_Explor_Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Filtro.resx">
       <DependentUpon>Frm_Filtro.cs</DependentUpon>

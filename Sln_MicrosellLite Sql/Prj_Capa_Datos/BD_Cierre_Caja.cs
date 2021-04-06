@@ -10,35 +10,34 @@ using System.Windows.Forms;
 
 namespace Prj_Capa_Datos
 {
-    public class BD_IngresoCompra : BD_Conexion
+    public class BD_Cierre_Caja : BD_Conexion
     {
         public static bool guardado = false;
-        public static bool detguardado = false;
-        public static bool edito = false;
-        public void BD_Insertar_RegistroCompra(EN_IngresoCompra compra)
+
+        public void BD_Registrar_Inicio_Caja(EN_Cierre_Caja caja)
 
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlCommand cmd = new SqlCommand("Sp_Registrar_Compra", cn);
+                SqlCommand cmd = new SqlCommand("Reg_Cierre_Caja", cn);
                 cmd.CommandTimeout = 20;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCom", compra.IdCom);
-                cmd.Parameters.AddWithValue("@Nro_Fac_Fisico", compra.Nro_Fac_Fisico1);
-                cmd.Parameters.AddWithValue("@IdProvee", compra.IdProvee1);
-                cmd.Parameters.AddWithValue("@SubTotal_Com", compra.SubTotal_Com1);
-                cmd.Parameters.AddWithValue("@FechaIngre", compra.FechaIngre1);
-                cmd.Parameters.AddWithValue("@TotalCompra", compra.TotalCompra1);
-                cmd.Parameters.AddWithValue("@IdUsu", compra.IdUsu1);
-                cmd.Parameters.AddWithValue("@ModalidadPago", compra.ModalidadPago1);
-                cmd.Parameters.AddWithValue("@TiempoEspera", compra.TiempoEspera1);
-                cmd.Parameters.AddWithValue("@FechaVence", compra.FechaVence1);
-                cmd.Parameters.AddWithValue("@EstadoIngre", compra.EstadoIngre1);
-                cmd.Parameters.AddWithValue("@RecibiConforme", compra.RecibiConforme1);
-                cmd.Parameters.AddWithValue("@Datos_Adicional", compra.Datos_Adicional1);
-                cmd.Parameters.AddWithValue("@Tipo_Doc_Compra", compra.Tipo_Doc_Compra1);
+                cmd.Parameters.AddWithValue("@idCierre", caja.IdCierre);
+                cmd.Parameters.AddWithValue("@Apertura_Caja", caja.AperturaCaja);
+                cmd.Parameters.AddWithValue("@Total_Ingreso", caja.TotalIngreso);
+                cmd.Parameters.AddWithValue("@TotalEgreso", caja.TotalEgreso);
+                cmd.Parameters.AddWithValue("@Id_usu", caja.IdUsu);
+                cmd.Parameters.AddWithValue("@TodoDeposito", caja.TotalDeposito);
+                cmd.Parameters.AddWithValue("@TotalGanancia", caja.TotalGanancia);
+                cmd.Parameters.AddWithValue("@TotalEntregado", caja.TotalEntregado);
+                cmd.Parameters.AddWithValue("@SaldoSiguiente", caja.SaldoSiguiente);
+                cmd.Parameters.AddWithValue("@TotalFactura", caja.TotalFactura);
+                cmd.Parameters.AddWithValue("@TotalBoleta", caja.TotalBoleta);
+                cmd.Parameters.AddWithValue("@Totalnota", caja.TotalNota);
+                cmd.Parameters.AddWithValue("@TotalCreditoCobrado", caja.TotalCreditoCobrado);
+                cmd.Parameters.AddWithValue("@TotalCreditoEmitido", caja.TotalCreditoEmitido);
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -57,30 +56,40 @@ namespace Prj_Capa_Datos
             }
         }
 
-        public void BD_Insertar_Detalle_RegistroCompra(EN_Det_IngresoCompra compra)
+        public void BD_Registrar_Cierre_Caja(EN_Cierre_Caja caja)
 
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlCommand cmd = new SqlCommand("Sp_Insert_Detalle_ingreso", cn);
+                SqlCommand cmd = new SqlCommand("sp_registrar_Cierre_Caja", cn);
                 cmd.CommandTimeout = 20;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id_ingreso", compra.Id_ingreso1);
-                cmd.Parameters.AddWithValue("@Id_Pro", compra.Id_Pro1);
-                cmd.Parameters.AddWithValue("@Precio", compra.Precio1);
-                cmd.Parameters.AddWithValue("@Cantidad", compra.Cantidad1);
-                cmd.Parameters.AddWithValue("@Importe", compra.Importe1);
+                cmd.Parameters.AddWithValue("@IDCIERRE", caja.IdCierre);
+                cmd.Parameters.AddWithValue("@Apertura_Caja", caja.AperturaCaja);
+                cmd.Parameters.AddWithValue("@Total_Ingreso", caja.TotalIngreso);
+                cmd.Parameters.AddWithValue("@TotalEgreso", caja.TotalEgreso);
+                cmd.Parameters.AddWithValue("@Id_usu", caja.IdUsu);
+                cmd.Parameters.AddWithValue("@TodoDeposito", caja.TotalDeposito);
+                cmd.Parameters.AddWithValue("@TotalGanancia", caja.TotalGanancia);
+                cmd.Parameters.AddWithValue("@TotalEntregado", caja.TotalEntregado);
+                cmd.Parameters.AddWithValue("@SaldoSiguiente", caja.SaldoSiguiente);
+                cmd.Parameters.AddWithValue("@TotalFactura", caja.TotalFactura);
+                cmd.Parameters.AddWithValue("@TotalBoleta", caja.TotalBoleta);
+                cmd.Parameters.AddWithValue("@Totalnota", caja.TotalNota);
+                cmd.Parameters.AddWithValue("@TotalCreditoCobrado", caja.TotalCreditoCobrado);
+                cmd.Parameters.AddWithValue("@TotalCreditoEmitido", caja.TotalCreditoEmitido);
+
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                detguardado = true;
+                guardado = true;
 
             }
             catch (Exception ex)
             {
-                detguardado = false;
+                guardado = false;
                 if (cn.State == ConnectionState.Open)
                 {
                     cn.Close();
@@ -89,7 +98,32 @@ namespace Prj_Capa_Datos
             }
         }
 
-        public bool BD_Verificar_NroDocFisico(string fisico)
+        public DataTable BD_Listar_Cierre_Caja_Dia()
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Cargar_CierreCaja_delDia", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
+
+        public bool BD_Validar_Inicio_Doble_Caja()
         {
             bool respuesta = false;
             Int32 value = 0;
@@ -98,11 +132,10 @@ namespace Prj_Capa_Datos
             {
                 SqlCommand cmd = new SqlCommand();
                 cn.ConnectionString = Conectar();
-                cmd.CommandText = "sp_validar_NroFisico_Compra";
+                cmd.CommandText = "SP_VALIDAR_REGISTRO_CAJA";
                 cmd.Connection = cn;
                 cmd.CommandTimeout = 20;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nro_Doc_fisico", fisico);
 
                 cn.Open();
                 value = Convert.ToInt32(cmd.ExecuteScalar());
@@ -133,15 +166,16 @@ namespace Prj_Capa_Datos
             return respuesta;
         }
 
-        public DataTable BD_Buscar_Compras(string valor)
+        public DataTable BD_Calcular_Ventas_Por_Tipo_Doc(string nomTipoDoc)
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlDataAdapter da = new SqlDataAdapter("Sp_Buscador_Gnral_deCompras", cn);
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Calcular_Ventas_PorTipoDoc", cn);
+                da.SelectCommand.Parameters.AddWithValue("@tipodoc", nomTipoDoc);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@xvalor", valor);
+
 
                 DataTable data = new DataTable();
                 da.Fill(data);
@@ -154,19 +188,20 @@ namespace Prj_Capa_Datos
                     cn.Close();
                 }
                 MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             }
             return null;
         }
 
-        public DataTable BD_Cargar_TodasCompras()
+        public DataTable BD_Calcular_Ventas_Por_Tipo_Pago(string tipoPago)
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlDataAdapter da = new SqlDataAdapter("Sp_Leer_Todas_Facturas_Compras", cn);
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Calcular_Gastos_porTipoPago", cn);
+                da.SelectCommand.Parameters.AddWithValue("@tipopago", tipoPago);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
 
                 DataTable data = new DataTable();
                 da.Fill(data);
@@ -179,21 +214,19 @@ namespace Prj_Capa_Datos
                     cn.Close();
                 }
                 MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             }
             return null;
         }
 
-        public DataTable BD_Buscar_Compras_Dia(string tipo, DateTime fecha)
+        public DataTable BD_Calcular_Ventas_Acredito()
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlDataAdapter da = new SqlDataAdapter("Sp_Facturas_Ingresadas_alDia", cn);
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Calcular_Ventas_aCredito", cn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@tipo", tipo);
-                da.SelectCommand.Parameters.AddWithValue("@fecha", fecha);
+
 
                 DataTable data = new DataTable();
                 da.Fill(data);
@@ -206,48 +239,19 @@ namespace Prj_Capa_Datos
                     cn.Close();
                 }
                 MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             }
             return null;
         }
 
-        public void BD_Borrar_Compra(string idCompra)
-
+        public DataTable BD_Calcular_Ventas_ADeposito()
         {
             SqlConnection cn = new SqlConnection();
             try
             {
                 cn.ConnectionString = Conectar();
-                SqlCommand cmd = new SqlCommand("SP_Borrar_Factura_Ingresada", cn);
-                cmd.CommandTimeout = 20;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id_Fac", idCompra);
-                cn.Open();
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                detguardado = true;
-
-            }
-            catch (Exception ex)
-            {
-                detguardado = false;
-                if (cn.State == ConnectionState.Open)
-                {
-                    cn.Close();
-                }
-                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        public DataTable BD_Buscar_Compras_Detalle(string idCompra)
-        {
-            SqlConnection cn = new SqlConnection();
-            try
-            {
-                cn.ConnectionString = Conectar();
-                SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_FacturasCompras_Detalle", cn);
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Calcular_Ventas_aDeposito", cn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@xvalor", idCompra);
+
 
                 DataTable data = new DataTable();
                 da.Fill(data);
@@ -260,7 +264,31 @@ namespace Prj_Capa_Datos
                     cn.Close();
                 }
                 MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
 
+        public DataTable BD_Calcular_Ganancias_Dia()
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Calcular_Ventas_GananciadelDia", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return null;
         }

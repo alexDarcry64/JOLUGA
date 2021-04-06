@@ -72,6 +72,7 @@ namespace Microsell_Lite
                 this.Hide();
                 Frm_Principal pri = new Frm_Principal();
                 pri.Show();
+                pri.CargarDatosUsuario();
             }
             else
             {

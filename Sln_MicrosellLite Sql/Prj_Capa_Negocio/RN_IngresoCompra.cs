@@ -52,5 +52,11 @@ namespace Prj_Capa_Negocio
             BD_IngresoCompra obj = new BD_IngresoCompra();
             obj.BD_Borrar_Compra(idCompra);
         }
+
+        public DataTable RN_Buscar_Compras_Detalle(string idCompra)
+        {
+            BD_IngresoCompra obj = new BD_IngresoCompra();
+            return obj.BD_Buscar_Compras_Detalle(idCompra);
+        }
     }
 }

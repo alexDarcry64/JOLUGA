@@ -37,6 +37,7 @@
             Klik.Windows.Forms.v1.Common.PaintStyle paintStyle11 = new Klik.Windows.Forms.v1.Common.PaintStyle();
             Klik.Windows.Forms.v1.Common.PaintStyle paintStyle12 = new Klik.Windows.Forms.v1.Common.PaintStyle();
             this.pnl_titu = new System.Windows.Forms.Panel();
+            this.chk_Cotizacion = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -115,6 +116,9 @@
             this.txtRfc = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
             this.txtDireccion = new Klik.Windows.Forms.v1.EntryLib.ELLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lblEstadoCotizacion = new System.Windows.Forms.TextBox();
+            this.lblStockProducto = new System.Windows.Forms.Label();
+            this.xlblTipoProd = new System.Windows.Forms.Label();
             this.pnl_titu.SuspendLayout();
             this.pnl_sinProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Nuevo_buscarProd)).BeginInit();
@@ -143,6 +147,7 @@
             // pnl_titu
             // 
             this.pnl_titu.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_titu.Controls.Add(this.chk_Cotizacion);
             this.pnl_titu.Controls.Add(this.button3);
             this.pnl_titu.Controls.Add(this.button2);
             this.pnl_titu.Controls.Add(this.button1);
@@ -158,6 +163,16 @@
             this.pnl_titu.Size = new System.Drawing.Size(1088, 51);
             this.pnl_titu.TabIndex = 1;
             this.pnl_titu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_titu_MouseMove);
+            // 
+            // chk_Cotizacion
+            // 
+            this.chk_Cotizacion.AutoSize = true;
+            this.chk_Cotizacion.Location = new System.Drawing.Point(926, 16);
+            this.chk_Cotizacion.Name = "chk_Cotizacion";
+            this.chk_Cotizacion.Size = new System.Drawing.Size(18, 17);
+            this.chk_Cotizacion.TabIndex = 507;
+            this.toolTip1.SetToolTip(this.chk_Cotizacion, "Cargar cotización");
+            this.chk_Cotizacion.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -196,6 +211,7 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button2, "Reimprimir Documento");
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -227,10 +243,10 @@
             this.label3.TabIndex = 503;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.label3, "Buscar el Cliente");
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtBuscar
             // 
-
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -813,7 +829,7 @@
             // 
             this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator9.LineThickness = 32;
+            this.bunifuSeparator9.LineThickness = 243;
             this.bunifuSeparator9.Location = new System.Drawing.Point(36, 208);
             this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.bunifuSeparator9.Name = "bunifuSeparator9";
@@ -826,7 +842,7 @@
             // 
             this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator8.LineThickness = 32;
+            this.bunifuSeparator8.LineThickness = 243;
             this.bunifuSeparator8.Location = new System.Drawing.Point(36, 129);
             this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
@@ -1062,7 +1078,7 @@
             this.txt_cliente.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txt_cliente.LineThickness = 2;
             this.txt_cliente.Location = new System.Drawing.Point(36, 13);
-            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4); 
+            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cliente.Name = "txt_cliente";
             this.txt_cliente.Size = new System.Drawing.Size(422, 33);
             this.txt_cliente.TabIndex = 501;
@@ -1124,6 +1140,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.xlblTipoProd);
+            this.panel1.Controls.Add(this.lblStockProducto);
+            this.panel1.Controls.Add(this.lblEstadoCotizacion);
             this.panel1.Controls.Add(this.dtpVencimientoSaldo);
             this.panel1.Controls.Add(this.lblSaldo);
             this.panel1.Controls.Add(this.lblACuenta);
@@ -1165,7 +1184,7 @@
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(782, 55);
+            this.lblSaldo.Location = new System.Drawing.Point(782, 45);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(20, 24);
             this.lblSaldo.TabIndex = 526;
@@ -1174,7 +1193,7 @@
             // lblACuenta
             // 
             this.lblACuenta.AutoSize = true;
-            this.lblACuenta.Location = new System.Drawing.Point(782, 15);
+            this.lblACuenta.Location = new System.Drawing.Point(782, 10);
             this.lblACuenta.Name = "lblACuenta";
             this.lblACuenta.Size = new System.Drawing.Size(20, 24);
             this.lblACuenta.TabIndex = 523;
@@ -1310,6 +1329,32 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // lblEstadoCotizacion
+            // 
+            this.lblEstadoCotizacion.Location = new System.Drawing.Point(724, 151);
+            this.lblEstadoCotizacion.Name = "lblEstadoCotizacion";
+            this.lblEstadoCotizacion.Size = new System.Drawing.Size(88, 29);
+            this.lblEstadoCotizacion.TabIndex = 528;
+            this.lblEstadoCotizacion.Visible = false;
+            // 
+            // lblStockProducto
+            // 
+            this.lblStockProducto.AutoSize = true;
+            this.lblStockProducto.Location = new System.Drawing.Point(785, 78);
+            this.lblStockProducto.Name = "lblStockProducto";
+            this.lblStockProducto.Size = new System.Drawing.Size(20, 24);
+            this.lblStockProducto.TabIndex = 529;
+            this.lblStockProducto.Text = "0";
+            // 
+            // xlblTipoProd
+            // 
+            this.xlblTipoProd.AutoSize = true;
+            this.xlblTipoProd.Location = new System.Drawing.Point(785, 109);
+            this.xlblTipoProd.Name = "xlblTipoProd";
+            this.xlblTipoProd.Size = new System.Drawing.Size(20, 24);
+            this.xlblTipoProd.TabIndex = 530;
+            this.xlblTipoProd.Text = "0";
+            // 
             // Frm_Crear_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -1430,7 +1475,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label14;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -1443,5 +1487,10 @@
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.Label lblACuenta;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        internal Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
+        internal System.Windows.Forms.CheckBox chk_Cotizacion;
+        private System.Windows.Forms.TextBox lblEstadoCotizacion;
+        private System.Windows.Forms.Label lblStockProducto;
+        private System.Windows.Forms.Label xlblTipoProd;
     }
 }

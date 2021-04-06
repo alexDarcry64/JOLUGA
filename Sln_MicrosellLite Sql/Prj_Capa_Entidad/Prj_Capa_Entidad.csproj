@@ -96,6 +96,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="EN_Caja.cs" />
+    <Compile Include="EN_Cierre_Caja.cs" />
     <Compile Include="EN_Cliente.cs" />
     <Compile Include="EN_Cotizacion.cs" />
     <Compile Include="EN_Credito.cs" />
