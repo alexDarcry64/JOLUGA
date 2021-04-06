@@ -325,7 +325,7 @@ namespace Microsell_Lite.Caja
 
             try
             {
-                ingresoBruto = Convert.ToDouble(Lbl_Efectivo_boleta.Text) + Convert.ToDouble(Lbl_Efectivo_factura.Text)+ Convert.ToDouble(Lbl_Efectivo_Notas.Text) + Convert.ToDouble(Lbl_otroIngresoEfectivo) + Convert.ToDouble(Lbl_Ingreso_Deposito.Text);
+                ingresoBruto = Convert.ToDouble(Lbl_Efectivo_boleta.Text) + Convert.ToDouble(Lbl_Efectivo_factura.Text)+ Convert.ToDouble(Lbl_Efectivo_Notas.Text) + Convert.ToDouble(Lbl_otroIngresoEfectivo.Text) + Convert.ToDouble(Lbl_Ingreso_Deposito.Text);
                 Lbl_totalIngreso.Text = ingresoBruto.ToString("###0.00");
                 xxtotalIngreso = ingresoBruto + Convert.ToDouble(Lbl_aperturaCaja.Text);
                 lbl_totalingre_bruto.Text = xxtotalIngreso.ToString("###0.00");
@@ -387,6 +387,7 @@ namespace Microsell_Lite.Caja
                     ver.lbl_Msm1.Text = "La caja se ha cerrado exitosamente";
                     ver.ShowDialog();
                     fil.Hide();
+                    this.Close();
                 }
             }
             catch (Exception)
