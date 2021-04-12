@@ -364,6 +364,7 @@ namespace Microsell_Lite.Caja
 
             try
             {
+                //Un cambio
                 ci.IdCierre = lbl_idcaja.Text;
                 ci.AperturaCaja = Convert.ToDouble(Lbl_aperturaCaja.Text);
                 ci.TotalIngreso = Convert.ToDouble(Lbl_totalIngreso.Text);
