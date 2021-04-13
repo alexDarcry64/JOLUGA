@@ -76,5 +76,17 @@ namespace Prj_Capa_Negocio
             BD_Documento obj = new BD_Documento();
             return obj.BD_ListarTodos_Documentos();
         }
+
+        public DataTable RN_Listar_Creditos_Activos(string estado)
+        {
+            BD_Documento obj = new BD_Documento();
+            return obj.BD_Listar_Creditos_Activos(estado);
+        }
+
+        public DataTable RN_Listar_Cotizaciones()
+        {
+            BD_Documento obj = new BD_Documento();
+            return obj.BD_Listar_Cotizaciones();
+        }
     }
 }

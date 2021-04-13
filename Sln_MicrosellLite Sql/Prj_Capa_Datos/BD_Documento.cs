@@ -337,5 +337,54 @@ namespace Prj_Capa_Datos
             }
             return null;
         }
+
+        public DataTable BD_Listar_Creditos_Activos(string estado)
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Filtrar_creditos_xEstado", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Stado", estado);
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
+
+        public DataTable BD_Listar_Cotizaciones()
+        {
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Conectar();
+                SqlDataAdapter da = new SqlDataAdapter("Sp_Cargar_todas_Cotizaciones", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataTable data = new DataTable();
+                da.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                if (cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+                MessageBox.Show("Error al guardar" + ex.Message, "Capa Datos Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return null;
+        }
     }
 }

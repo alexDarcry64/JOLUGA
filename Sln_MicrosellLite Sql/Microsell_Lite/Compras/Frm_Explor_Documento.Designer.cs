@@ -48,6 +48,7 @@
             this.bt_copiarIDProveedorTool = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarComprasDelMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coomprasDelDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reimprimirDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -60,13 +61,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlmsj = new System.Windows.Forms.Panel();
+            this.dtpHoy = new System.Windows.Forms.DateTimePicker();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dtpHoy = new System.Windows.Forms.DateTimePicker();
-            this.reimprimirDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creditosPendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cotizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,9 +135,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 25);
+            this.label1.Size = new System.Drawing.Size(248, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Explorador de Productos";
+            this.label1.Text = "Explorador de Documentos";
             // 
             // panel2
             // 
@@ -162,7 +164,7 @@
             this.txtbuscar.LineIdleColor = System.Drawing.Color.Gray;
             this.txtbuscar.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtbuscar.LineThickness = 3;
-            this.txtbuscar.Location = new System.Drawing.Point(1211, 11);
+            this.txtbuscar.Location = new System.Drawing.Point(1104, 11);
             this.txtbuscar.Margin = new System.Windows.Forms.Padding(5);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(379, 33);
@@ -174,7 +176,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1588, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(1481, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 30);
@@ -227,16 +229,18 @@
             this.bt_copiarIDProveedorTool,
             this.buscarComprasDelMesToolStripMenuItem,
             this.coomprasDelDiaToolStripMenuItem,
-            this.reimprimirDocumentoToolStripMenuItem});
+            this.reimprimirDocumentoToolStripMenuItem,
+            this.creditosPendientesToolStripMenuItem,
+            this.cotizacionesToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 180);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 232);
             // 
             // mostrarTodosToolStripMenuItem
             // 
             this.mostrarTodosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mostrarTodosToolStripMenuItem.Image")));
             this.mostrarTodosToolStripMenuItem.Name = "mostrarTodosToolStripMenuItem";
             this.mostrarTodosToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.mostrarTodosToolStripMenuItem.Text = "Mostrar todos";
+            this.mostrarTodosToolStripMenuItem.Text = "Mostrar todos Doc";
             this.mostrarTodosToolStripMenuItem.Click += new System.EventHandler(this.mostrarTodosToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -275,6 +279,13 @@
             this.coomprasDelDiaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.coomprasDelDiaToolStripMenuItem.Text = "Coompras del Dia";
             this.coomprasDelDiaToolStripMenuItem.Click += new System.EventHandler(this.coomprasDelDiaToolStripMenuItem_Click);
+            // 
+            // reimprimirDocumentoToolStripMenuItem
+            // 
+            this.reimprimirDocumentoToolStripMenuItem.Name = "reimprimirDocumentoToolStripMenuItem";
+            this.reimprimirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.reimprimirDocumentoToolStripMenuItem.Text = "Reimprimir Documento";
+            this.reimprimirDocumentoToolStripMenuItem.Click += new System.EventHandler(this.reimprimirDocumentoToolStripMenuItem_Click);
             // 
             // toolTip1
             // 
@@ -388,6 +399,14 @@
             this.pnlmsj.TabIndex = 13;
             this.pnlmsj.Visible = false;
             // 
+            // dtpHoy
+            // 
+            this.dtpHoy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoy.Location = new System.Drawing.Point(61, 37);
+            this.dtpHoy.Name = "dtpHoy";
+            this.dtpHoy.Size = new System.Drawing.Size(200, 22);
+            this.dtpHoy.TabIndex = 3;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -441,20 +460,19 @@
             this.label15.TabIndex = 15;
             this.label15.Text = "Total de productos:";
             // 
-            // dtpHoy
+            // creditosPendientesToolStripMenuItem
             // 
-            this.dtpHoy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoy.Location = new System.Drawing.Point(61, 37);
-            this.dtpHoy.Name = "dtpHoy";
-            this.dtpHoy.Size = new System.Drawing.Size(200, 22);
-            this.dtpHoy.TabIndex = 3;
+            this.creditosPendientesToolStripMenuItem.Name = "creditosPendientesToolStripMenuItem";
+            this.creditosPendientesToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.creditosPendientesToolStripMenuItem.Text = "Creditos Pendientes";
+            this.creditosPendientesToolStripMenuItem.Click += new System.EventHandler(this.creditosPendientesToolStripMenuItem_Click);
             // 
-            // reimprimirDocumentoToolStripMenuItem
+            // cotizacionesToolStripMenuItem
             // 
-            this.reimprimirDocumentoToolStripMenuItem.Name = "reimprimirDocumentoToolStripMenuItem";
-            this.reimprimirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.reimprimirDocumentoToolStripMenuItem.Text = "Reimprimir Documento";
-            this.reimprimirDocumentoToolStripMenuItem.Click += new System.EventHandler(this.reimprimirDocumentoToolStripMenuItem_Click);
+            this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
+            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
+            this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
             // 
             // Frm_Explor_Documento
             // 
@@ -538,5 +556,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dtpHoy;
         private System.Windows.Forms.ToolStripMenuItem reimprimirDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creditosPendientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cotizacionesToolStripMenuItem;
     }
 }

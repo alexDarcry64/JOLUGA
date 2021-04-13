@@ -639,7 +639,7 @@ namespace Microsell_Lite.Ventas
                 doc.IdTipo = Convert.ToInt32(cboTipoDoc.SelectedValue);
                 doc.FechaDoc = dtp_FechaEmi.Value;
                 doc.Importe = Convert.ToDouble(lbl_TotalPagar.Text);
-                doc.TipoPago = cboTipoDoc.Text;
+                doc.TipoPago = cboTipoPago.Text;
                 doc.NrOperacion = txtNroOperacion.Text;
                 doc.IdUsu = Convert.ToInt32(Cls_Libreria.IdUsu);
                 doc.Igv = Convert.ToDouble(lbl_igv.Text);
@@ -822,12 +822,12 @@ namespace Microsell_Lite.Ventas
 
                 if (Convert.ToDouble(lblACuenta.Text) == 0)
                 {
-                    cre.SaldoPdnte = Convert.ToDouble(lbl_TotalPagar.Text);
+                    cre.SaldoPdnte = Convert.ToDouble(lblSaldo.Text);
                 }
 
                 else if (Convert.ToDouble(lblACuenta.Text) > 0)
                 {
-                    cre.SaldoPdnte = Convert.ToDouble(lblSaldoPendiente.Text);
+                    cre.SaldoPdnte = Convert.ToDouble(lblSaldo.Text);
                 }
 
                 cre.FechaVencimiento = dtpVencimientoSaldo.Value;
@@ -1190,13 +1190,11 @@ namespace Microsell_Lite.Ventas
                 if (dato.Rows.Count > 0)
                 {
                     var dt = dato.Rows[0];
-                    txtNroDoc.Text = Convert.ToString(dt["id_Doc"]);
+                    txtNroDoc.Text = Convert.ToString(dt["Id_Cotiza"]);
                     txt_nroPed.Text = Convert.ToString(dt["id_Ped"]);
                     txt_NroCotiza.Text = Convert.ToString(dt["Id_Cotiza"]);
-                    cboTipoDoc.Text = Convert.ToString(dt["Id_Tipo"]);
+                    cboTipoDoc.Text = Convert.ToString(dt["Tipo_Prod"]);
                     dtp_FechaEmi.Text = Convert.ToString(dt["FechaCoti"]);
-                    txtNroOperacion.Text = Convert.ToString(dt["Nro_Operacion"]);
-                    cboTipoPago.Text = Convert.ToString(dt["TipoPago"]);
                     lbl_idcliente.Text = Convert.ToString(dt["Id_Cliente"]);
                     txt_cliente.Text = Convert.ToString(dt["Razon_Social_Nombres"]);
                     txtDireccion.Text = Convert.ToString(dt["Direccion"]);
@@ -1360,6 +1358,21 @@ namespace Microsell_Lite.Ventas
             nota.Tag = txtNroDoc.Text;
             nota.ShowDialog();
             fil.Hide();
+        }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Trim().Length > 3)
+            {
+                if (chk_Cotizacion.Checked == true)
+                {
+                    Buscar_Cotizacion_Atender(txtBuscar.Text);
+                }
+                else
+                {
+                    Buscar_Documento_Reimprimir(txtBuscar.Text);
+                }
+            }
         }
     }
 }
